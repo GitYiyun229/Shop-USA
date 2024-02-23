@@ -1,0 +1,96 @@
+.title_lovu {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.list_tiktok {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.pagination {
+  padding-bottom: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+}
+
+.pagination a {
+  margin: 0 6px;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  border-radius: 100% !important;
+  background-color: white;
+  border: solid 1px #dddddd;
+}
+
+.pagination a span {
+  display: block;
+  padding-top: 6px;
+  font-weight: 600;
+  color: black;
+  font-size: 14px;
+}
+
+.pagination a:hover {
+  background-color: #d53c00;
+  border-color: #d53c00;
+  text-decoration: none;
+}
+
+.pagination a:hover span {
+  color: white;
+}
+
+.pagination a i {
+  line-height: unset;
+}
+
+.pagination .current {
+  padding: 7px 14px;
+  color: #fff;
+  background-color: #d53c00 !important;
+  border-color: #d53c00 !important;
+  border-radius: 100%;
+  font-weight: 600;
+}
+
+.pagination .current:hover {
+  background-color: #d53c00;
+  border-color: white;
+  text-decoration: none;
+}
+
+.pagination .first-page,
+.pagination .last-page {
+  display: none;
+}
+
+.pagination b {
+  padding-top: 5px;
+}
+
+@media (max-width: 960px) {
+  .list_tiktok {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .list_tiktok {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+/*# sourceMappingURL=home.css.map */

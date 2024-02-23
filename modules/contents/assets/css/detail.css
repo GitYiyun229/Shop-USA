@@ -1,0 +1,124 @@
+.container .main-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  grid-gap: 30px;
+  padding: 20px 0;
+}
+
+.container .main-content .menu-left .h2_c {
+  font-size: 16px;
+  color: #B0B0B0;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.container .main-content .menu-left .list {
+  padding-left: 0px;
+}
+
+.container .main-content .menu-left .list li {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 14px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.container .main-content .menu-left .list li:hover a {
+  color: #d53c00;
+}
+
+.container .main-content .menu-left .list li a {
+  display: block;
+  color: #6d6e71;
+}
+
+.container .main-content .menu-left .list .active {
+  padding-left: 16px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.container .main-content .menu-left .list .active a {
+  color: #d53c00;
+}
+
+.container .main-content .content-right h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #6d6e71;
+  padding-top: 27px;
+  padding-bottom: 23px;
+  border-bottom: solid 1px #eeeeee;
+  margin-bottom: 30px;
+}
+
+.container .main-content .content-right .content__ {
+  font-size: 16px;
+}
+
+.container .main-content .content-right .content__ p {
+  color: #6d6e71;
+}
+
+.container .main-content .content-right .content__ p img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+.container .main-content .content-right .share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.container .main-content .content-right .share a {
+  display: block;
+}
+
+@media (max-width: 769px) {
+  .breadcrumbs .breadcrumb {
+    padding-top: 10px;
+  }
+  .main-content {
+    display: unset !important;
+  }
+  .main-content .menu-left .h2_c {
+    font-size: 24px !important;
+    padding: 10px 0 !important;
+  }
+  .main-content .content-right h2 {
+    padding: 15px 0 !important;
+    margin-bottom: 15px;
+  }
+  .main-content .content-right .content__ {
+    font-size: 16px;
+  }
+  .main-content .content-right .content__ table {
+    width: 100% !important;
+  }
+  .main-content .content-right .content__ table tbody td img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .main-content .content-right .content__ table tbody td p img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .main-content .content-right .content__ p img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+/*# sourceMappingURL=detail.css.map */

@@ -1,0 +1,196 @@
+----------
+1704352725
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2239%22%2C%22customerName%22%3A%22FS+test+api+ssc%22%2C%22customerMobile%22%3A%220123456789%22%2C%22customerEmail%22%3A%22hieudv%40finalstyle.com%22%2C%22customerAddress%22%3A%22Bamboo+Airways+Tower%2C+No.+265%2C+Cau+Giay+Street%2C+Cau+Giay%2C+Hanoi%2C+Viet+Nam..%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Giang%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+B%E1%BA%AFc+Giang%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Th%E1%BB%8D+X%C6%B0%C6%A1ng%22%2C%22description%22%3A%22FS+test+api+ssc%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%221004%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%226944628963948%22%2C%22price%22%3A%22349000%22%2C%22name%22%3A%22Tai+nghe+JOWAY+H136%22%7D%5D%7D
+----------
+
+
+----------
+1704353673
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2241%22%2C%22customerName%22%3A%22FS+test+api+ssc%22%2C%22customerMobile%22%3A%220123456789%22%2C%22customerEmail%22%3A%22hieudv%40finalstyle.com%22%2C%22customerAddress%22%3A%22Bamboo+Airways+Tower%2C+No.+265%2C+Cau+Giay+Street%2C+Cau+Giay%2C+Hanoi%2C+Viet+Nam..%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Giang%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+B%E1%BA%AFc+Giang%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Th%E1%BB%8D+X%C6%B0%C6%A1ng%22%2C%22description%22%3A%22FS+test+api+ssc%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%221004%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%226944628963948%22%2C%22price%22%3A%22349000%22%2C%22name%22%3A%22Tai+nghe+JOWAY+H136%22%7D%5D%7D
+----------
+
+
+----------
+1704353764
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2242%22%2C%22customerName%22%3A%22FS+test+api+ssc%22%2C%22customerMobile%22%3A%220123456789%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22Bamboo+Airways+Tower%2C+No.+265%2C+Cau+Giay+Street%2C+Cau+Giay%2C+Hanoi%2C+Viet+Nam..%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Giang%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+B%E1%BA%AFc+Giang%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Th%E1%BB%8D+X%C6%B0%C6%A1ng%22%2C%22description%22%3A%22FS+test+api+ssc%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%221004%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%226944628963948%22%2C%22price%22%3A%22349000%22%2C%22name%22%3A%22Tai+nghe+JOWAY+H136%22%7D%5D%7D
+----------
+
+
+----------
+1704354640
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2243%22%2C%22customerName%22%3A%22FS+test+api+ssc%22%2C%22customerMobile%22%3A%220559852187%22%2C%22customerEmail%22%3A%22hieudv%40finalstyle.com%22%2C%22customerAddress%22%3A%22Bamboo+Airways+Tower%2C+No.+265%2C+Cau+Giay+Street%2C+Cau+Giay%2C+Hanoi%2C+Viet+Nam..%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Giang%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+B%E1%BA%AFc+Giang%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Th%E1%BB%8D+X%C6%B0%C6%A1ng%22%2C%22description%22%3A%22FS+test+api+ssc%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%221004%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%226944628963948%22%2C%22price%22%3A%22349000%22%2C%22name%22%3A%22Tai+nghe+JOWAY+H136%22%7D%5D%7D
+----------
+
+
+----------
+1704355585
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2244%22%2C%22customerName%22%3A%22FS+test+api+ssc%22%2C%22customerMobile%22%3A%220559852187%22%2C%22customerEmail%22%3A%22hieudv%40finalstyle.com%22%2C%22customerAddress%22%3A%22Bamboo+Airways+Tower%2C+No.+265%2C+Cau+Giay+Street%2C+Cau+Giay%2C+Hanoi%2C+Viet+Nam..%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Giang%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+B%E1%BA%AFc+Giang%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Th%E1%BB%8D+X%C6%B0%C6%A1ng%22%2C%22description%22%3A%22FS+test+api+ssc%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%221004%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%226944628963948%22%2C%22price%22%3A%22349000%22%2C%22name%22%3A%22Tai+nghe+JOWAY+H136%22%7D%5D%7D
+----------
+
+
+----------
+1704422181
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2245%22%2C%22customerName%22%3A%22Levu%22%2C%22customerMobile%22%3A%220378301301%22%2C%22customerEmail%22%3A%22lehaivu01%40gmail.com%22%2C%22customerAddress%22%3A%22S%E1%BB%91+27+Ng%C3%B5+54+Nguy%E1%BB%85n+Ch%C3%AD+Thanh%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+%C4%90%E1%BB%91ng+%C4%90a%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+L%C3%A1ng+Th%C6%B0%E1%BB%A3ng%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%22136%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214263862%22%2C%22price%22%3A%229900%22%2C%22name%22%3A%22%C3%81o+m%C6%B0a+mini+06%22%7D%5D%7D
+----------
+
+
+----------
+1704440696
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2246%22%2C%22customerName%22%3A%22%C4%90%E1%BB%A9c%22%2C%22customerMobile%22%3A%220769995555%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%2214+ng%C3%B5+01+ng%E1%BB%8Dc+l%C3%A2m%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+Long+Bi%C3%AAn%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Ng%E1%BB%8Dc+L%C3%A2m%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%2239%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214266443%22%2C%22price%22%3A%22149000%22%2C%22name%22%3A%22%C4%90ai+Ch%E1%BB%91ng+G%C3%B9+L%C6%B0ng+Th%C3%B4ng+Minh+J5000%22%7D%5D%7D
+----------
+
+
+----------
+1704440921
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2247%22%2C%22customerName%22%3A%22Hi%E1%BA%BFu+Test+API+SSC%22%2C%22customerMobile%22%3A%220981164769%22%2C%22customerEmail%22%3A%22hieudv%40finalstyle.com%22%2C%22customerAddress%22%3A%22B%C3%A3i+Ch%C3%A1y%2C+TP.+H%E1%BA%A1+Long%2C+Qu%E1%BA%A3ng+Ninh%22%2C%22customerCityName%22%3A%22B%C3%A0+R%E1%BB%8Ba+-+V%C5%A9ng+T%C3%A0u%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+V%C5%A9ng+T%C3%A0u%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+1%22%2C%22description%22%3A%22Hi%E1%BA%BFu+Test+API+SSC%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22id%22%3A%221639%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%22CB000030%22%2C%22price%22%3A%22539100%22%2C%22name%22%3A%22Combo+Tai+nghe+AP+2+h%E1%BB%95+v%E1%BA%B1n+8h+%2B+%E1%BB%90p%22%7D%5D%7D
+----------
+
+
+----------
+1704449186
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=40772448
+----------
+
+
+----------
+1704449186
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=40772447
+----------
+
+
+----------
+1704449187
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=40772446
+----------
+
+
+----------
+1704449187
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=40772445
+----------
+
+
+----------
+1704449188
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=40772444
+----------
+
+
+----------
+1704590451
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2248%22%2C%22customerName%22%3A%22c%C6%B0%E1%BB%9Dng%22%2C%22customerMobile%22%3A%220896463605%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22575+kim+m%C3%A3%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+Ba+%C4%90%C3%ACnh%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Ng%E1%BB%8Dc+Kh%C3%A1nh%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772465%22%2C%22id%22%3A%2266%22%2C%22quantity%22%3A2%2C%22code%22%3A%222000214265248%22%2C%22price%22%3A%22550000%22%2C%22name%22%3A%22%C4%90%E1%BB%93ng+h%E1%BB%93+th%C3%B4ng+minh+V7+Cyber%22%7D%5D%7D
+----------
+
+
+----------
+1704702839
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2249%22%2C%22customerName%22%3A%22c%C6%B0%E1%BB%9Dng%22%2C%22customerMobile%22%3A%220896463605%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22575+kim+m%C3%A3%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+Ba+%C4%90%C3%ACnh%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Ng%E1%BB%8Dc+Kh%C3%A1nh%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772278%22%2C%22id%22%3A%22150%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214263503%22%2C%22price%22%3A%22139000%22%2C%22name%22%3A%22Camera+mini+kh%C3%B4ng+d%C3%A2y+A9%22%7D%5D%7D
+----------
+
+
+----------
+1704717564
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2250%22%2C%22customerName%22%3A%22%C4%91o%C3%A0n+th%C3%A1i+s%C6%A1n%22%2C%22customerMobile%22%3A%220769961826%22%2C%22customerEmail%22%3A%22thanhphodaqui%40gmail.com%22%2C%22customerAddress%22%3A%22S1.03+VINHOME+GRANDPARK%22%2C%22customerCityName%22%3A%22H%E1%BB%93+Ch%C3%AD+Minh%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+Th%E1%BB%A7+%C4%90%E1%BB%A9c%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Long+Th%E1%BA%A1nh+M%E1%BB%B9%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2238846648%22%2C%22id%22%3A%221529%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000204046765%22%2C%22price%22%3A%22499000%22%2C%22name%22%3A%22PIN+D%E1%BB%B0+PH%C3%92NG+VELASBOOST+DYNAMIC+2+%2820K+MAH%29%22%7D%5D%7D
+----------
+
+
+----------
+1704871275
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2251%22%2C%22customerName%22%3A%22hieudong%22%2C%22customerMobile%22%3A%220981164763%22%2C%22customerEmail%22%3A%22hieudv%40finalstyle.com%22%2C%22customerAddress%22%3A%22Bamboo+Airways+Tower%2C+No.+265%2C+Cau+Giay+Street%2C+Cau+Giay%2C+Hanoi%2C+Viet+Nam..%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Giang%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+B%E1%BA%AFc+Giang%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Th%E1%BB%8D+X%C6%B0%C6%A1ng%22%2C%22description%22%3A%22test+h%E1%BB%A7y+gi%C3%BAp+e+%E1%BA%A1%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772632%22%2C%22id%22%3A%2216%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214266726%22%2C%22price%22%3A%2299000%22%2C%22name%22%3A%22Tai+d%C3%A2y+JBL+C100SI%22%7D%5D%7D
+----------
+
+
+----------
+1704946412
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2252%22%2C%22customerName%22%3A%22LevNga%22%2C%22customerMobile%22%3A%220123456789%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22s%E1%BB%91+35%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+C%E1%BA%A7u+Gi%E1%BA%A5y%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Mai+D%E1%BB%8Bch%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772621%22%2C%22id%22%3A%2224%22%2C%22quantity%22%3A%222%22%2C%22code%22%3A%222000214266627%22%2C%22price%22%3A%22250000%22%2C%22name%22%3A%22Tai+nghe+bluetooth+Ugreen+Hitune+T2+WS105%22%7D%5D%7D
+----------
+
+
+----------
+1704946664
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2253%22%2C%22customerName%22%3A%22LevNga%22%2C%22customerMobile%22%3A%220123456789%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22s%E1%BB%91+35%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+C%E1%BA%A7u+Gi%E1%BA%A5y%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Mai+D%E1%BB%8Bch%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772468%22%2C%22id%22%3A%2265%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214265279%22%2C%22price%22%3A%22479000%22%2C%22name%22%3A%22%C4%90%E1%BB%93ng+h%E1%BB%93+th%C3%B4ng+minh+V3%22%7D%5D%7D
+----------
+
+
+----------
+1704957608
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2254%22%2C%22customerName%22%3A%22%C4%90inh+Anh+Tu%E1%BA%A5n%22%2C%22customerMobile%22%3A%220971616170%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22Th%C3%B4n+Ng%C3%B4+X%C3%A1%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Ninh%22%2C%22customerDistrictName%22%3A%22Huy%E1%BB%87n+Y%C3%AAn+Phong%22%2C%22customerWardLocationName%22%3A%22X%C3%A3+Long+Ch%C3%A2u%22%2C%22description%22%3A%22Giao+h%C3%A0ng+ngo%C3%A0i+gi%E1%BB%9D+h%C3%A0nh+ch%C3%ADnh%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240771756%22%2C%22id%22%3A%22420%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214258813%22%2C%22price%22%3A%2289000%22%2C%22name%22%3A%22M%C3%A1y+h%C3%BAt+b%E1%BB%A5i+c%E1%BA%A7m+tay+M2037%22%7D%5D%7D
+----------
+
+
+----------
+1704963568
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2255%22%2C%22customerName%22%3A%22Le+Nga%22%2C%22customerMobile%22%3A%220123456789%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22s%E1%BB%91+35%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+C%E1%BA%A7u+Gi%E1%BA%A5y%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Mai+D%E1%BB%8Bch%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772632%22%2C%22id%22%3A%2216%22%2C%22quantity%22%3A%222%22%2C%22code%22%3A%222000214266726%22%2C%22price%22%3A%2299000%22%2C%22name%22%3A%22Tai+d%C3%A2y+JBL+C100SI%22%7D%2C%7B%22idNhanh%22%3A%2240772624%22%2C%22id%22%3A%2221%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214266658%22%2C%22price%22%3A%22250000%22%2C%22name%22%3A%22Tai+nghe+bluetooth+Ugreen+Hitune+T2+WS105%22%7D%2C%7B%22idNhanh%22%3A%2240772621%22%2C%22id%22%3A%2224%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214266627%22%2C%22price%22%3A%22250000%22%2C%22name%22%3A%22Tai+nghe+bluetooth+Ugreen+Hitune+T2+WS105%22%7D%5D%7D
+----------
+
+
+----------
+1705034110
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2256%22%2C%22customerName%22%3A%22C%C6%B0%E1%BB%9Dng%22%2C%22customerMobile%22%3A%220896463605%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22575+kim+m%C3%A3%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+Ba+%C4%90%C3%ACnh%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Ng%E1%BB%8Dc+Kh%C3%A1nh%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772353%22%2C%22id%22%3A%22103%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214264241%22%2C%22price%22%3A%2249000%22%2C%22name%22%3A%22C%C3%A1p+C+to+C+AAAA+1m%22%7D%5D%7D
+----------
+
+
+----------
+1705046048
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=40771756
+----------
+
+
+----------
+1705115116
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%22M36E2DV%22%2C%22customerName%22%3A%22hieudong1213123%22%2C%22customerMobile%22%3A%220981164763%22%2C%22customerEmail%22%3A%22hieudv%40finalstyle.com%22%2C%22customerAddress%22%3A%22Bamboo+Airways+Tower%2C+No.+265%2C+Cau+Giay+Street%2C+Cau+Giay%2C+Hanoi%2C+Viet+Nam..%22%2C%22customerCityName%22%3A%22B%E1%BA%AFc+Giang%22%2C%22customerDistrictName%22%3A%22Th%C3%A0nh+ph%E1%BB%91+B%E1%BA%AFc+Giang%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+Th%E1%BB%8D+X%C6%B0%C6%A1ng%22%2C%22description%22%3A%22test%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772624%22%2C%22id%22%3A%2221%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214266658%22%2C%22price%22%3A%22250000%22%2C%22name%22%3A%22Tai+nghe+bluetooth+Ugreen+Hitune+T2+WS105%22%7D%5D%7D
+----------
+
+
+----------
+1705291249
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%2275B6GPW%22%2C%22customerName%22%3A%22Levu%22%2C%22customerMobile%22%3A%220378301301%22%2C%22customerEmail%22%3A%22lehaivu01%40gmail.com%22%2C%22customerAddress%22%3A%22S%E1%BB%91+27+Ng%C3%B5+54+Nguy%E1%BB%85n+Ch%C3%AD+Thanh%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+%C4%90%E1%BB%91ng+%C4%90a%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+L%C3%A1ng+Th%C6%B0%E1%BB%A3ng%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772315%22%2C%22id%22%3A%22136%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214263862%22%2C%22price%22%3A%229900%22%2C%22name%22%3A%22%C3%81o+m%C6%B0a+mini+06%22%7D%5D%7D
+----------
+
+
+----------
+1705295904
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%227TH2EA8%22%2C%22customerName%22%3A%22Levu%22%2C%22customerMobile%22%3A%220378301301%22%2C%22customerEmail%22%3A%22lehaivu01%40gmail.com%22%2C%22customerAddress%22%3A%22S%E1%BB%91+27+Ng%C3%B5+54+Nguy%E1%BB%85n+Ch%C3%AD+Thanh%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+%C4%90%E1%BB%91ng+%C4%90a%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+L%C3%A1ng+Th%C6%B0%E1%BB%A3ng%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772315%22%2C%22id%22%3A%22136%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214263862%22%2C%22price%22%3A%229900%22%2C%22name%22%3A%22%C3%81o+m%C6%B0a+mini+06%22%7D%5D%7D
+----------
+
+
+----------
+1705480478
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%22CZPFAZP%22%2C%22customerName%22%3A%22L%C3%AA+V%C5%A9%22%2C%22customerMobile%22%3A%220378301301%22%2C%22customerEmail%22%3A%22%22%2C%22customerAddress%22%3A%22S%E1%BB%91+27+Ng%C3%B5+54+Nguy%E1%BB%85n+Ch%C3%AD+Thanh%22%2C%22customerCityName%22%3A%22H%C3%A0+N%E1%BB%99i%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+%C4%90%E1%BB%91ng+%C4%90a%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+L%C3%A1ng+Th%C6%B0%E1%BB%A3ng%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2240772315%22%2C%22id%22%3A%22136%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%222000214263862%22%2C%22price%22%3A%229900%22%2C%22name%22%3A%22%C3%81o+m%C6%B0a+mini+06%22%7D%5D%7D
+----------
+
+
+----------
+1705651951
+Call API
+version=2.0&secretKey=ZNUV9UcsvTk2s1FyWAxLoQzLhoMp6IJ8xYHonFIv2r4SMuLKlqr81sktpuA73YSHYUqHg8uSuvFWvTo4Ietlu0seXa17jdjC9c3tRILqNQUdekNcdtnmDX04TB46gM7y&businessId=119888&accessToken=YAhvXN9bmuw9jS77MNBdaXIdK1cKnzxUrTJVEwArzljYribtVYgCpjrzPEQE4tzuKJFaJ4tQWaLaHYLQYAN0MpfKIzJEun9WoXNZOYbBig0MS51bFm0qD0hTbQ5C16tlcfEnr61GsOJQ92BqqiTVrk0m5UIAnqgsSxGlWLcFmw&appId=73980&data=%7B%22id%22%3A%22P4BBXSE%22%2C%22customerName%22%3A%22L%C3%AA+Nga%22%2C%22customerMobile%22%3A%220335188501%22%2C%22customerEmail%22%3A%22ngoc%40gmail.com%22%2C%22customerAddress%22%3A%22hjfjr%22%2C%22customerCityName%22%3A%22H%E1%BA%A3i+Ph%C3%B2ng%22%2C%22customerDistrictName%22%3A%22Qu%E1%BA%ADn+Ng%C3%B4+Quy%E1%BB%81n%22%2C%22customerWardLocationName%22%3A%22Ph%C6%B0%E1%BB%9Dng+M%C3%A1y+T%C6%A1%22%2C%22description%22%3A%22%22%2C%22status%22%3A%22New%22%2C%22carrierId%22%3A5%2C%22customerShipFee%22%3A30000%2C%22paymentMethod%22%3A%22COD%22%2C%22productList%22%3A%5B%7B%22idNhanh%22%3A%2239060801%22%2C%22id%22%3A%221429%22%2C%22quantity%22%3A%221%22%2C%22code%22%3A%226973238310040%22%2C%22price%22%3A%22279000%22%2C%22name%22%3A%22Gi%C3%A0y+Xiaomi+Freetie+%C4%90en%22%7D%5D%7D
+----------
+
+
