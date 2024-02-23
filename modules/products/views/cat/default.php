@@ -13,7 +13,7 @@ $tmpl->addScript('category', 'modules/products/assets/js');
                 <span><?php echo FSText::_('Bộ lọc') ?></span>
                 <i class="fa-solid fa-filter"></i> 
             </a> 
-            <div class="section-item bg-white ">
+            <!-- <div class="section-item bg-white ">
                 <div class="filter-group">
                     <div class="filter-title"><?php echo $categoriesWrap[0]->name ?></div>
                     <?php foreach ($catList as $item) { ?>
@@ -76,7 +76,7 @@ $tmpl->addScript('category', 'modules/products/assets/js');
                         </div>
                     <?php } ?>
                 <?php } ?>
-            </div>
+            </div> -->
 
         </div>
 

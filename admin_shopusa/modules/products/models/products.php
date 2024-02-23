@@ -34,17 +34,20 @@ class ProductsModelsProducts extends FSModels
         $this->arr_img_paths_unbox = array(array('large', 800, 600, 'resize_image_fix_height_webp'), array('resized', 150, 112, 'resize_image_fix_height_webp'));
         //        $this->arr_img_paths_unbox = array('resized', 150, 112, 'resize_image_fix_height_webp');
         $this->arr_img_paths_sub = array(
-            array('larges', 440, 440, 'resize_image_fix_height_webp'),
+            array('larges', 616, 616, 'resize_image_fix_height_webp'),
             array('resized', 200, 200, 'resize_image_fix_height_webp'),
             array('large', 240, 240, 'resize_image_fix_height_webp'),
-            array('tiny', 60, 60, 'resize_image_fix_height_webp'),
+            array('tiny', 120, 120, 'resize_image_fix_height_webp'),
             array('small', 112, 112, 'resize_image_fix_height_webp')
         );
+        
+        // 192.200.240.112,616,120,88,231
+
         $this->arr_img_paths_other = array(
-            array('larges', 440, 440, 'resize_image_fix_height_webp'),
-            array('resized', 220, 220, 'resize_image_fix_height_webp'),
+            array('larges', 616, 616, 'resize_image_fix_height_webp'),
+            array('resized', 200, 200, 'resize_image_fix_height_webp'),
             array('large', 240, 240, 'resize_image_fix_height_webp'),
-            array('tiny', 60, 60, 'resize_image_fix_height_webp'),
+            array('tiny',120, 120, 'resize_image_fix_height_webp'),
             array('small', 112, 112, 'resize_image_fix_height_webp')
         );
         $this->arr_img_paths_landing = array(

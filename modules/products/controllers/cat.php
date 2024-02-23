@@ -41,7 +41,7 @@ class ProductsControllersCat extends FSControllers
         $query = $model->setQueryBody($cat->id, $getPrice, $getFilter, $getSort);
         $products = $model->getProducts($query);
         $products = $this->nomalizeProducts($products);
-        
+    
         $total = $model->getTotal($query);    
 
         $categoriesWrap = $model->getCategoriesWrap($cat->list_parents);
@@ -55,20 +55,21 @@ class ProductsControllersCat extends FSControllers
         $canonical = FSRoute::_("index.php?module=products&view=cat&code=$cat->alias&id=$cat->id");
         $tmpl->assign('breadcrumbs', $breadcrumbs);
         $tmpl->assign('canonical', $canonical);
-        $tmpl->assign('og_image', $cat->og_image ? URL_ROOT . $cat->og_image : URL_ROOT . $products[0]->image);
-        $tmpl->addTitle($cat->seo_title ? $cat->seo_title : $cat->name . ' giá tốt tại vuabanlo.vn');
-        $tmpl->addMetakey($cat->seo_keyword ? $cat->seo_keyword : $cat->name . ' giá tốt tại vuabanlo.vn');
-        if ($cat->seo_description) {
-            $tmpl->addMetades($cat->seo_description);
-        } else {
-            $str_meta_des = 'Mua ';
-            for ($i = 0; $i < 5; $i++) {
-                $item_des = $products[$i];
-                $str_meta_des .=  $item_des->name . ', ';
-            }
-            $str_meta_des .= '... với nhiều ưu đãi hấp dẫn tại Lỗ Vũ';
-            $tmpl->addMetades($str_meta_des);
-        }
+
+        // $tmpl->assign('og_image', $cat->og_image ? URL_ROOT . $cat->og_image : URL_ROOT . $products[0]->image);
+        $tmpl->addTitle($cat->seo_title ? $cat->seo_title : $cat->name . ' Shop USA');
+        $tmpl->addMetakey($cat->seo_keyword ? $cat->seo_keyword : $cat->name . ' Shop USA');
+        // if ($cat->seo_description) {
+        //     $tmpl->addMetades($cat->seo_description);
+        // } else {
+        //     $str_meta_des = 'Mua ';
+        //     for ($i = 0; $i < 5; $i++) {
+        //         $item_des = $products[$i];
+        //         $str_meta_des .=  $item_des->name . ', ';
+        //     }
+        //     $str_meta_des .= '... với nhiều ưu đãi hấp dẫn tại Lỗ Vũ';
+        //     $tmpl->addMetades($str_meta_des);
+        // }
 
         // danh sách lọc
         $catList = $model->getCatList($cat->id, $cat->level, $cat->parent_id);
