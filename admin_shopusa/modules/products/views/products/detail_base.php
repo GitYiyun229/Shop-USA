@@ -17,7 +17,7 @@ $arr_unitDiscount = array(
 
 $this->dt_form_begin(1, 2, FSText::_('Thông tin chung'), '', 1, 'col-md-8 fl-left editor');
     // TemplateHelper::dt_edit_text(FSText:: _('Ordering'), 'ordering', @$data->ordering, @$maxOrdering, '', '', 0, '', '');
-    TemplateHelper::dt_edit_text(FSText::_('Nhanh ID'), 'nhanh_id', @$data->nhanh_id, '', 255, 1, 0, '', '', 'col-md-3 left', 'col-md-9');
+    // TemplateHelper::dt_edit_text(FSText::_('Nhanh ID'), 'nhanh_id', @$data->nhanh_id, '', 255, 1, 0, '', '', 'col-md-3 left', 'col-md-9');
     TemplateHelper::dt_edit_text(FSText::_('Name'), 'name', @$data->name, '', 255, 1, 0, '', '', 'col-md-3 left', 'col-md-9');
     TemplateHelper::dt_edit_text(FSText::_('Alias'), 'alias', @$data->alias, '', 255, 1, 0, '', '', 'col-md-3 left', 'col-md-9');
     TemplateHelper::dt_edit_text(FSText::_('Diễn giải phụ'), 'subtitle', @$data->subtitle, '', 255, 1, 0, '', '', 'col-md-3 left', 'col-md-9', '', '', 1, '');
@@ -60,14 +60,14 @@ $this->dt_form_begin(1, 2, FSText::_('Giá'), 'fa-usd', 1, 'col-md-4 fl-left');
 $this->dt_form_end_col(); 
 
 $this->dt_form_begin(1, 2, FSText::_('Kích hoạt'), 'fa-unlock', 1, 'col-md-4 fl-left');
-    TemplateHelper::dt_checkbox(FSText::_('COMBO'), 'combo', @$data->combo, 1, '', '', '', 'col-md-5 left', 'col-md-7');
+    // TemplateHelper::dt_checkbox(FSText::_('COMBO'), 'combo', @$data->combo, 1, '', '', '', 'col-md-5 left', 'col-md-7');
     TemplateHelper::dt_checkbox(FSText::_('Published'), 'published', @$data->published, 1, '', '', '', 'col-md-5 left', 'col-md-7');
     // TemplateHelper::dt_checkbox(FSText::_('Quản lý tồn kho'), 'is_stocking', @$data->is_stocking, 0, [1 => 'Không', 0 => 'Có'], '', '(Không - luôn sẵn hàng, Có đồng bộ từ ERP)', 'col-md-5 left', 'col-md-7 stock');
     TemplateHelper::dt_checkbox(FSText::_('Sản phẩm mới'), 'is_new', @$data->is_new, 1, '', '', '', 'col-md-5 left', 'col-md-7', 1, '');
     TemplateHelper::dt_checkbox(FSText::_('Bán chạy'), 'is_sell', @$data->is_sell, 0, '', '', '', 'col-md-5 left', 'col-md-7', '1', '');
     // TemplateHelper::dt_checkbox(FSText::_('Độc quyền'), 'is_monopoly', @$data->is_monopoly, 0, '', '', '', 'col-md-5 left', 'col-md-7', '1', '');
     // TemplateHelper::dt_checkbox(FSText::_('Trả góp 0%'), 'is_installment', @$data->is_installment, 0, '', '', '', 'col-md-5 left', 'col-md-7', '1', '');
-    TemplateHelper::dt_checkbox(FSText::_('Quà tặng'), 'is_gift', @$data->is_gift, 0, '', '', '', 'col-md-5 left', 'col-md-7', 1, '');
+    // TemplateHelper::dt_checkbox(FSText::_('Quà tặng'), 'is_gift', @$data->is_gift, 0, '', '', '', 'col-md-5 left', 'col-md-7', 1, '');
     TemplateHelper::dt_checkbox(FSText::_('Hiển thị trang chủ'), 'show_in_home', @$data->show_in_home, 0, '', '', '', 'col-md-5 left', 'col-md-7');
     // TemplateHelper::dt_checkbox(FSText::_('Sapo TSKT'), 'checksapo', @$data->checksapo, 0, '', '', '', 'col-md-5 left', 'col-md-7', 1, 'Áp dụng cho thông số dạng bảng, convert từ web cũ. Chọn `Không` sau khi đã nhập TSKT theo form mới');
     // TemplateHelper::dt_checkbox(FSText::_('Google Merchant'), 'gs', @$data->gs, 0, '', '', '', 'col-md-5 left', 'col-md-7');

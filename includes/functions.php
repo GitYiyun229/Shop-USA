@@ -670,7 +670,7 @@ function format_money($price, $current = '₫', $text = 'Liên hệ')
 {
     if (!$price)
         return $text;
-    return  number_format($price, 0, '.', '.')."<span class='fw-bold'>$current</span>";
+    return  number_format($price, 0, '.', '.').$current;
 }
 
 function format_money_0($price, $current = '₫', $text = 'Liên hệ')

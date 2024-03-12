@@ -136,14 +136,14 @@ class ProductsControllersCart extends FSControllers
         $itemNew = [
             // 'nhanh_id' => $id_sub ? $sub->nhanh_id : $product->nhanh_id,
             'product_id' => $id,
-            // 'product_name' => $product->name,
+            'product_name' => $product->name,
             'sub_id' => $id_sub,
-            // 'sub_name' => $id_sub ? $sub->name : '',
+            'sub_name' => $id_sub ? $sub->name : '',
             'quantity' => $quantity,
-            // 'price' => $price,
-            // 'price_origin' => $price_origin,
+            'price' => $price,
+            'price_origin' => $price_origin,
             // 'price_old' => $price_old && $price_old > $price ? $price_old : 0,
-            // 'image' => $image,
+            'image' => $image,
             // 'code' => $id_sub ? $sub->code : $product->code,
             // 'url' => FSRoute::_("index.php?module=products&view=product&code=$product->alias&id=$id")
         ];

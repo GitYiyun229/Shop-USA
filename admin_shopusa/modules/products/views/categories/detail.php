@@ -151,7 +151,7 @@ $this -> dt_form_begin(1,4,$title.' '.FSText::_('Categories'),'',1,'col-md-12',1
         <li><a href="#fragment-1"><span><?php echo FSText::_("Trường cơ bản"); ?></span></a></li>
         <!-- <li><a href="#fragment-3"><span><?php //echo FSText::_("Nội dung"); ?></span></a></li> -->
         <li><a href="#fragment-7"><span><?php echo FSText::_("Thứ tự SP"); ?></span></a></li>
-        <li><a href="#fragment-2"><span><?php echo FSText::_("Bộ lọc"); ?></span></a></li>
+        <!-- <li><a href="#fragment-2"><span><?php echo FSText::_("Bộ lọc"); ?></span></a></li> -->
         <li><a href="#fragment-4"><span><?php echo FSText::_("SEO"); ?></span></a></li>
         <!-- <li><a href="#fragment-5"><span><?php //echo FSText::_("Tin liên quan"); ?></span></a></li> -->
         <!-- <li><a href="#fragment-6"><span><?php //echo FSText::_("Landing Page"); ?></span></a></li> -->
@@ -164,7 +164,7 @@ $this -> dt_form_begin(1,4,$title.' '.FSText::_('Categories'),'',1,'col-md-12',1
         TemplateHelper::dt_edit_text(FSText :: _('Alias'),'alias',@$data -> alias,'',60,1,0,FSText::_("Can auto generate"));
         TemplateHelper::dt_edit_selectbox(FSText::_('Parent'),'parent_id',@$data -> parent_id,'',$categories,$field_value = 'id', $field_label='treename',$size = 1,0,1);
         // TemplateHelper::dt_edit_selectbox(FSText::_('Danh Mục Cha Phụ'),'multi_parent',@$data -> multi_parent,'',$categories,$field_value = 'id', $field_label='treename',$size = 1,1,1);
-        TemplateHelper::dt_edit_selectbox(FSText::_('Bảng thông số kỹ thuật'),'tablename',@$data -> tablename,'fs_products',$tables,$field_value = 'table_name', $field_label='table_name',$size = 1,0,1);
+        // TemplateHelper::dt_edit_selectbox(FSText::_('Bảng thông số kỹ thuật'),'tablename',@$data -> tablename,'fs_products',$tables,$field_value = 'table_name', $field_label='table_name',$size = 1,0,1);
         TemplateHelper::dt_checkbox(FSText::_('Published'),'published',@$data -> published,1);
         // TemplateHelper::dt_checkbox(FSText::_('Danh mục phụ kiện?'),'is_accessories',@$data -> is_accessories,0);
         TemplateHelper::dt_checkbox(FSText::_('Hiển thị trang chủ'),'show_in_homepage',@$data -> show_in_homepage,0);
@@ -175,21 +175,21 @@ $this -> dt_form_begin(1,4,$title.' '.FSText::_('Categories'),'',1,'col-md-12',1
         TemplateHelper::dt_edit_text(FSText :: _('Ordering'),'ordering',@$data -> ordering,@$maxOrdering,'20');
         // TemplateHelper::dt_edit_image(FSText :: _('Image'),'image',URL_ROOT.@$data->image,'','','Ảnh đại diện khi vào Danh mục. Lưu ý ảnh vuông');
         TemplateHelper::dt_edit_image(FSText :: _('Icon'),'icon',str_replace('/original/','/original/',URL_ROOT.@$data->icon));
-        TemplateHelper::dt_edit_image(FSText :: _('Icon Hover'),'icon_hover',str_replace('/original/','/original/',URL_ROOT.@$data->icon_hover));
+        // TemplateHelper::dt_edit_image(FSText :: _('Icon Hover'),'icon_hover',str_replace('/original/','/original/',URL_ROOT.@$data->icon_hover));
         // TemplateHelper::dt_edit_image(FSText :: _('Logo Sản phẩm'),'logo',str_replace('/original/','/original/',URL_ROOT.@$data->logo));
         // TemplateHelper::dt_edit_image(FSText :: _('Icon'),'icon',str_replace('/original/','/small/',URL_ROOT.@$data->icon));
         // TemplateHelper::dt_edit_text(FSText :: _('Svg'),'svg',@$data -> svg,'','','4');
         ?>
     </div>
 
-    <div id="fragment-2">
-        <?php
+    <!-- <div id="fragment-2">
+        </?php
         echo '<div style="margin-bottom: 15px">';
         TemplateHelper::dt_edit_selectbox(FSText::_('Khoảng giá'), 'price', @$data->price, 0, $range_price, $field_value = 'id', $field_label = 'treename', $size = 1, 1,0,'','','','col-md-12 left','col-md-12');
         echo '</div>';
         // require_once ('detail_extend.php');
         ?>
-    </div>
+    </div> -->
 
     <div id="fragment-3">
         <?php

@@ -830,12 +830,11 @@ class Controllers
 		$this->model->delete_file();
 	}
 
-	public function getAjaxSearchProduct()
+	public function getAjaxSearchProduct_()
 	{
 		$result = [];
         $model = $this->model;
-        $list = $model->getAjaxSearchProduct();
-		// $list = $this->nomalizeProducts($list);
+        $list = $model->getAjaxSearchProduct_();
 
         if (!empty($list)) {
             foreach ($list as $item) {
@@ -857,67 +856,25 @@ class Controllers
 		exit;
 	}
 
-	public function nomalizeProducts($products)
+	public function getAjaxSearchProduct()
 	{
-		if (!empty($products)) {
-            $arrProductId = [];
-            $timeNow = date('Y-m-d H:i:s');
-
-            foreach ($products as $item) {
-                $arrProductId[] = $item->id;
-            }
-
-			$discount = 0;
-    
-            $flashSale = $this->model->getSaleProducts(implode(',', $arrProductId), $timeNow);
-
-			$gift = 0;
-
-            foreach ($products as $item) {
-				$item = $this->nomalizeProduct($item, $timeNow, $flashSale);
+		$list = $this->model->getAjaxSearchProduct();
+		if (!empty($list)) {
+            foreach ($list as $item) {
+				$item->image = URL_ROOT . str_replace(['/original/', '.png', '.jpg'], ['/resized/', '.webp', '.webp'], $item->image);
+				$item->href = FSRoute::_("index.php?module=products&view=product&code=$item->alias&id=$item->id");
+				$item->price = format_money($item->price);
+				$item->quantity = $item->quantity ?: 0;
             }
         }
-
-		return $products;
+		echo json_encode($list);
+		exit;
 	}
 
-	public function nomalizeProduct($item, $timeNow, $flashSale)
+	public function getAjaxSearchMembers()
 	{
-		$item->price_public = $item->price;
-		$item->price_old = $item->price_old ?: $item->price;
-		$item->percent = $item->price_public ? 100 - round($item->price_public / $item->price_old * 100, 0) : 0;
-		$item->have_flashsale = 0;
-		$item->total_flashsale = 0;
-		$item->ordered_flashsale = 0;
-
-		if (!empty($flashSale) && (($timeNow <= $item->promotion_end_time)) && $item->price_public) {
-			if (is_array($flashSale)) {
-				foreach ($flashSale as $sale) {
-					if ($sale->product_id == $item->id) {
-						$saleInfo = $sale;
-						break;
-					}
-				}
-			} else {
-				$saleInfo = $flashSale;
-			}
-
-			if ($saleInfo) {
-				$item->have_flashsale = 1;
-				$item->total_flashsale = $saleInfo->total;
-				$item->ordered_flashsale = $saleInfo->ordered;
-
-				if ($saleInfo->discount_unit == 1) {
-					$discount = $saleInfo->discount ?: 0;
-					$item->price_public = $item->price_public - $discount;
-					$item->percent = round(100 - $item->price_public * 100 / $item->price_old, 0);
-				} else {
-					$item->percent = $saleInfo->discount;
-					$item->price_public = $item->price_public - $saleInfo->discount * $item->price_public / 100;
-				}
-			}
-		}
-
-		return $item;
+		$list = $this->model->getAjaxSearchMembers();
+		echo json_encode($list);
+		exit;
 	}
 }

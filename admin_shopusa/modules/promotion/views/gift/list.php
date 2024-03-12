@@ -29,4 +29,4 @@ $list_config[] = array('title' => 'Bắt đầu', 'field' => 'date_start', 'orde
 $list_config[] = array('title' => 'Kết thúc', 'field' => 'date_end', 'ordering' => 1, 'type' => 'datetime');
 $list_config[] = array('title' => 'Id', 'field' => 'id', 'ordering' => 1, 'type' => 'text');
 
-TemplateHelper::genarate_form_liting($this->module, $this->view, $list, $fitler_config, $list_config, $sort_field, $sort_direct, $pagination);
+TemplateHelper::genarate_form_liting($this->module, $this->view, $list, $fitler_config, $list_config, $this->sort_field, $this->sort_direct, $pagination);

@@ -13,31 +13,33 @@ $tmpl->addScript('default', 'modules/home/assets/js');
 
         <div class="section-top-center">
             <?php echo $tmpl->load_direct_blocks('banners', ['category_id' => '1', 'style' => 'slide']); ?>
-
-
         </div>
 
 
     </div>
     <div class="container">
-        <div class="section-top mb-3 mt-3">
+        <div class="section-flash-sale mb-5 mt-2">
+            <div class="title-flash-sale d-flex flex-wrap align-items-center">
+                <h3 class="title-categories mb-3 mt-3 fs-sale">
+                    <p class="fst-italic"><?= FSText::_('Flash') ?><span class="pl-3"><?= FSText::_('Sale') ?></span> </p>
+                </h3>
+                <div class="time_sales fs-sale">
+                    <p class="tile time_count" data-timeend="Mar 31 2024 23:00:00" data-id="163">Kết thúc sau:
+                        <span id="demo163"><span class="fw-bold number_">27</span>:<span class="fw-bold number_">09</span>:
+                            <span class="fw-bold number_">00</span>:<span class="fw-bold number_">19</span></span>
+
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <div class="section-top mb-5 mt-3">
             <h3 class="title-categories mb-3 mt-3"><?= FSText::_('Shop by categories') ?></h3>
             <?php echo $tmpl->load_direct_blocks('product_categories', ['style' => 'view_menu_categories_home']); ?>
         </div>
+
         <div class="section-product bg-white mb-3">
-            <div class="mb-2 section-title"><?php echo FSText::_('Gợi ý hôm nay') ?></div>
-            <div class="categories d-flex align-items-center flex-wrap justify-content-between gap-3" role="tablist">
-                <a class="text-title active" data-bs-toggle="tab" data-bs-target="#nav-0" type="button" role="tab" aria-controls="nav-0" aria-selected="true">
-                    <?php echo FSText::_('Gợi ý phổ biến') ?>
-                </a>
-                <?php foreach ($categories as $item) {
-                    $link = FSRoute::_("index.php?module=products&view=cat&code=$item->alias&id=$item->id");
-                ?>
-                    <a title="<?php echo $item->name ?>" data-bs-toggle="tab" data-bs-target="#nav-<?php echo $item->id ?>" type="button" role="tab" aria-controls="nav-<?php echo $item->id ?>" aria-selected="false">
-                        <?php echo $item->name ?>
-                    </a>
-                <?php } ?>
-            </div>
+            <div class="mb-4 section-title"><?php echo FSText::_('Gợi ý cho bạn') ?></div>
 
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="nav-0" role="tabpanel" aria-labelledby="nav-0-tab" tabindex="0">
@@ -60,7 +62,5 @@ $tmpl->addScript('default', 'modules/home/assets/js');
                 <?php } ?>
             </div>
         </div>
-
-       
     </div>
 </div>

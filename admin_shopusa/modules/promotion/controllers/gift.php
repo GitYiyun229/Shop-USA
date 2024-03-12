@@ -4,62 +4,73 @@ class PromotionControllersGift extends Controllers
 {
     function __construct()
     {
-        $this->view = 'gift';
         parent::__construct();
+        $this->view = 'gift';        
     }
 
     function display()
     {
         parent::display();
-        $sort_field = $this->sort_field;
-        $sort_direct = $this->sort_direct;
-
-        $model = $this->model;
-        $list = $model->get_data('');
-
-        $pagination = $model->getPagination();
+        $list = $this->model->get_data(''); 
+        $pagination = $this->model->getPagination();
         include 'modules/' . $this->module . '/views/' . $this->view . '/list.php';
     }
 
     function add()
     {
         $ids = FSInput::get('id', array(), 'array');
-        //        $id = $ids[0];
-        $model = $this->model;
-        $products = $model->get_all_products();
-        $categories = $model->get_categories_tree();
-        $maxOrdering = $model->getMaxOrdering();
-
-        //			$tags_categories = $model->get_tags_categories();
-        //			$data = $model->get_record_by_id($id);
-        // data from fs_news_categories
-
-        //			$promotion_products = $model -> get_promotion_products($data -> id);
+        
+        $model = $this->model; 
+        $categories = $model->get_categories_tree_all();
+       
         include 'modules/' . $this->module . '/views/' . $this->view . '/detail.php';
     }
-
+ 
     function edit()
     {
         $ids = FSInput::get('id', array(), 'array');
         $id = $ids[0];
         $model = $this->model;
-        $categories = $model->get_categories_tree();
-        //			$tags_categories = $model->get_tags_categories();
+        $categories = $model->get_categories_tree_all();
+       
         $data = $model->get_record_by_id($id);
-        $products = $model->get_all_products();
-        $flash_sale = $model->get_flash($id, 'fs_flash_sale');
-        if (@$flash_sale->promotion_products) {
-            $flash_products = $model->get_promotion_products($flash_sale->promotion_products);
+         
+        $products = $this->model->get_records("published = 1 AND id IN ($data->product_id)", "fs_products", "id, name, alias, code, image, price, price_old, quantity, status_prd");
+
+        $giftOther = $this->model->get_exist_gift($data->date_start, $data->date_end, $data->id);
+        $existOther = array_map(function ($item) {
+            return $item->product_id;
+        }, $giftOther);
+
+        $existOther = explode(',', implode(',', $existOther));
+
+        $exist = [...$existOther, ...explode(',', $data->product_id)];
+        $exist = array_filter($exist); 
+        $exist = array_unique($exist);
+
+        $gift = json_decode($data->gift);
+        
+        $gift_id = [];
+        foreach ($gift as $item) {
+            $gift_id[] = $item->gift;
+            $item->giftInfo = explode(',', $item->gift);
         }
-        //        $hot_sale = $model ->get_flash($id,'fs_hot_sale');
-        //        if(@$hot_sale->promotion_products){
-        //            $hot_products = $model -> get_promotion_products($hot_sale -> promotion_products);
-        //        }
 
-        // data from fs_news_categories
+        $gift_id = implode(',', $gift_id);
 
-        //			$promotion_products = $model -> get_promotion_products($data -> promotion_products);
-        //        $promotion_products = $model->get_list_promotion_products($data->promotion_products);
+        $giftInfo = $this->model->get_records("published = 1 AND id IN ($gift_id)", "fs_products", "id, name, alias, code, image, price, price_old, quantity, status_prd");
+        if (!empty($giftInfo)) {
+            foreach ($gift as $item) {
+                foreach ($item->giftInfo as $g => $giftId) {
+                    foreach ($giftInfo as $info) {
+                        if ($giftId == $info->id) {
+                            $item->giftInfo[$g] = $info;
+                        }
+                    }
+                }
+            }
+        }
+         
         include 'modules/' . $this->module . '/views/' . $this->view . '/detail.php';
     } 
 }

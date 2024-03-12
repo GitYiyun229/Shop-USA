@@ -355,11 +355,12 @@ $this->dt_form_end(@$data,1);
 
     $('#search-add').click(function(){
         let html;
-        let totalCurrent = $('.table-record tbody tr').length 
+        // let totalCurrent = $('.table-record tbody tr').length 
 
         $("#productsModal table tbody input[type=checkbox]:checked").each(function(i, item){
             let data = JSON.parse($(this).attr('data'))
-            if (!productId.includes(parseInt(data.id)) && totalCurrent < 100) { 
+            // if (!productId.includes(parseInt(data.id)) && totalCurrent < 100) { 
+            if (!productId.includes(parseInt(data.id))) { 
                 let quantitOption = ``;
                 if (data.quantity) {
                     for (let i = 1; i <= data.quantity; i++) {
@@ -422,7 +423,7 @@ $this->dt_form_end(@$data,1);
                     </tr>
                 `
                 productId.push(parseInt(data.id));
-                totalCurrent ++;
+                // totalCurrent ++;
             }
         })
 
@@ -514,12 +515,12 @@ $this->dt_form_end(@$data,1);
         return text
     }
 
-    $('.add-products').click(function() {
-        if($('.table-record tbody tr').length >= 100) {
-            alert('Tối đa 100 sản phẩm');
-            return false;
-        }
-    })
+    // $('.add-products').click(function() {
+    //     if($('.table-record tbody tr').length >= 100) {
+    //         alert('Tối đa 100 sản phẩm');
+    //         return false;
+    //     }
+    // })
 
     $(document).on('click', '.delete-product', function(e){
         e.preventDefault()

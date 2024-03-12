@@ -14,7 +14,7 @@ $userImage = 'images/user-icon.svg';
 if ($user->userID) {
     $userImage = $user->userInfo->image ?: 'images/user-customer-icon.svg';
 }
-
+$total_money_cart = 0;
 $cart = new FSControllers();
 $cartList = $cart->calculateCartPrice();
 ?>
@@ -81,28 +81,37 @@ $cartList = $cart->calculateCartPrice();
                         </div>
 
                         <div class="cart-hover-body">
-                            <?php if (!empty($cartList)) {
-                                // print_r($cartList)
-                            ?>
-                                <?php foreach ($cartList as $item) { ?>
-                                    <a href="<?php echo $item['url'] ?>" class="cart-hover-item">
-                                        <img src="<?php echo $item['image'] ?>" alt="<?php echo $item['product_name'] ?>" class="img-fluid">
+                            <?php if (!empty($cartList)) { ?>
+                                <?php foreach ($cartList as $item) {
+                                    $total_money_cart +=  $total_money_cart + ($item['price'] * $item['quantity']);
+                                ?>
+                                    <div class="cart-hover-item position-relative">
+                                        <a href="<?php echo $item['url'] ?>" class=""><img src="<?php echo $item['image'] ?>" alt="<?php echo $item['product_name'] ?>" class="img-fluid"></a>
                                         <div>
-                                            <div class="mb-1"><?php echo $item['product_name'] ?></div>
-                                            <div class="sub-name"><?php echo @$item['sub_name'] ?></div>
-                                            <div class="item-price d-flex flex-wrap align-items-center justify-content-between">
-                                                <p><?php echo format_money($item['price']) ?> </p>
-                                                <p><?php echo 'x' . ($item['quantity']) ?></p>
-                                            </div>
+                                            <a href="<?php echo $item['url'] ?>">
+                                                <div class="mb-1"><?php echo $item['product_name'] ?></div>
+                                                <div class="sub-name"><?php echo @$item['sub_name'] ?></div>
+                                                <div class="item-price d-flex flex-wrap align-items-center justify-content-between">
+                                                    <p><?php echo format_money($item['price']) ?>
+                                                        <span class="span-price-origin"><?php echo format_money($item['price_old']) ?></span>
+                                                    </p>
+                                                    <p><?php echo 'x ' . ($item['quantity']) ?></p>
+                                                </div>
+                                            </a>
                                         </div>
-
-                                    </a>
+                                        <a href="" class="delete-cart position-absolute top-0 end-0" data-id="<?php echo $item['product_id'] ?>">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.6201 2.38L2.38013 11.62M2.38013 2.38L11.6201 11.62" stroke="#757575" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 <?php } ?>
                             <?php } ?>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between cart-hover-footer">
-                            <div>Có <b class="cart-text-quantity"><?php echo $totalCart ?></b> sản phẩm</div>
-                            <a href="<?php echo FSRoute::_('index.php?module=products&view=cart') ?>"><?php echo FSText::_('Xem giỏ hàng') ?></a>
+                        <div class=" cart-hover-footer">
+                            <div class="text-tamtinh text-center"><span>Tạm tính</span><b class="cart-text-quantity"><?= format_money($total_money_cart) ?></b></div>
+                            <p class="mt-3 mb-3 text-center">Mã vận chuyển, thuế và giảm giá được tính khi thanh toán.</p>
+                            <a class="text-center" href="<?php echo FSRoute::_('index.php?module=products&view=cart') ?>"><?php echo FSText::_('Thanh toán') ?></a>
                         </div>
                     </div>
                 </div>

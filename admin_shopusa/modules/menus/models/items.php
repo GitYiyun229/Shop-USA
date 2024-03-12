@@ -293,9 +293,9 @@
 			// print_r($sql);die;
 			$rows = $db->affected_rows($sql);
 
-			$memcache = new Memcache();
-            $memcache->addServer('127.0.0.1', 11211);
-            $memcache->flush();
+			// $memcache = new Memcache();
+            // $memcache->addServer('127.0.0.1', 11211);
+            // $memcache->flush();
 
 			if ($rows) {
 				return $id;

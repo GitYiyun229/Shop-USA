@@ -1,0 +1,2165 @@
+\n================REMOTE: ::1  (2024-03-09 09:55:43)===================\n\n================URL : /son-thoi-chotto-matte-yumeisakura-li-min-sieu-duong-chong-nang-cho-moi-cang-muot-35g-copy-p7.html===================\n\n================1709952943===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'products' 
+
+time:::0.049031972885132
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.018332004547119
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "products" AND view = "product" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0061540603637695
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0045018196105957
+
+===========
+
+SELECT id, name, image, alias, quantity, text_buy, category_id_wrapper, tablename, price, price_old, seo_title, seo_keyword, seo_description, `description`, status_prd, promotion_id, promotion_end_time, promotion_start_time, subtitle, sold_out, trademark, sale_brief, products_same, nick_name, products_related, comments_total
+                FROM fs_products
+                WHERE published = 1 AND id = 7 AND alias = 'son-thoi-chotto-matte-yumeisakura-li-min-sieu-duong-chong-nang-cho-moi-cang-muot-35g-copy'
+        
+
+time:::0.0080211162567139
+
+===========
+
+SELECT id, title, image, sub_id, file_type
+                FROM fs_products_images
+                WHERE record_id = 7
+                ORDER BY ordering ASC
+        
+
+time:::0.0085558891296387
+
+===========
+
+SELECT id, name, code, price, price_old, product_id, quantity,price_discount
+                FROM fs_products_sub
+                WHERE product_id = 7 AND published = 1
+                ORDER BY price ASC
+        
+
+time:::0.013149976730347
+
+===========
+
+SELECT id, name, alias, nick_name, quantity
+                FROM fs_products
+                WHERE id IN (0,1,2,3,4,5,7,0) AND published = 1
+                ORDER BY price ASC
+        
+
+time:::0.0083849430084229
+
+===========
+
+SELECT id, name, image, quantity, alias, price, price_old, promotion_id, promotion_end_time, promotion_start_time, sold_out, is_gift, freeship
+                FROM fs_products
+                WHERE published = 1 AND id IN (0,1,0) AND id <> 7
+        
+
+time:::0.001910924911499
+
+===========
+
+SELECT id, name, image, alias, quantity, price, price_old, promotion_id, promotion_end_time, promotion_start_time, sold_out, is_gift, freeship
+                FROM fs_products
+                WHERE published = 1 AND is_sell = 1 AND id <> 7
+                ORDER BY ordering ASC LIMIT 10
+        
+
+time:::0.002363920211792
+
+===========
+
+SELECT field_name, field_name_display, field_type, foreign_id
+                FROM fs_products_tables
+                WHERE is_main = 1 AND table_name = 'fs_products' ORDER BY ordering ASC
+        
+
+time:::0.0026330947875977
+
+===========
+
+SELECT id, name, image, alias, quantity, price, price_old, promotion_id, promotion_end_time, promotion_start_time, sold_out, is_gift, freeship
+                FROM fs_products
+                WHERE published = 1
+                ORDER BY ordering ASC
+        
+
+time:::1.6212463378906E-5
+
+===========
+
+
+
+time:::0.00012302398681641
+
+===========
+
+SELECT id, name, phone, email, comment, created_time, rating, user_id, parent_id, product_id, product_name, sub_id, sub_name
+                FROM fs_products_comments
+                WHERE published = 1 AND product_id = 7
+                ORDER BY id DESC
+        
+
+time:::0.0019848346710205
+
+===========
+
+SELECT id, name, alias
+                FROM fs_products_categories
+                WHERE published = 1 AND id IN (0 ,58,48, 0)
+                ORDER BY `level` ASC
+        
+
+time:::0.002593994140625
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00073885917663574
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.017692089080811
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.0038011074066162
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00078892707824707
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.0040831565856934
+
+===========
+
+
+
+time:::0.00018095970153809
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00062084197998047
+
+===========
+
+
+
+time:::5.0067901611328E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:55:46)===================\n\n================URL : /libraries/slick-js/slick.theme.css?v=1.20===================\n\n================1709952946===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.0027182102203369
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0096960067749023
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0029129981994629
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.074321985244751
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:55:48)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_05vo0o7yp2_1702573141.jpeg===================\n\n================1709952948===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.0046820640563965
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0077180862426758
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0045909881591797
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0021810531616211
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:55:49)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_agji7f9owg_1702573141.jpeg===================\n\n================1709952949===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.32335805892944
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.074190855026245
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.20513200759888
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.01305103302002
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:55:58)===================\n\n================URL : /===================\n\n================1709952958===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.0037710666656494
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0026900768280029
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0045888423919678
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0017130374908447
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.0022120475769043
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0025570392608643
+
+===========
+
+
+
+time:::3.0040740966797E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00075507164001465
+
+===========
+
+
+
+time:::2.4795532226562E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0012931823730469
+
+===========
+
+
+
+time:::0.00041294097900391
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::1.1920928955078E-5
+
+===========
+
+
+
+time:::0.00016903877258301
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00061798095703125
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:55:59') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.0068628787994385
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.022145986557007
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.0031321048736572
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.0017890930175781
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00091195106506348
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.001194953918457
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.00091004371643066
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.0012950897216797
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00082683563232422
+
+===========
+
+
+
+time:::0.00019192695617676
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.0015180110931396
+
+===========
+
+
+
+time:::9.7036361694336E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:55:59)===================\n\n================URL : /===================\n\n================1709952959===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.001507043838501
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0053369998931885
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0050539970397949
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0015349388122559
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.0018069744110107
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0021529197692871
+
+===========
+
+
+
+time:::5.1021575927734E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00093603134155273
+
+===========
+
+
+
+time:::6.6995620727539E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.011321067810059
+
+===========
+
+
+
+time:::0.00038003921508789
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::1.9073486328125E-5
+
+===========
+
+
+
+time:::0.00073981285095215
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00059008598327637
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:55:59') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.0013070106506348
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.0077919960021973
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.0014071464538574
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.0013530254364014
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.015367984771729
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.0012037754058838
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.00085806846618652
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00053882598876953
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00046205520629883
+
+===========
+
+
+
+time:::5.6982040405273E-5
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00058698654174805
+
+===========
+
+
+
+time:::7.7009201049805E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_qbb2bbodkw_1702573141.webp===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.0012259483337402
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0020558834075928
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0035440921783447
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0016160011291504
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.001007080078125
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0014491081237793
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0014128684997559
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00074291229248047
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.0010199546813965
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0021660327911377
+
+===========
+
+
+
+time:::1.0967254638672E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0005638599395752
+
+===========
+
+
+
+time:::1.0967254638672E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0013999938964844
+
+===========
+
+
+
+time:::0.0001060962677002
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::5.9604644775391E-6
+
+===========
+
+
+
+time:::8.4877014160156E-5
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00029611587524414
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:56:00') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.0012450218200684
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.010885953903198
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.00093722343444824
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.0005791187286377
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00074505805969238
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.0011811256408691
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.00036096572875977
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00051283836364746
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00052404403686523
+
+===========
+
+
+
+time:::4.6014785766602E-5
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00027108192443848
+
+===========
+
+
+
+time:::2.4080276489258E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_kalvokr5nk_1702573142.jpeg===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.0019590854644775
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.012021064758301
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0037841796875
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0012619495391846
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00076889991760254
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0016069412231445
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0015950202941895
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00072908401489258
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.0009760856628418
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0020020008087158
+
+===========
+
+
+
+time:::1.8119812011719E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00044083595275879
+
+===========
+
+
+
+time:::2.598762512207E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00085306167602539
+
+===========
+
+
+
+time:::0.00022697448730469
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::2.288818359375E-5
+
+===========
+
+
+
+time:::0.00031805038452148
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00053191184997559
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:56:00') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.0011529922485352
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.00050687789916992
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.00059103965759277
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00072503089904785
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00057792663574219
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.00072598457336426
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.00027203559875488
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.0002741813659668
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00049591064453125
+
+===========
+
+
+
+time:::3.7908554077148E-5
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00027203559875488
+
+===========
+
+
+
+time:::2.1934509277344E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_l6ek7xjgm5_1702573142.jpeg===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00092482566833496
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.00070405006408691
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0012309551239014
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00051403045654297
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.0005800724029541
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.00057816505432129
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.00073504447937012
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00059604644775391
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.0009000301361084
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0014910697937012
+
+===========
+
+
+
+time:::1.0967254638672E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00034308433532715
+
+===========
+
+
+
+time:::1.0013580322266E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00066995620727539
+
+===========
+
+
+
+time:::0.00010991096496582
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::4.0531158447266E-6
+
+===========
+
+
+
+time:::8.2015991210938E-5
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00033903121948242
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:56:00') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.0010249614715576
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.001039981842041
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.0014321804046631
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00062394142150879
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00054407119750977
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.0012378692626953
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.00034594535827637
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00042605400085449
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00047016143798828
+
+===========
+
+
+
+time:::3.814697265625E-5
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00032591819763184
+
+===========
+
+
+
+time:::2.0980834960938E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_wrgwyxylwq_1702573142.webp===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00060486793518066
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.00074911117553711
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0023589134216309
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00088906288146973
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00097799301147461
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0012760162353516
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0017299652099609
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00082111358642578
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.00077390670776367
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0014119148254395
+
+===========
+
+
+
+time:::1.3113021850586E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00045418739318848
+
+===========
+
+
+
+time:::3.2901763916016E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00065183639526367
+
+===========
+
+
+
+time:::0.00011396408081055
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::4.0531158447266E-6
+
+===========
+
+
+
+time:::8.2015991210938E-5
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00023508071899414
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:56:00') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.00077199935913086
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.00041103363037109
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.00063800811767578
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.0009918212890625
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00075411796569824
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.0010650157928467
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.0002601146697998
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00026702880859375
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00041294097900391
+
+===========
+
+
+
+time:::0.00014710426330566
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00034403800964355
+
+===========
+
+
+
+time:::2.288818359375E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_faqknljufv_1702573143.webp===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.0012919902801514
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.00074982643127441
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0017108917236328
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00069499015808105
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:00)===================\n\n================URL : /===================\n\n================1709952960===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00061202049255371
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.00066208839416504
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0013890266418457
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0010368824005127
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.00058412551879883
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0012509822845459
+
+===========
+
+
+
+time:::1.5020370483398E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00052785873413086
+
+===========
+
+
+
+time:::1.0967254638672E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0009160041809082
+
+===========
+
+
+
+time:::0.00011515617370605
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::3.0994415283203E-5
+
+===========
+
+
+
+time:::8.9168548583984E-5
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00031304359436035
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:56:01') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.0010089874267578
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.00057101249694824
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.00052809715270996
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00059199333190918
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00044608116149902
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.00097298622131348
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.00028204917907715
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00036215782165527
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00060319900512695
+
+===========
+
+
+
+time:::4.6968460083008E-5
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00027918815612793
+
+===========
+
+
+
+time:::2.0980834960938E-5
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:01)===================\n\n================URL : /upload_images/images/products/gia-dung-va-nha-thong-minh/large/20230920_7nnbbtoczm_1702573144.webp===================\n\n================1709952961===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00064516067504883
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.00065207481384277
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND task = "display404"  
+
+time:::0.0009920597076416
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00096416473388672
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:01)===================\n\n================URL : /===================\n\n================1709952961===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00056290626525879
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.0005948543548584
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.003169059753418
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.0010790824890137
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.00076103210449219
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0019259452819824
+
+===========
+
+
+
+time:::3.2901763916016E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00045108795166016
+
+===========
+
+
+
+time:::1.1920928955078E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00071310997009277
+
+===========
+
+
+
+time:::0.00011801719665527
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::5.0067901611328E-6
+
+===========
+
+
+
+time:::8.4877014160156E-5
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.0002589225769043
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:56:01') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.00095605850219727
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.00048017501831055
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.00045394897460938
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00075912475585938
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00069308280944824
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.001025915145874
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.00031089782714844
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00034308433532715
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00036501884460449
+
+===========
+
+
+
+time:::9.4890594482422E-5
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00065994262695312
+
+===========
+
+
+
+time:::0.00012397766113281
+
+===========
+\n================REMOTE: ::1  (2024-03-09 09:56:01)===================\n\n================URL : /===================\n\n================1709952961===================\n
+ SELECT lang_key, lang_vi 
+							FROM fs_languages_text 
+				 			WHERE is_common = 1 
+							 OR module = 'home' 
+
+time:::0.00085806846618652
+
+===========
+
+ SELECT * FROM fs_config
+						WHERE is_common = 1
+					 
+
+time:::0.00064897537231445
+
+===========
+
+ SELECT cache,params,fields_seo_title,fields_seo_keyword,fields_seo_description,fields_seo_h1,fields_seo_h2,fields_seo_image_alt,value_seo_title,value_seo_keyword,value_seo_description FROM fs_config_modules
+				WHERE module = "home" AND view = "home" AND ( task = "display" OR task = "" OR task IS NULL) 
+
+time:::0.0010571479797363
+
+===========
+
+SELECT id,title,content, ordering, module, position, showTitle, params ,listItemid,news_categories,contents_categories
+						FROM fs_blocks AS a 
+						WHERE published = 1 
+					ORDER BY ordering
+
+time:::0.00054502487182617
+
+===========
+
+SELECT id, alias, name FROM fs_products_categories WHERE published = 1 AND level = 0 AND show_in_homepage = 1 ORDER BY ordering ASC
+
+time:::0.011879920959473
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,46,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.001906156539917
+
+===========
+
+
+
+time:::2.5033950805664E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,47,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.0018610954284668
+
+===========
+
+
+
+time:::2.1934509277344E-5
+
+===========
+
+ SELECT id, alias, name, image, category_id_wrapper, quantity, price, price_old, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time
+					  FROM fs_products  WHERE category_id_wrapper LIKE '%,48,%' AND published = 1 ORDER BY ordering ASC LIMIT 30
+
+time:::0.00078105926513672
+
+===========
+
+
+
+time:::0.00012087821960449
+
+===========
+
+SELECT id, alias, name, image, price, price_old, quantity, sold_out, is_gift, freeship, promotion_end_time, promotion_start_time FROM fs_products WHERE published = 1 AND show_in_home = 1 ORDER BY ordering ASC
+
+time:::5.0067901611328E-6
+
+===========
+
+
+
+time:::8.4877014160156E-5
+
+===========
+
+SELECT count(*) FROM fs_products WHERE published = 1 AND show_in_home = 1
+
+time:::0.00031208992004395
+
+===========
+
+SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
+                FROM fs_products AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
+                WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('2024-03-09 09:56:01') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
+                ORDER BY a.ordering DESC, a.id DESC
+        
+
+time:::0.00090694427490234
+
+===========
+
+SELECT id, tiktok FROM fs_tiktok WHERE published = 1 ORDER BY ordering ASC LIMIT 10
+
+time:::0.00062298774719238
+
+===========
+
+SELECT name, id, image, link
+				FROM fs_banners AS a
+				WHERE published = 1  AND category_id IN (1)   
+				ORDER BY ordering, id 
+		
+
+time:::0.00056219100952148
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00057291984558105
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00061202049255371
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 21 ORDER BY  ordering ASC, id ASC
+
+time:::0.00080299377441406
+
+===========
+
+ SELECT * 
+						  FROM fs_menus_items
+						  WHERE  published = 1 AND group_id = 24 ORDER BY  ordering ASC, id ASC
+
+time:::0.0004580020904541
+
+===========
+
+SELECT id, name, alias, icon, icon_hover,level,parent_id FROM fs_products_categories WHERE published = 1 AND show_in_homepage = 1
+
+time:::0.00054693222045898
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 2
+					ORDER BY ordering
+
+time:::0.00070405006408691
+
+===========
+
+
+
+time:::4.6014785766602E-5
+
+===========
+
+ SELECT id,link, name,image, level, parent_id as parent_id, target,group_id, description,icon,image,is_rewrite,width_icon,heigth_icon,image_mb,color_bg,internal_link
+				FROM fs_menus_items
+				WHERE published  = 1 AND group_id = 3
+					ORDER BY ordering
+
+time:::0.00035905838012695
+
+===========
+
+
+
+time:::2.1934509277344E-5
+
+===========

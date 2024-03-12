@@ -358,7 +358,7 @@ class FSModels
 		}
 		$sql = " DELETE FROM " . $this->table_name . " 
 						WHERE id IN ( $str_cids ) ";
-
+		 
 		global $db;
 		$rows = $db->affected_rows($sql);
 
@@ -656,10 +656,7 @@ class FSModels
 	{
 		$id = FSInput::get('id', 0, 'int');
 
-		// $memcache = new Memcache();
-		// $memcache->addServer('127.0.0.1', 11211);
-		// $memcache->flush();
-
+		$this->freeMemcache();
 
 		if (!$id)
 			return $this->save_new($row, $use_mysql_real_escape_string);
@@ -684,12 +681,9 @@ class FSModels
 				$field == $field_img && !isset($row[$field_img])
 				&& $field_img
 			) {
-									// $image = $_FILES[$field_img]["name"];
+				//					$image = $_FILES[$field_img]["name"];
 				if ($type_image == 0) {
-
 					$image = $_FILES[$field_img]["name"];
-					print_r($field_img);
-					echo 111;
 				} else {
 					$image = FSInput::get($field_img);
 				}
@@ -774,7 +768,7 @@ class FSModels
 		$sql .=  '(' . $str_fields . ") ";
 		$sql .=  'VALUES (' . $str_values . ") ";
 
-		// print_r($sql);die;
+		//print_r($sql);die;
 		$id = $db->insert($sql);
 
 		// calculate filters:
@@ -794,9 +788,7 @@ class FSModels
 				$arr_table_name_changed[] = $row['tablename'];
 			//				$this -> caculate_filter($arr_table_name_changed);
 		}
-		// $memcache = new Memcache();
-		// $memcache->addServer('127.0.0.1', 11211);
-		// $memcache->flush();
+		$this->freeMemcache();
 		return $id;
 	}
 
@@ -950,9 +942,7 @@ class FSModels
 			if (isset($row['tablename']) && !empty($row['tablename']))
 				$arr_table_name_changed[] = $row['tablename'];
 		}
-		// $memcache = new Memcache();
-		// $memcache->addServer('127.0.0.1', 11211);
-		// $memcache->flush();
+		$this->freeMemcache();
 		if ($id)
 			return $id;
 		else if ($rows)
@@ -995,11 +985,7 @@ class FSModels
 			$where = ' WHERE ' . $where;
 		$sql .= $where;
 		$rows = $db->affected_rows($sql);
-
-		// $memcache = new Memcache();
-		// $memcache->addServer('127.0.0.1', 11211);
-		// $memcache->flush();
-
+		$this->freeMemcache();
 		return $rows;
 	}
 	function _add($row, $table_name, $use_mysql_real_escape_string = 0)
@@ -1030,11 +1016,7 @@ class FSModels
 		$sql .=  'VALUES (' . $str_values . ') ';
 		// echo $sql;die;
 		$id = $db->insert($sql);
-
-		// $memcache = new Memcache();
-		// $memcache->addServer('127.0.0.1', 11211);
-		// $memcache->flush();
-
+		$this->freeMemcache();
 		return $id;
 	}
 
@@ -1100,11 +1082,7 @@ class FSModels
 
 		global $db;
 		$rows = $db->affected_rows($sql);
-
-		// $memcache = new Memcache();
-		// $memcache->addServer('127.0.0.1', 11211);
-		// $memcache->flush();
-
+		$this->freeMemcache();
 		return $rows;
 	}
 
@@ -1542,9 +1520,7 @@ class FSModels
 							SET `" . $field . "` = $value
 						WHERE id IN ( $str_ids ) ";
 			$rows = $db->affected_rows($sql);
-			// $memcache = new Memcache();
-			// $memcache->addServer('127.0.0.1', 11211);
-			// $memcache->flush();
+			$this->freeMemcache();
 			return $rows;
 		}
 		return 0;
@@ -3120,7 +3096,7 @@ class FSModels
 		return $auto_increment;
 	}
 
-	public function getAjaxSearchProduct()
+	public function getAjaxSearchProduct_()
 	{
 		global $db;
 		$where = '';
@@ -3155,6 +3131,109 @@ class FSModels
 		return $result;
 	}
 
+	public function getAjaxSearchProduct()
+	{
+		global $db;
+		$where = '';
+		$keyword = FSInput::get('keyword', '');
+		$cat = FSInput::get('cat');
+
+		if (!$keyword && !$cat) {
+			$sql = "SELECT id, alias, `name`, `image`, price, price_old, quantity, status_prd, code
+					FROM fs_products
+					WHERE published = 1
+					ORDER BY id DESC
+			";
+		} else {
+			$query = "name LIKE '%$keyword%'";
+
+			$arr_tags = explode(' ', $keyword);
+			$total_tags = count($arr_tags);
+			if ($total_tags) {
+				$j = 0;
+				for ($i = 0; $i < $total_tags; $i++) {
+					$item = trim($arr_tags[$i]);
+					if ($item) {
+						$where .= "AND `name` LIKE '%" . $item . "%'";
+						$j++;
+					}
+				}
+			}
+
+			if ($cat) {
+				$where .= " AND category_id_wrapper LIKE '%,$cat,%' ";
+			}
+
+			$sql = "SELECT id, alias, `name`, `image`, price, price_old, quantity, status_prd, code
+					FROM fs_products 
+					WHERE published = 1 $where OR `code` = '$keyword'
+					ORDER BY CASE
+						WHEN $query THEN 1
+						ELSE 2
+					END,
+					quantity DESC, price ASC
+			";
+		}
+		
+		$limit = FSInput::get('limit');
+		if ($limit) {
+			$sql .= " LIMIT $limit ";
+		}
+
+		$sql = $db->query($sql);
+		$result = $db->getObjectList();
+		return $result;
+	}
+
+	public function getAjaxSearchMembers()
+	{
+		global $db;
+		$where = '';
+		$keyword = FSInput::get('keyword', '');
+
+		if (!$keyword) {
+			$sql = "SELECT id, full_name, email, telephone, `point`
+					FROM fs_members
+					WHERE published = 1
+					ORDER BY id DESC
+			";
+		} else {
+			$query = "full_name LIKE '%$keyword%'";
+
+			$arr_tags = explode(' ', $keyword);
+			$total_tags = count($arr_tags);
+			if ($total_tags) {
+				$j = 0;
+				for ($i = 0; $i < $total_tags; $i++) {
+					$item = trim($arr_tags[$i]);
+					if ($item) {
+						$where .= "AND `full_name` LIKE '%" . $item . "%'";
+						$j++;
+					}
+				}
+			}
+
+			$sql = "SELECT id, full_name, email, telephone, `point`
+					FROM fs_members 
+					WHERE published = 1 $where OR `telephone` = '$keyword' OR `email` = '$keyword'
+					ORDER BY CASE
+						WHEN $query THEN 1
+						ELSE 2
+					END,
+					id DESC
+			";
+		}
+		
+		$limit = FSInput::get('limit');
+		if ($limit) {
+			$sql .= " LIMIT $limit ";
+		}
+
+		$sql = $db->query($sql);
+		$result = $db->getObjectList();
+		return $result;
+	}
+
 	public function getSaleProducts($productsId, $timeNow)
 	{
 		global $db;
@@ -3169,5 +3248,14 @@ class FSModels
 		$query = "SELECT product_id, discount, discount_unit, total, ordered FROM fs_flash_sale_detail WHERE published = 1 AND product_id = $productsId AND date_end >= '$timeNow' ";
 
 		return $db->getObject($query, USE_MEMCACHE);
+	}
+
+
+	public function freeMemcache()
+	{
+		// $memcache = new Memcache();
+		// $memcache->addServer('127.0.0.1', 11211);
+		// $memcache->flush();
+		// return true;
 	}
 }

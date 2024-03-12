@@ -2,6 +2,12 @@
   width: 100%;
   flex-wrap: wrap;
   gap: 32px;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+}
+.category_list .box-items {
+  overflow: hidden;
+  width: calc((100% - 160px) / 6);
 }
 .category_list .box-items .items {
   justify-content: center;

@@ -1679,6 +1679,49 @@ class TemplateHelper
         echo $html;
     }
 
+    public static function dt_edit_video($title, $name, $value = '', $comment = '', $class_col1 = 'col-md-3', $class_col2 = 'col-md-9')
+    {
+        // phan quyen theo field
+        $module = FSInput::get('module');
+        $view = FSInput::get('view', $module);
+        $permission = FSSecurity::check_permission_field($module, $view, $name);
+        if (!$permission) {
+            return false;
+        }
+        //END phan quyen theo field
+
+       
+        $id = FSInput::get('id', 0, 'int');
+        $html = '<div class="form-group">
+                    <label class="' . $class_col1 . ' col-xs-12 control-label">' . $title . '</label>
+                    <div class="' . $class_col2 . '  col-xs-12">';
+        $check_val = $value ? 1 : 0;
+        if ($value) {
+            $html .= '
+                <div class="sort_' . $name . '">
+                    <video width="320" height="240" controls style="max-width: 100%;">
+                        <source src="' . URL_ROOT . $value . '" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <span style="margin-left: 20px; cursor: pointer; color: #F44336; font-size: 16px;" onclick="remove_file(\'' . $module . '\',\'' . $view . '\',\'' . $id . '\',\'' . $name . '\',\'sort_' . $name . '\')">
+                        <i class="fa fa-times-circle"></i>
+                    </span>
+                </div>
+            '; 
+        }
+        $html .= '
+            <div class="fileUpload btn btn-primary ">
+                <span data-name="' . $name . '" id="btn-' . $name . '" class="btn-' . $name . '"><i class="fa fa-cloud-upload"></i> Upload</span>
+                <input type="file" class="upload" id ="' . $name . '" name="' . $name . '"  />
+                <input type="hidden" id="check_' . $name . '" value="' . $check_val . '" />                        
+            </div>
+        ';
+        if ($comment)
+            $html .= '<p class="help-block">' . $comment . '</p>';
+        $html .= '</div></div>';
+        echo $html;
+    }
+
     /*
      * FOR DETAIL PAGE
      * tag: radio

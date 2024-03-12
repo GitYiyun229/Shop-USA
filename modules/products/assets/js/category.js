@@ -25,7 +25,7 @@ $(window).on('scroll', debounce(function () {
         
         loadMoreContent(page, limit, id, load);       
     }
-}, 300));
+}, 1000));
 
 function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();

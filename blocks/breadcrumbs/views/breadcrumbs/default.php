@@ -17,7 +17,7 @@ $id = FSInput::get('id');
 					<?php }?>
 				<?php }?>
 			</select>
-			<?php $i ++;?>								
+			<?php $i ++;?>
 		<?php }?>
 	<?php }?>	
 <div class="clear"></div>

@@ -425,6 +425,41 @@
   }
 }
 
+.section-flash-sale {
+  background-color: #fce9eb;
+  padding: 22px;
+  border-radius: 16px;
+  .title-flash-sale {
+    .fs-sale {
+      width: calc((100% - 0px) / 2);
+    }
+    .title-categories {
+      p {
+        font-size: 24px;
+        color: #000000;
+        span {
+          color: #dd2033;
+          padding-left: 7px;
+        }
+      }
+    }
+    .time_sales .tile.time_count {
+      text-align: end;
+      color: #3b3b3b;
+      #demo163 {
+        font-weight: 600;
+        span {
+          background-color: #dd2033;
+          color: #fff;
+          border-radius: 4px;
+          margin: 0px 2px;
+          padding: 0 2px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 960px) {
   .section-top {
     flex-direction: column;
