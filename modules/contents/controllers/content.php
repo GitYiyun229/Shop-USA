@@ -10,16 +10,17 @@
 		var $view;
 	
 		function display()
-		{
-            $data = $this->model->get_data_content();
-			$cat  = $this->model->getCategory();
- 
-            $list = $this->model->getList($data->category_id);
+		{	
+			$model = $this->model;
 
-			// echo '<pre>';
-			// print_r($list);
- 
+            $data = $model->get_data_content(); 
+			$cat  = $model->getCategory();
+			echo 1 ;
+			foreach($cat as $item_cat){ 
+				$item_cat->list_item = $model->getList($item_cat->id);
 
+			}
+ 
             global $tmpl; 
 			include 'modules/'.$this->module.'/views/'.$this->view.'/default.php';
 		}

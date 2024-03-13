@@ -9,11 +9,7 @@
 			$this->table_category  = $fstable->_('fs_contents_categories',1);
             $this -> table_add = $fstable->_('fs_address',1);
 		}
-
-
-		/*
-		 * get Article
-		 */
+ 
 		function get_data_content()
 		{
 			$id = FSInput::get('id',0,'int');
@@ -40,25 +36,24 @@
 		function getCategory()
 		{
 			$fs_table = FSFactory::getClass('fstable');
-			$code = FSInput::get('ccode');
-			if($code){
-				$where = " AND alias = '$code' ";
-			} else {
-				$id = FSInput::get('id',0,'int');
-				if(!$id)
-					die('Not exist this url');
-				$where = " AND id = '$id' ";
-			}
+			// $code = FSInput::get('ccode');
+			// if($code){
+			// 	$where = " AND alias = '$code' ";
+			// } else {
+			// 	$id = FSInput::get('id',0,'int');
+			// 	if(!$id)
+			// 		die('Not exist this url');
+			// 	$where = " AND id = '$id' ";
+			// }
 			$query = " SELECT id,name, icon, alias,parent_id as parent_id,seo_title,seo_keyword,seo_description,list_parents
 						FROM ".$fs_table -> getTable('fs_contents_categories',1)." 
-						WHERE published = 1 ".$where;
+						WHERE published = 1 ";
 			global $db;
 			$sql = $db->query($query);
-			$result = $db->getObject();
+			$result = $db->getObjectList();
 			return $result;
 		}
-        
- 
+         
 
         function getList($id){
             $query = ' select id, content, category_alias, category_name, title, image, alias, published 

@@ -72,17 +72,16 @@ $(".slider-nav").slick({
   slidesToShow: 5,
   slidesToScroll: 1,
   asNavFor: ".slider-for",
-  margin: 1,
+  margin: 10,
   dots: false,
   arrows: true,
   centerMode: false,
   focusOnSelect: true,
-  vertical: true,
-  verticalSwiping: true,
+  // infinite: true,
   prevArrow:
-    '<button class="slick-prev"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 7.5L10 12.5L5 7.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+    '<button class="slick-prev"><svg width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_84_2901)"><path d="M0 0L2.09815e-06 48L16 48C20.4183 48 24 44.4183 24 40L24 8C24 3.58172 20.4183 -8.92511e-07 16 -6.99382e-07L0 0Z" fill="black" fill-opacity="0.24"/><path d="M9.5 29L14.5 24L9.5 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_84_2901"><path d="M0 0L2.09815e-06 48L16 48C20.4183 48 24 44.4183 24 40L24 8C24 3.58172 20.4183 -8.92511e-07 16 -6.99382e-07L0 0Z" fill="white"/></clipPath></defs></svg></button>',
   nextArrow:
-    '<button class="slick-next"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 12.5L10 7.5L5 12.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+    '<button class="slick-next"><svg width="24" height="48" viewBox="0 0 24 48" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_84_2900)"><path d="M24 0L24 48L8 48C3.58172 48 -1.94158e-06 44.4183 -1.74846e-06 40L-3.49691e-07 8C-1.56562e-07 3.58172 3.58172 -8.92511e-07 8 -6.99382e-07L24 0Z" fill="black" fill-opacity="0.24"/><path d="M14.5 29L9.5 24L14.5 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_84_2900"><path d="M24 0L24 48L8 48C3.58172 48 -1.94158e-06 44.4183 -1.74846e-06 40L-3.49691e-07 8C-1.56562e-07 3.58172 3.58172 -8.92511e-07 8 -6.99382e-07L24 0Z" fill="white"/></clipPath></defs></svg></button>',
   responsive: [
     {
       breakpoint: 500,
@@ -93,6 +92,7 @@ $(".slider-nav").slick({
     },
   ],
 });
+
 
 $(".slider-related").slick({
   slidesToShow: 6,

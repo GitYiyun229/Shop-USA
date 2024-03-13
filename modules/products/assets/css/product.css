@@ -1,11 +1,10 @@
 .section-product-detail .container {
   justify-content: space-between;
+  gap: 20px;
 }
 
 .section-image {
-  gap: 10px;
-  width: 530px;
-  justify-content: space-between;
+  width: calc(100% - 584px);
 }
 .section-image img {
   width: 100%;
@@ -14,53 +13,52 @@
      object-fit: contain;
 }
 .section-image .image {
-  width: 440px;
+  width: 616px;
 }
 .section-image .image img {
-  height: 450px;
+  height: 616px;
 }
 .section-image .thumbnail {
-  width: 80px;
+  width: 100%;
 }
 .section-image .thumbnail .slick-slide {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  opacity: 0.5;
+  width: 112px !important;
+  height: 112px;
+  border-radius: 10px;
+  margin: 0 6px;
   overflow: hidden;
   border-color: #ebebeb;
+  transition: all 0.3s;
 }
 .section-image .thumbnail .slick-slide.slick-current {
-  border-color: #d53c00;
+  border: 3px solid #dd2033;
+}
+.section-image .thumbnail .slick-slide.slick-current.slick-active {
+  border-color: #dd2033;
+  opacity: 1;
 }
 .section-image .slick-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
-  left: 50%;
-  transform: translateX(-50%);
   position: absolute;
-  background: rgba(0, 0, 0, 0.24);
+  background: rgba(255, 255, 255, 0);
   border: none;
   outline: none;
-  width: 48px;
-  height: 20px;
   z-index: 1;
 }
-.section-image .slick-arrow:hover {
-  background: #d53c00;
-}
 .section-image .slick-next {
-  border-radius: 0px 0px 2px 2px;
-  top: 0;
+  top: 25%;
+  left: 0;
 }
 .section-image .slick-prev {
-  border-radius: 2px 2px 0 0;
-  bottom: 10px;
+  top: 25%;
+  right: 0;
 }
 
 .section-main {
-  width: 630px;
+  width: calc(100% - 616px);
 }
 .section-main .p-name {
   font-size: 20px;
@@ -108,7 +106,7 @@
   padding: 28px 20px;
 }
 .section-main .p-price-public {
-  color: #d53c00;
+  color: #dd2033;
   font-size: 30px;
   font-weight: 600;
   line-height: normal;
@@ -118,7 +116,7 @@
   font-weight: 500;
 }
 .section-main .p-price-discount {
-  color: #d53c00;
+  color: #dd2033;
   font-size: 20px;
   font-weight: 700;
   line-height: normal;
@@ -171,7 +169,7 @@
   height: 20px;
 }
 .section-main .p-form {
-  padding: 28px 20px;
+  padding: 28px 0px;
 }
 .section-main .p-choose {
   min-width: 80px;
@@ -186,23 +184,23 @@
   padding: 0 1rem;
 }
 .section-main .p-choose.out-of-stock {
-  background: #F5F5F5;
+  background: #f5f5f5;
   color: #bfbfbf;
-  border-color: #F5F5F5;
+  border-color: #f5f5f5;
 }
 .section-main .p-choose.active {
-  background: #d53c00;
-  border-color: #d53c00;
+  background: #dd2033;
+  border-color: #dd2033;
   color: #fff;
 }
 .section-main .p-choose.p-type.out-of-stock {
-  background: #F5F5F5;
+  background: #f5f5f5;
   color: #bfbfbf;
-  border-color: #F5F5F5;
+  border-color: #f5f5f5;
   pointer-events: none;
 }
 .section-main .p-choose:hover {
-  border-color: #d53c00;
+  border-color: #dd2033;
 }
 .section-main .p-quantity .form-control {
   width: 64px;
@@ -218,7 +216,7 @@
   -webkit-appearance: none;
 }
 .section-main .p-quantity .form-control:focus {
-  border-color: #d53c00;
+  border-color: #dd2033;
 }
 .section-main .p-quantity button {
   border: 1px solid #dedede;
@@ -242,21 +240,21 @@
   transition: 0.15s ease-in-out;
 }
 .section-main .p-quantity button:hover {
-  border-color: #d53c00;
-  background: #d53c00;
+  border-color: #dd2033;
+  background: #dd2033;
 }
 .section-main .p-quantity button:hover rect {
   fill: #fff;
 }
 .section-main .add-cart {
   color: #fff;
-  background: #d53c00;
-  border: 1px solid #d53c00;
+  background: #dd2033;
+  border: 1px solid #dd2033;
   width: 200px;
 }
 .section-main .buy-now {
-  color: #d53c00;
-  border: 1px solid #d53c00;
+  color: #dd2033;
+  border: 1px solid #dd2033;
   background: #fff;
   width: 200px;
 }
@@ -269,8 +267,8 @@
 .section-main .add-like.added {
   pointer-events: none;
   color: #fff;
-  background: #c23700;
-  border-color: #c23700;
+  background: #dd2033;
+  border-color: #dd2033;
 }
 .section-main .btn-submit {
   height: 48px;
@@ -282,14 +280,25 @@
 }
 .section-main .btn-submit.out-of-stock {
   color: #fff;
-  background: #d53c00;
-  border: 1px solid #d53c00;
+  background: #dd2033;
+  border: 1px solid #dd2033;
   width: calc(400px + 1rem);
 }
 .section-main .btn-submit:hover {
   color: #fff;
-  background: #c23700;
-  border-color: #c23700;
+  background: #dd2033;
+  border-color: #dd2033;
+}
+.section-main .b-collapse .p-collapse {
+  background: #fff;
+  border: none;
+  color: #3b3b3b;
+  letter-spacing: 3px;
+  font-size: 16px;
+}
+.section-main .bd-row {
+  height: 1px;
+  border: 1px solid #ebebeb;
 }
 
 .section-product-related {
@@ -383,7 +392,7 @@
   left: -20px;
   width: 2px;
   height: 20px;
-  background: #d53c00;
+  background: #dd2033;
 }
 
 .section-grid {
@@ -424,7 +433,7 @@
   -webkit-mask-image: -webkit-linear-gradient(top, #000 60%, transparent);
 }
 .section-description .btn-more-less {
-  color: #d53c00;
+  color: #dd2033;
   background: transparent;
   border: none;
   padding: 6px 16px;
@@ -512,7 +521,7 @@
 }
 .section-rate .rate-overview .percent-rate {
   font-size: 36px;
-  color: #d53c00;
+  color: #dd2033;
 }
 .section-rate .rate-detail-item {
   margin-bottom: 4px;
@@ -524,7 +533,7 @@
   width: 140px;
   height: 6px;
   border-radius: 4px;
-  --bs-progress-bar-bg: #d53c00;
+  --bs-progress-bar-bg: #dd2033;
   --bs-progress-bg: #ebebeb;
 }
 .section-rate .item-image {
@@ -554,11 +563,11 @@
   border-radius: 2px;
 }
 .section-comment-filter a.active {
-  color: #d53c00;
-  border-color: #d53c00;
+  color: #dd2033;
+  border-color: #dd2033;
 }
 .section-comment-filter a:hover {
-  border-color: #d53c00;
+  border-color: #dd2033;
 }
 
 .item-comment {
@@ -570,7 +579,7 @@
   border-bottom: 1px solid #f5f5f5;
 }
 .item-comment .rate-name {
-  color: #d53c00;
+  color: #dd2033;
 }
 .item-comment .comment-time {
   font-size: 13px;
@@ -593,7 +602,7 @@
 }
 
 .section-comment .more-comment {
-  color: #d53c00;
+  color: #dd2033;
 }
 
 @media (max-width: 960px) {
@@ -638,7 +647,7 @@
     height: auto;
   }
   .section-product-detail .container .section-image .thumbnail .slick-current {
-    border: solid 1px #d53c00;
+    border: solid 1px #dd2033;
   }
   .section-product-detail .container .section-image .thumbnail .slick-arrow {
     left: unset;

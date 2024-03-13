@@ -30,8 +30,14 @@ class ProductsModelsProducts extends FSModels
         $this->field_img = 'image';
         $this->field_reset_when_duplicate = array('comments_total');
         $this->arr_img_paths_og = array('large', 800, 600, 'resize_image_fix_height_webp');
-        $this->arr_img_paths_spec = array(array('large', 800, 600, 'resize_image_fix_height_webp'), array('resized', 150, 112, 'resize_image_fix_height_webp'));
-        $this->arr_img_paths_unbox = array(array('large', 800, 600, 'resize_image_fix_height_webp'), array('resized', 150, 112, 'resize_image_fix_height_webp'));
+        $this->arr_img_paths_spec = array(
+            array('large', 800, 600, 'resize_image_fix_height_webp'),
+            array('resized', 150, 112, 'resize_image_fix_height_webp')
+        );
+        $this->arr_img_paths_unbox = array(
+            array('large', 800, 600, 'resize_image_fix_height_webp'),
+            array('resized', 150, 112, 'resize_image_fix_height_webp')
+        );
         //        $this->arr_img_paths_unbox = array('resized', 150, 112, 'resize_image_fix_height_webp');
         $this->arr_img_paths_sub = array(
             array('larges', 616, 616, 'resize_image_fix_height_webp'),
@@ -40,16 +46,15 @@ class ProductsModelsProducts extends FSModels
             array('tiny', 120, 120, 'resize_image_fix_height_webp'),
             array('small', 112, 112, 'resize_image_fix_height_webp')
         );
-        
-        // 192.200.240.112,616,120,88,231
 
         $this->arr_img_paths_other = array(
             array('larges', 616, 616, 'resize_image_fix_height_webp'),
             array('resized', 200, 200, 'resize_image_fix_height_webp'),
             array('large', 240, 240, 'resize_image_fix_height_webp'),
-            array('tiny',120, 120, 'resize_image_fix_height_webp'),
+            array('tiny', 120, 120, 'resize_image_fix_height_webp'),
             array('small', 112, 112, 'resize_image_fix_height_webp')
         );
+
         $this->arr_img_paths_landing = array(
             array('resize', 590, 330, 'resize_image_fix_height_webp'),
             array('small', 60, 60, 'resize_image_fix_height_webp')
@@ -879,8 +884,8 @@ class ProductsModelsProducts extends FSModels
             }
 
             if (($price_exist != $price_exist_begin) || ($price_h_exist != $price_h_exist_begin)
-                || ($published_exist != $published_exist_begin) || ($products_type_id_exist != $products_type_id_exist_begin) || $_FILES[$upload_area]["name"] 
-                || ($code_exist != $code_exist_begin) 
+                || ($published_exist != $published_exist_begin) || ($products_type_id_exist != $products_type_id_exist_begin) || $_FILES[$upload_area]["name"]
+                || ($code_exist != $code_exist_begin)
                 || ($nhanh_exist != $nhanh_exist_begin)
                 || ($quantity_exist != $quantity_exist_begin)
             ) {

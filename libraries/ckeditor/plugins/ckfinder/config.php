@@ -95,7 +95,7 @@ $config['resourceTypes'][] = array(
     'name'              => 'Images',
     'directory'         => 'images',
     'maxSize'           => 5000000,
-    'allowedExtensions' => 'webp,gif,jpeg,jpg,svg',
+    'allowedExtensions' => 'webp,gif,jpeg,jpg,svg,png',
     'deniedExtensions'  => '',
     'backend'           => 'default'
 );

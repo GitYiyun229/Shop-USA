@@ -17,8 +17,8 @@ $tmpl->addScript('product', 'modules/products/assets/js');
 
 <div class="section-product-detail bg-white mb-3 pt-3 pb-3">
     <div class="container d-flex">
-        <div class="section-image d-flex">
-            <div class="image">
+        <div class="section-image">
+            <div class="image mb-3">
                 <div class="slider-for">
                     <div>
                         <img src="<?php echo image_replace_webp(URL_ROOT . $data->image, 'large') ?>" alt="<?php echo $data->name ?>" class="img-fluid">
@@ -113,7 +113,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                         <div class="p-note">
                             Giá chỉ còn <b class="p-price-discount"><?php echo format_money($data->price_discount) ?></b> cho <?php echo $promotionDiscount->quantity_user ?> sản phẩm mua lần đầu trong thời gian diễn ra chương trình
                         </div>
-                    <?php } ?> 
+                    <?php } ?>
                     <?php if ($data->sale_brief) { ?>
                         <div class="p-line p-sale-brief">
                             <div class="p-line-title"><?php echo FSText::_('Khuyến mại') ?></div>
@@ -130,22 +130,14 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                     <div class="p-line">
                         <div class="p-line-title"><?php echo $data->text_buy ?: 'Màu sắc' ?></div>
                         <div class="p-line-content d-flex flex-wrap gap-2">
-                            <?php foreach ($dataType as $i => $item) { 
+                            <?php foreach ($dataType as $i => $item) {
                                 $active = '';
                                 if ($item->quantity && !@$found) {
                                     $found = true;
                                     $active = 'active';
                                 }
-                                ?>
-                                <a href="" data-sub="<?php echo $item->id ?>" 
-                                    data-price="<?php echo $item->price_public ?>" 
-                                    data-price-origin="<?php echo $item->price ?>"
-                                    data-price-old="<?php echo $item->price_old ?>"
-                                    price-format="<?php echo format_money($item->price_public) ?>" 
-                                    price-old-format="<?php echo format_money($item->price_old) ?>" 
-                                    price-discount-format="<?php echo format_money($item->price_discount) ?>" 
-                                    data="<?php echo @$item->thumbnail_index ?>" 
-                                    class="p-choose p-type <?php echo !$item->quantity ? 'out-of-stock' : '' ?> <?php echo $active ?>">
+                            ?>
+                                <a href="" data-sub="<?php echo $item->id ?>" data-price="<?php echo $item->price_public ?>" data-price-origin="<?php echo $item->price ?>" data-price-old="<?php echo $item->price_old ?>" price-format="<?php echo format_money($item->price_public) ?>" price-old-format="<?php echo format_money($item->price_old) ?>" price-discount-format="<?php echo format_money($item->price_discount) ?>" data="<?php echo @$item->thumbnail_index ?>" class="p-choose p-type <?php echo !$item->quantity ? 'out-of-stock' : '' ?> <?php echo $active ?>">
                                     <?php echo $item->name ?>
                                 </a>
                             <?php } ?>
@@ -227,6 +219,25 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                     <?php } ?>
                 </div>
             </div>
+            <p class="bd-row"></p>
+            <div class="b-collapse mt-2 mb-2">
+                <p class="btn btn-primary p-collapse text-uppercase" data-bs-toggle="collapse" href="#MoTaSanPham" role="button" aria-expanded="false" aria-controls="MoTaSanPham">Mô tả sản phẩm</p>
+                <div class="collapse mt-3 mb-3 " id="MoTaSanPham">
+                    <div class="card card-body border-0">
+                        <?php echo $data->description ?>
+                    </div>
+                </div>
+            </div>
+            <p class="bd-row"></p>
+            <div class="b-collapse mt-2 mb-2">
+                <p class="btn btn-primary p-collapse text-uppercase" data-bs-toggle="collapse" href="#HoanTra" role="button" aria-expanded="false" aria-controls="HoanTra">Chính sách vận chuyển và hoàn trả</p>
+                <div class="collapse mt-3 mb-3" id="HoanTra">
+                    <div class="card card-body border-0">
+                        sadasas222 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                    </div>
+                </div>
+            </div>
+            <p class="bd-row"></p>
         </div>
     </div>
 </div>
@@ -300,7 +311,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                             <p class="fw-medium mb-3 fs-6"><?php echo FSText::_('Tất cả hình ảnh') ?> (<?php echo count($dataRateImage) ?>)</p>
                             <?php if (!empty($dataRateImage)) { ?>
                                 <div class="list-image d-flex flex-wrap gap-2">
-                                    <?php foreach($dataRateImage as $i => $image) { ?>
+                                    <?php foreach ($dataRateImage as $i => $image) { ?>
                                         <div class="item-image position-relative">
                                             <img src="<?php echo URL_ROOT . image_replace_webp($image->image, 'resized') ?>" alt="" class="img-fluid">
                                             <?php if ($i == 13 && count($dataRateImage) > 14) { ?>
@@ -310,7 +321,8 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                                                 </div>
                                             <?php } ?>
                                         </div>
-                                    <?php if ($i == 13 && count($dataRateImage) > 14) break; } ?>
+                                    <?php if ($i == 13 && count($dataRateImage) > 14) break;
+                                    } ?>
                                 </div>
                             <?php } ?>
                         </div>
@@ -357,7 +369,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                                         <div class="comment-image mt-3 d-flex flex-wrap gap-2">
                                             <?php foreach ($item->image as $image) { ?>
                                                 <img src="<?php echo URL_ROOT . image_replace_webp($image->image, 'resized') ?>" alt="" class="img-fluid">
-                                            <?php } ?>    
+                                            <?php } ?>
                                         </div>
                                     <?php } ?>
 
