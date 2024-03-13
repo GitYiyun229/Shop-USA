@@ -10,7 +10,7 @@ $tmpl->addScript('default', 'blocks/product_categories/assets/js');
     ?>
         <?php if ($item->level > 0) { ?>
             <div class="box-items">
-                <a class="items d-grid" href="#">
+                <a class="items d-grid" href="<?= $link?>">
                     <img src="<?php echo URL_ROOT . image_replace_webp($item->icon, 'large')  ?>" alt="<?php echo $item->name ?>" class="img-fluid img-icon">
                     <p class="mega-links-item" data-id="<?= $item->id ?>"><?php echo $item->name ?></p>
                 </a>

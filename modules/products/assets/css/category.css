@@ -1,3 +1,70 @@
+.select-menu {
+  width: 300px;
+  cursor: pointer;
+  position: relative;
+}
+
+.select {
+  border: 1px solid #dedede;
+  padding: 10px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #111;
+  font-weight: 300;
+}
+
+.options-list {
+  position: absolute;
+  width: 100%;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  padding: 0px 20px;
+  max-height: 180px;
+  overflow-y: auto;
+  transition: 0.4s linear 0.2s;
+  height: 0;
+}
+.options-list .filter-div {
+  padding: 15px 0 0 0;
+}
+.options-list .filter-div:last-child {
+  padding: 15px 0 15px 0;
+}
+
+.option {
+  padding: 8px 0;
+  font-weight: 500;
+  font-size: 14px;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.option:hover,
+.option.selected {
+  color: #00a8ff;
+}
+
+.options-list::-webkit-scrollbar {
+  width: 4px;
+  background-color: #eee;
+}
+
+.options-list::-webkit-scrollbar-thumb {
+  background-color: #00a8ff;
+}
+
+.options-list.active {
+  height: 160px;
+}
+.options-list.active .filter-div a.active {
+  color: #dd2033;
+}
+
 .section-item {
   border-radius: 4px;
 }
@@ -18,9 +85,6 @@
   gap: 12px;
 }
 
-.section-filter {
-  width: 190px;
-}
 .section-filter .button_filter {
   display: none;
 }

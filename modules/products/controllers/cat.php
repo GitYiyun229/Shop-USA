@@ -26,10 +26,10 @@ class ProductsControllersCat extends FSControllers
         $getSort = $this->getSort;
 
         $arrSort = [
-            FSText::_('Phổ biến'),
-            FSText::_('Hàng mới'),
-            FSText::_('Giá từ thấp đến cao'),
-            FSText::_('Giá từ cao đến thấp'),
+           1=> FSText::_('phổ biến'),
+           2=> FSText::_('hàng mới'),
+           3=> FSText::_('giá từ thấp đến cao'),
+           4=> FSText::_('giá từ cao đến thấp'),
         ];
 
         $cat = $model->getCat();
