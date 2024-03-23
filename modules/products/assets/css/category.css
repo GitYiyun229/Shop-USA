@@ -2,6 +2,7 @@
   width: 300px;
   cursor: pointer;
   position: relative;
+  z-index: 10;
 }
 
 .select {
@@ -178,13 +179,13 @@
 }
 
 .section-products {
-  gap: 12px;
+  gap: 20px;
 }
 .section-products .layout-product-item {
-  width: calc((100% - 48px) / 5);
+  width: calc((100% - 80px) / 5);
 }
 .section-products .layout-product-item .layout-img {
-  height: 188px;
+  height: 240px;
 }
 
 @media (max-width: 960px) {

@@ -260,15 +260,14 @@
 }
 .section-main .add-like {
   color: #a3a3a3;
-  border: 1px solid #a3a3a3;
   background: #fff;
-  width: calc(100% - 400px - 2rem);
 }
 .section-main .add-like.added {
   pointer-events: none;
   color: #fff;
-  background: #dd2033;
-  border-color: #dd2033;
+}
+.section-main .add-like.added svg path {
+  fill: rgb(221, 32, 51);
 }
 .section-main .btn-submit {
   height: 48px;
@@ -280,14 +279,16 @@
 }
 .section-main .btn-submit.out-of-stock {
   color: #fff;
-  background: #dd2033;
-  border: 1px solid #dd2033;
   width: calc(400px + 1rem);
+}
+.section-main .btn-submit.out-of-stock svg path {
+  fill: rgb(221, 32, 51);
 }
 .section-main .btn-submit:hover {
   color: #fff;
-  background: #dd2033;
-  border-color: #dd2033;
+}
+.section-main .btn-submit:hover svg path {
+  fill: rgb(221, 32, 51);
 }
 .section-main .b-collapse .p-collapse {
   background: #fff;
@@ -296,9 +297,27 @@
   letter-spacing: 3px;
   font-size: 16px;
 }
+.section-main .b-collapse .collapse {
+  max-width: 100%;
+}
+.section-main .b-collapse .collapse img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .section-main .bd-row {
   height: 1px;
   border: 1px solid #ebebeb;
+}
+
+p img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .section-product-related {
@@ -306,14 +325,18 @@
   border-radius: 4px;
 }
 .section-product-related h2 {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-right: 10px;
   font-size: 20px;
-  margin-bottom: 1rem;
+  font-weight: 300;
+  color: #3b3b3b;
 }
 .section-product-related .list-related {
   gap: 10px;
 }
 .section-product-related .list-related .layout-product-item {
-  width: calc((100% - 50px) / 6);
+  width: calc((100% - 50px) / 5);
 }
 .section-product-related .list-related .layout-product-item .layout-img {
   height: 183px;
@@ -325,15 +348,9 @@
 .section-product-related .slider-related .layout-product-item {
   margin: 0 5px;
 }
-.section-product-related .slider-related .layout-product-item .layout-img {
-  height: 183px;
-}
-.section-product-related .slider-related .layout-product-item .layout-info {
-  min-height: 44px;
-}
 .section-product-related .slider-related .slick-arrow {
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
@@ -393,12 +410,6 @@
   width: 2px;
   height: 20px;
   background: #dd2033;
-}
-
-.section-grid {
-  display: grid;
-  grid-template-columns: auto 220px;
-  grid-gap: 1rem;
 }
 
 .section-technical .item-technical {

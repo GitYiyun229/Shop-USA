@@ -364,7 +364,7 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
-    height: 14px;
+    height: 16px;
   }
   .layout-origin-price {
     color: #757575;
@@ -379,8 +379,9 @@ footer {
   }
   .layout-public-price {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    // align-items: flex-end;
+    // justify-content: space-between;
+    gap: 0.5rem;
     line-height: normal;
     .price {
       color: #DD2033;
@@ -403,14 +404,14 @@ footer {
     font-size: 10px;
     font-weight: 500;
     // margin-bottom: 12px;
-    min-height: 20px;
+    min-height: 22px;
     .item-info {
       padding: 0 4px;
       border-radius: 2px;
       line-height: normal;
       display: flex;
       width: fit-content;
-      height: 20px;
+      height: 16px;
       align-items: center;
     }
     .item-flash {
@@ -428,6 +429,7 @@ footer {
     .item-percent {
       color: #dd2033;
       background: #fce9eb;
+      font-size: 13px;
       font-weight: 600;
     }
   }

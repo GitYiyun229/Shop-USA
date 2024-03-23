@@ -348,7 +348,7 @@ footer .footer-bottom {
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
-  height: 14px;
+  height: 16px;
 }
 .layout-product-item .layout-origin-price {
   color: #757575;
@@ -363,8 +363,7 @@ footer .footer-bottom {
 }
 .layout-product-item .layout-public-price {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+  gap: 0.5rem;
   line-height: normal;
 }
 .layout-product-item .layout-public-price .price {
@@ -386,7 +385,7 @@ footer .footer-bottom {
   gap: 4px;
   font-size: 10px;
   font-weight: 500;
-  min-height: 20px;
+  min-height: 22px;
 }
 .layout-product-item .layout-info .item-info {
   padding: 0 4px;
@@ -395,7 +394,7 @@ footer .footer-bottom {
   display: flex;
   width: -moz-fit-content;
   width: fit-content;
-  height: 20px;
+  height: 16px;
   align-items: center;
 }
 .layout-product-item .layout-info .item-flash {
@@ -413,6 +412,7 @@ footer .footer-bottom {
 .layout-product-item .layout-info .item-percent {
   color: #dd2033;
   background: #fce9eb;
+  font-size: 13px;
   font-weight: 600;
 }
 .layout-product-item .layout-addcart {

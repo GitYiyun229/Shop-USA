@@ -1,4 +1,4 @@
-		<div href="https://shopusa:8890/son-trang-diem-flawsome-sunny-matte-tint-32g-copy-copy-copy-p41.html" title="Son trang điểm Flawsome Sunny Matte Tint (32g)" class="layout-product-item position-relative" target="_blank">
+		<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323-copy-copy-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -13,7 +13,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							176.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							196.000₫						</div>
 						<div class="layout-info">
@@ -23,7 +22,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-p4.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/Rectangle_1323_(2).webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -38,7 +37,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							358.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							458.000₫						</div>
 						<div class="layout-info">
@@ -48,7 +46,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-copy-p10.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_2-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -63,7 +61,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							229.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							450.000₫						</div>
 						<div class="layout-info">
@@ -73,7 +70,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-copy-2-p16.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_2-copy-2.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -88,7 +85,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							358.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							458.000₫						</div>
 						<div class="layout-info">
@@ -98,7 +94,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-copy-copy-p22.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g " class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_2-copy-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -113,7 +109,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							239.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							529.000₫						</div>
 						<div class="layout-info">
@@ -123,7 +118,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-copy-copy-1-p30.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/03/12/resized/rectangle_1323_2-copy-copy-1.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -138,7 +133,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							99.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 													</div>
 						<div class="layout-info">
@@ -147,7 +141,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-copy-2-copy-p36.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_2-copy-2-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -162,7 +156,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							358.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							458.000₫						</div>
 						<div class="layout-info">
@@ -172,7 +165,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-copy-copy-copy-p42.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_2-copy-copy-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -187,7 +180,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							358.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							458.000₫						</div>
 						<div class="layout-info">
@@ -197,7 +189,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-p5.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/Rectangle_1323_(3).webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -212,7 +204,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							895.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							995.000₫						</div>
 						<div class="layout-info">
@@ -222,7 +213,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-copy-p11.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_3-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -237,7 +228,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							895.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							995.000₫						</div>
 						<div class="layout-info">
@@ -247,7 +237,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-copy-1-p17.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế " class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_3-copy-1.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -262,7 +252,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							895.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							995.000₫						</div>
 						<div class="layout-info">
@@ -272,7 +261,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-copy-copy-p23.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_3-copy-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -287,7 +276,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							895.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							995.000₫						</div>
 						<div class="layout-info">
@@ -297,7 +285,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-copy-2-p25.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_3-copy-2.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -312,7 +300,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							895.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							995.000₫						</div>
 						<div class="layout-info">
@@ -322,7 +309,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-copy-copy-1-p31.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế " class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_3-copy-copy-1.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -337,7 +324,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							4.300.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							6.500.000₫						</div>
 						<div class="layout-info">
@@ -347,7 +333,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-copy-1-copy-p37.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_3-copy-1-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -362,7 +348,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							895.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							995.000₫						</div>
 						<div class="layout-info">
@@ -372,7 +357,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/phan-nuoc-trang-diem-duong-am-the-he-moi-cho-lop-nen-bong-khoe-laneige-neo-cushion-glow-15gkem-loi-thay-the-copy-copy-copy-p43.html" title="Phấn Nước Trang Điểm Dưỡng Ẩm Thế Hệ Mới Cho Lớp Nền Bóng Khỏe Laneige Neo Cushion Glow 15G + Kèm Lõi Thay Thế" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/rectangle_1323_3-copy-copy-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -387,7 +372,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							279.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 													</div>
 						<div class="layout-info">
@@ -396,7 +380,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-1-p6.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/Frame_1170.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -411,7 +395,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							358.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							458.000₫						</div>
 						<div class="layout-info">
@@ -421,7 +404,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-1-copy-1-p12.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/frame_1170-copy-1.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -436,7 +419,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							358.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							458.000₫						</div>
 						<div class="layout-info">
@@ -446,7 +428,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-1-copy-3-p18.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/frame_1170-copy-3.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -461,7 +443,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							358.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							458.000₫						</div>
 						<div class="layout-info">
@@ -471,7 +452,7 @@
 				</div>
 			</a>
 		</div>
-		<div href="https://shopusa:8890/sap-duong-moi-nuxe-reve-de-miel®-15g-1-copy-1-copy-p24.html" title="Sáp dưỡng môi Nuxe Rêve de Miel® 15g" class="layout-product-item position-relative" target="_blank">
+			<div class="layout-product-item position-relative">
 			<div class="box-img">
 				<img src="https://shopusa:8890/images/products/2024/02/23/resized/frame_1170-copy-1-copy.webp" alt="" class="img-fluid layout-img" onerror="this.src='/images/not_picture.png'">
 			</div>
@@ -486,7 +467,6 @@
 					<div class="layout-public-price">
 						<div class="price">
 							79.000₫						</div>
-						<!-- <div class="sold-out">Đã bán </?php echo $item->sold_out ?></div> -->
 						<div class="layout-origin-price">
 							159.000₫						</div>
 						<div class="layout-info">
@@ -496,3 +476,4 @@
 				</div>
 			</a>
 		</div>
+	

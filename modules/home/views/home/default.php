@@ -1,21 +1,19 @@
 <?php
+$tmpl->addStylesheet('slick', 'libraries/slick-js');
+$tmpl->addStylesheet('slick.theme', 'libraries/slick-js');
 $tmpl->addStylesheet('owl.carousel.min', 'libraries/OwlCarousel2-2.3.4/dist/assets');
 $tmpl->addStylesheet('owl.theme.default.min', 'libraries/OwlCarousel2-2.3.4/dist/assets');
+
 $tmpl->addStylesheet('default', 'modules/home/assets/css');
 $tmpl->addScript('owl.carousel.min', 'libraries/OwlCarousel2-2.3.4/dist');
 $tmpl->addScript('default', 'modules/home/assets/js');
-
+$tmpl->addScript('slick.min', 'libraries/slick-js');
 ?>
-
 <div class="page-home">
     <div class="d-flex gap-3 section-top mb-3">
-
-
         <div class="section-top-center">
             <?php echo $tmpl->load_direct_blocks('banners', ['category_id' => '1', 'style' => 'slide']); ?>
         </div>
-
-
     </div>
     <div class="container">
         <div class="section-flash-sale mb-5 mt-2">
@@ -24,13 +22,24 @@ $tmpl->addScript('default', 'modules/home/assets/js');
                     <p class="fst-italic"><?= FSText::_('Flash') ?><span class="pl-3"><?= FSText::_('Sale') ?></span> </p>
                 </h3>
                 <div class="time_sales fs-sale">
-                    <p class="tile time_count" data-timeend="Mar 31 2024 23:00:00" data-id="163">Kết thúc sau:
-                        <span id="demo163"><span class="fw-bold number_">27</span>:<span class="fw-bold number_">09</span>:
-                            <span class="fw-bold number_">00</span>:<span class="fw-bold number_">19</span></span>
-
-                    </p>
-
+                    <div class="tile time_count d-flex flex-wrap justify-content-end" data-day="7" id="the-FlashSale-countdown">
+                        <p>Kết thúc sau:</p>
+                        <div id="demo163">
+                            <span class="fw-bold number_">00</span>
+                            :
+                            <span class="fw-bold number_">00</span>
+                            :
+                            <span class="fw-bold number_">00</span>
+                            :
+                            <span class="fw-bold number_">00</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+            <div class="<?php echo count($flashsaleProductsOriginal) > 12 ? 'slider-flashsale' : 'flashsale-listprd' ?>  products d-flex flex-wrap product-gap ">
+                <?php foreach ($flashsaleProductsOriginal as $item_sale) { ?>
+                    <?php echo $this->layoutProductItemFlashSale($item_sale) ?>
+                <?php } ?>
             </div>
         </div>
         <div class="section-top mb-5 mt-3">

@@ -60,7 +60,8 @@ class HomeModelsHome extends FSModels
         $sql = "SELECT a.id, a.name, a.alias, a.image, a.quantity, a.price, b.product_id, b.promotion_id, b.quantity AS discount_quantity, b.quantity_user, b.sold AS discount_sold, b.price AS discount_price, b.percent, b.`type`, b.date_end, b.date_start 
                 FROM $this->tableProduct AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
                 WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('$now') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
-                ORDER BY a.ordering DESC, a.id DESC
+                ORDER BY a.ordering DESC, a.id DESC 
+               
         ";
         return $db->getObjectList($sql, USE_MEMCACHE);
     }

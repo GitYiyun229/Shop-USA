@@ -95,7 +95,7 @@ $(".slider-nav").slick({
 
 
 $(".slider-related").slick({
-  slidesToShow: 6,
+  slidesToShow: 5,
   slidesToScroll: 1,
   arrows: true,
   infinite: false,

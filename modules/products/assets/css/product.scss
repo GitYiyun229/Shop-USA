@@ -273,14 +273,14 @@
   }
   .add-like {
     color: #a3a3a3;
-    border: 1px solid #a3a3a3;
     background: #fff;
-    width: calc(100% - 400px - 2rem);
+    // width: calc(100% - 480px - 1rem);
     &.added {
       pointer-events: none;
       color: #fff;
-      background: #dd2033;
-      border-color: #dd2033;
+      svg path {
+        fill: rgb(221, 32, 51);
+      }
     }
   }
   .btn-submit {
@@ -292,14 +292,16 @@
     gap: 10px;
     &.out-of-stock {
       color: #fff;
-      background: #dd2033;
-      border: 1px solid #dd2033;
       width: calc(400px + 1rem);
+      svg path {
+        fill: rgb(221, 32, 51);
+      }
     }
     &:hover {
       color: #fff;
-      background: #dd2033;
-      border-color: #dd2033;
+      svg path {
+        fill: rgb(221, 32, 51);
+      }
     }
   }
   .b-collapse {
@@ -310,26 +312,42 @@
       letter-spacing: 3px;
       font-size: 16px;
     }
-  
-
+    .collapse {
+      max-width: 100%;
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+      }
+    }
   }
   .bd-row {
     height: 1px;
     border: 1px solid #ebebeb;
   }
 }
-
+p img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
 .section-product-related {
   padding: 20px;
   border-radius: 4px;
   h2 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-right: 10px;
     font-size: 20px;
-    margin-bottom: 1rem;
+    font-weight: 300;
+    color: #3b3b3b;
   }
   .list-related {
     gap: 10px;
     .layout-product-item {
-      width: calc((100% - 50px) / 6);
+      width: calc((100% - 50px) / 5);
       .layout-img {
         height: 183px;
       }
@@ -341,15 +359,15 @@
     .layout-product-item {
       margin: 0 5px;
       .layout-img {
-        height: 183px;
+        // height: 240px;
       }
       .layout-info {
-        min-height: 44px;
+        // min-height: 44px;
       }
     }
     .slick-arrow {
       position: absolute;
-      top: 50%;
+      top: 35%;
       transform: translateY(-50%);
       width: 24px;
       height: 24px;
@@ -414,9 +432,9 @@
 }
 
 .section-grid {
-  display: grid;
-  grid-template-columns: auto 220px;
-  grid-gap: 1rem;
+  // display: grid;
+  // grid-template-columns: auto 220px;
+  // grid-gap: 1rem;
 }
 
 .section-technical {

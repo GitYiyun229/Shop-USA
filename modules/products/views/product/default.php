@@ -45,8 +45,31 @@ $tmpl->addScript('product', 'modules/products/assets/js');
         </div>
 
         <div class="section-main">
+            <div class="p-sub-title">
+                <a href="">HOME </a>
+                <a href="" class="text-uppercase">/ <?php echo $data->category_name ?></a>
+            </div>
             <h1 class="p-name"><?php echo $data->name ?></h1>
             <p class="p-sub-title"><?php echo $data->subtitle ?></p>
+            <div class="p-sub-Evaluate d-flex justify-content-between">
+                <div class="d-flex align-items-center gap-2 mb-1">
+                    <div class="star-rating" style="--rating: <?php echo 5 ?>;"></div>
+                    <div class="rate-name fw-medium"><?php echo $this->rateName[5] ?></div>
+                </div>
+                <div class="<?php echo $data->status_prd == 4 ? 'p-status-out' : 'p-status-in' ?>">
+                    <?php if ($data->status_prd == 4) { ?>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.5 4.5L4.5 13.5" stroke="#E71313" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4.5 4.5L13.5 13.5" stroke="#E71313" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    <?php } else { ?>
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 4.5L6.75 12.75L3 9" stroke="#3BA500" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    <?php } ?>
+                    <?php echo $status_prd ?>
+                </div>
+            </div>
             <div class="p-trademark d-flex align-items-center justify-content-between">
                 <div class="d-flex align-items-center gap-3">
                     <div>
@@ -58,31 +81,34 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                         <b><?php echo $data->sold_out ?></b>
                         <span><?php echo FSText::_('Đã bán') ?></span>
                     </div>
-                    <div class="wrap"></div>
-                    <div class="<?php echo $data->status_prd == 4 ? 'p-status-out' : 'p-status-in' ?>">
-                        <?php if ($data->status_prd == 4) { ?>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.5 4.5L4.5 13.5" stroke="#E71313" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M4.5 4.5L13.5 13.5" stroke="#E71313" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        <?php } else { ?>
-                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 4.5L6.75 12.75L3 9" stroke="#3BA500" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        <?php } ?>
-                        <?php echo $status_prd ?>
+
+                </div>
+
+                <?php if ($user->userID) { ?>
+                    <a href="" class="btn-submit add-like <?php echo $favorite ? 'added' : 'no-add' ?>">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.44 0.100006C12.63 0.100006 11.01 0.980006 10 2.33001C8.99 0.980006 7.37 0.100006 5.56 0.100006C2.49 0.100006 0 2.60001 0 5.69001C0 6.88001 0.19 7.98001 0.52 9.00001C2.1 14 6.97 16.99 9.38 17.81C9.72 17.93 10.28 17.93 10.62 17.81C13.03 16.99 17.9 14 19.48 9.00001C19.81 7.98001 20 6.88001 20 5.69001C20 2.60001 17.51 0.100006 14.44 0.100006Z" fill="#BFBFBF" />
+                        </svg>
+                    </a>
+                <?php } else { ?>
+                    <a href="javascript:void(0)" class="btn-submit add-like" data-bs-toggle="tooltip" data-bs-title="Vui lòng đăng nhập để sử dụng tính năng">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.44 0.100006C12.63 0.100006 11.01 0.980006 10 2.33001C8.99 0.980006 7.37 0.100006 5.56 0.100006C2.49 0.100006 0 2.60001 0 5.69001C0 6.88001 0.19 7.98001 0.52 9.00001C2.1 14 6.97 16.99 9.38 17.81C9.72 17.93 10.28 17.93 10.62 17.81C13.03 16.99 17.9 14 19.48 9.00001C19.81 7.98001 20 6.88001 20 5.69001C20 2.60001 17.51 0.100006 14.44 0.100006Z" fill="#BFBFBF" />
+                        </svg>
+                    </a>
+                <?php } ?>
+            </div>
+
+            <div class="p-price-promotion">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="layout-public-price">
+                        <div class="price"><?php echo format_money($data->price_discount, '₫') ?></div>
+                        <div class="layout-origin-price"> <?php echo $data->price_old && $data->price_discount < $data->price_old ? format_money($data->price_old, '₫') : '' ?></div>
+                        <div class="layout-info">
+                            <div class="item-info item-percent">- <?php echo $data->percent ?>%</div>
+                        </div>
                     </div>
                 </div>
-                <div class="p-share">
-                    <a href="" class="d-flex align-items-center gap-2">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.1335 5.14166C15.8002 6.29999 16.9502 8.14166 17.1835 10.2667M2.9085 10.3083C3.12516 8.19166 4.2585 6.34999 5.9085 5.18333M6.82516 17.45C7.79183 17.9417 8.89183 18.2167 10.0502 18.2167C11.1668 18.2167 12.2168 17.9667 13.1585 17.5083M12.3668 4.09999C12.3668 5.37945 11.3296 6.41666 10.0502 6.41666C8.7707 6.41666 7.7335 5.37945 7.7335 4.09999C7.7335 2.82053 8.7707 1.78333 10.0502 1.78333C11.3296 1.78333 12.3668 2.82053 12.3668 4.09999ZM6.34183 14.2833C6.34183 15.5628 5.30462 16.6 4.02516 16.6C2.7457 16.6 1.7085 15.5628 1.7085 14.2833C1.7085 13.0039 2.7457 11.9667 4.02516 11.9667C5.30462 11.9667 6.34183 13.0039 6.34183 14.2833ZM18.2918 14.2833C18.2918 15.5628 17.2546 16.6 15.9752 16.6C14.6957 16.6 13.6585 15.5628 13.6585 14.2833C13.6585 13.0039 14.6957 11.9667 15.9752 11.9667C17.2546 11.9667 18.2918 13.0039 18.2918 14.2833Z" stroke="#757575" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                        <?php echo FSText::_('Chia sẻ') ?>
-                    </a>
-                </div>
-            </div>
-            <div class="p-price-promotion">
                 <?php if ($data->have_flash) { ?>
                     <div class="p-promotion d-flex align-items-center justify-content-between ps-3 pe-3">
                         <img src="/images/flash-text.svg" alt="Fashsale" class="img-fluid">
@@ -233,7 +259,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                 <p class="btn btn-primary p-collapse text-uppercase" data-bs-toggle="collapse" href="#HoanTra" role="button" aria-expanded="false" aria-controls="HoanTra">Chính sách vận chuyển và hoàn trả</p>
                 <div class="collapse mt-3 mb-3" id="HoanTra">
                     <div class="card card-body border-0">
-                        sadasas222 dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+                        <?php echo $config['title_vanchuyen'] ?>
                     </div>
                 </div>
             </div>
@@ -245,9 +271,29 @@ $tmpl->addScript('product', 'modules/products/assets/js');
 <div class="container">
     <?php if (!empty($dataRelated)) { ?>
         <div class="section-product-related bg-white mb-3">
-            <h2><?php echo FSText::_('Sản phẩm tương tự') ?></h2>
+            <h2 class="text-center mb-4"><?php echo FSText::_('có thể bạn cũng thích') ?></h2>
             <div class="<?php echo count($dataRelated) > 5 ? 'slider-related' : 'list-related d-flex' ?>">
                 <?php foreach ($dataRelated as $item) {
+                    echo $this->layoutProductItem($item);
+                } ?>
+            </div>
+        </div>
+    <?php } ?>
+    <?php if (!empty($dataRelated)) { ?>
+        <div class="section-product-related bg-white mb-4">
+            <h2 class="text-center mb-3"><?php echo FSText::_('Sản phẩm khuyến nghị') ?></h2>
+            <div class="<?php echo count($dataRelated) > 5 ? 'slider-related' : 'list-related d-flex' ?>">
+                <?php foreach ($dataRelated as $item) {
+                    echo $this->layoutProductItem($item);
+                } ?>
+            </div>
+        </div>
+    <?php } ?>
+    <?php if (empty($dataRelated)) { ?>
+        <div class="section-product-related bg-white mb-4">
+            <h2 class="text-center mb-3"><?php echo FSText::_('Sản phẩm khuyến nghị') ?></h2>
+            <div class="<?php echo count($dataSell) > 5 ? 'slider-related' : 'list-related d-flex' ?>">
+                <?php foreach ($dataSell as $item) {
                     echo $this->layoutProductItem($item);
                 } ?>
             </div>
@@ -268,19 +314,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                 </div>
             <?php } ?>
 
-            <div class="section-item section-description bg-white mb-3">
-                <h2 class="section-title fw-bold position-relative"><?php echo FSText::_('Mô tả sản phẩm') ?></h2>
-                <div class="description-main less">
-                    <?php echo $data->description ?>
-                </div>
-                <div class="d-flex align-items-center justify-content-center">
-                    <button class="btn-more-less d-flex align-items-center gap-2 fw-bold">
-                        <span><?php echo FSText::_('Xem thêm') ?></span>
-                        <span><?php echo FSText::_('Thu gọn') ?></span>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </button>
-                </div>
-            </div>
+
 
             <?php if (!empty($dataRate)) { ?>
                 <div class="section-item section-rate-comment bg-white mb-3">
@@ -379,7 +413,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                                                 <div class="comment-admin mt-2">
                                                     <img src="<?php echo URL_ROOT ?>images/user-icon.svg" alt="vuabanlo.vn" class="img-fluid">
                                                     <div class="content-admin">
-                                                        <div class="mb-1 fw-medium mb-1">VUABANLO.VN</div>
+                                                        <div class="mb-1 fw-medium mb-1">ShopUSA.VN</div>
                                                         <div class="comment-text">
                                                             <?php echo nl2br($admin->comment) ?>
                                                         </div>
@@ -398,23 +432,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                 </div>
             <?php } ?>
 
-            <div class="section-more-products">
-                <h2 class="fw-bold"><?php echo FSText::_('Có thể bạn cũng thích') ?></h2>
-                <div class="section-more d-flex flex-wrap">
-                    <?php foreach ($dataMore as $item) {
-                        echo $this->layoutProductItem($item);
-                    } ?>
-                </div>
-                <div class="section-item loading-scroll w-100" limit="<?php echo $this->model->limit ?>" total-current="<?php echo count($dataMore) ?>" total="96" page="1"></div>
-            </div>
         </div>
-        <div class="section-grid-right">
-            <div class="section-item section-hot-selling bg-white">
-                <h2 class="section-title fw-bold position-relative"><?php echo FSText::_('Sản phẩm bán chạy') ?></h2>
-                <?php foreach ($dataSell as $item) {
-                    echo $this->layoutProductItem($item);
-                } ?>
-            </div>
-        </div>
+
     </div>
 </div>

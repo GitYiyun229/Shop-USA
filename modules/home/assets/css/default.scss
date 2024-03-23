@@ -447,7 +447,7 @@
       text-align: end;
       color: #3b3b3b;
       #demo163 {
-        font-weight: 600;
+        font-weight: 300;
         span {
           background-color: #dd2033;
           color: #fff;
@@ -455,6 +455,73 @@
           margin: 0px 2px;
           padding: 0 2px;
           font-size: 16px;
+        }
+      }
+    }
+  }
+  .flashsale-listprd {
+    gap: 10px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    .layout-product-item {
+      width: calc((100% - 50px) / 6);
+    }
+  }
+
+  .slider-flashsale {
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      border-radius: 100%;
+      color: #888;
+      background: #fff;
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      border: none;
+      padding: 0;
+      outline: none;
+      transform-origin: center;
+      transition: 0.3s ease-in-out;
+      svg {
+        width: 6px;
+        height: auto;
+        stroke-width: 4;
+        transition: 0.3s ease-in-out;
+      }
+      &.slick-disabled {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &.slick-prev {
+        left: -12px;
+      }
+      &.slick-next {
+        right: -12px;
+      }
+      &:hover {
+        color: #888;
+        background: #fff;
+        width: 48px;
+        height: 48px;
+        svg {
+          width: 12px;
+        }
+      }
+    }
+    .slick-list.draggable {
+      background-color: #fff;
+      border-radius: 8px;
+      // padding: 0.5rem;
+      .slick-track {
+        .slick-slide {
+          padding: 0 5px;
         }
       }
     }

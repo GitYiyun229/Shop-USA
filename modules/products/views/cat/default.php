@@ -7,9 +7,6 @@ $tmpl->addScript('category', 'modules/products/assets/js');
 <div class="container">
     <?php echo $tmpl->load_direct_blocks('breadcrumbs', array('style' => 'simple')); ?>
     <form action="<?php echo $canonical ?>" method="GET" class="page-products-category d-flex flex-wrap">
-
-
-
         <div class="section-main">
             <div class="section-item section-padding bg-white">
                 <h1 class="cat-h1"><?php echo $cat->name ?></h1>
@@ -17,7 +14,7 @@ $tmpl->addScript('category', 'modules/products/assets/js');
                     <?php echo $tmpl->load_direct_blocks('banners', ['product_category_id' => $cat->id, 'style' => 'category']); ?>
                 </div>
             </div>
-            <div class="section-filter d-flex justify-content-end">
+            <div class="section-filter d-flex justify-content-end mb-4">
                 <div class="select-menu ">
                     <?php ?>
                     <div class="select">
@@ -37,14 +34,11 @@ $tmpl->addScript('category', 'modules/products/assets/js');
                     </div>
                 </div>
             </div>
-
-
             <div class="section-item section-products d-flex flex-wrap">
                 <?php foreach ($products as $item) {
                     echo $this->layoutProductItem($item);
                 } ?>
             </div>
-
             <div class="section-item loading-scroll w-100" category="<?php echo $cat->id ?>" limit="<?php echo $this->model->limit ?>" total-current="<?php echo count($products) ?>" total="<?php echo $total ?>" page="1"></div>
         </div>
 

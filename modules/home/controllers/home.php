@@ -23,6 +23,7 @@ class HomeControllersHome extends FSControllers
         $total = $total > 60 ? 60 : $total;
 
         $flashsaleProductsOriginal = $model->getFlashProducts();
+        // print_r($flashsaleProductsOriginal);
         $flashsaleProducts = [];
         if (!empty($flashsaleProductsOriginal)) {
             foreach ($flashsaleProductsOriginal as $item) {
@@ -32,6 +33,7 @@ class HomeControllersHome extends FSControllers
             $flashsaleProducts = array_values($flashsaleProducts);
             
             foreach ($flashsaleProducts as $item) {
+                // print_r($flashsaleProducts);
                 if ($item->discount_price && $item->discount_price > 0) {
                     $item->price_public = $item->discount_price;
                 } else {
@@ -39,6 +41,7 @@ class HomeControllersHome extends FSControllers
                 }
                 $total_discount = $item->discount_quantity ?: $item->quantity;
                 $item->percent_sale = $total_discount ? round($item->discount_sold / $total_discount * 100) : 0;
+                // print_r($item->price_public);
                 $item->text_sale = FSText::_('Vừa mở bán');
                 if ($item->percent_sale) {
                     $item->text_sale = "Đã bán $item->discount_sold";
@@ -77,6 +80,7 @@ class HomeControllersHome extends FSControllers
         }
 
         $list_tiktok = $model->get_tiktok();
+
 
         include 'modules/' . $this->module . '/views/' . $this->view . '/default.php';
     }
