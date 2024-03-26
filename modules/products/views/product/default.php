@@ -318,7 +318,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
 
             <?php if (!empty($dataRate)) { ?>
                 <div class="section-item section-rate-comment bg-white mb-3">
-                    <h2 class="section-title fw-bold position-relative"><?php echo FSText::_('Khách hàng đánh giá') ?></h2>
+                    <h2 class="section-title fw-bold position-relative"><?php echo FSText::_('Đánh giá của khách hàng') ?></h2>
                     <div class="section-rate">
                         <div class="rate">
                             <p class="fw-medium mb-3 fs-6"><?php echo FSText::_('Tổng quan') ?></p>

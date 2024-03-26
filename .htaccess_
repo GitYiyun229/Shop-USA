@@ -42,7 +42,7 @@ RewriteRule ^dat-hang-thanh-cong$ index.php?module=products&view=cart&task=order
 
 #members
 RewriteRule ^tai-khoan-ca-nhan$ index.php?module=members&view=dashboard&Itemid=201&lang=vi [L]
-RewriteRule ^don-hang-cua-toi(.*) index.php?module=members&view=orders&Itemid=201&lang=vi&%{QUERY_STRING} [L]
+RewriteRule ^don-hang-cua-toi$ index.php?module=members&view=orders&Itemid=201&lang=vi [L]
 RewriteRule ^chi-tiet-don-hang-([0-9]*)$ index.php?module=members&view=orders&task=detail&id=$1&Itemid=201&lang=vi [L]
 RewriteRule ^hang-thanh-vien$ index.php?module=members&view=level&Itemid=201&lang=vi [L]
 RewriteRule ^so-dia-chi$ index.php?module=members&view=address&Itemid=201&lang=vi [L]

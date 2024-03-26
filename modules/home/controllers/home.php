@@ -23,15 +23,33 @@ class HomeControllersHome extends FSControllers
         $total = $total > 60 ? 60 : $total;
 
         $flashsaleProductsOriginal = $model->getFlashProducts();
+
         // print_r($flashsaleProductsOriginal);
+
         $flashsaleProducts = [];
         if (!empty($flashsaleProductsOriginal)) {
+
+            
+            $date_flash_sale = $model->GetDateFlashSale();
+            $specificDate = strtotime($date_flash_sale->date_end);
+            $currentTime = time();
+            // Tính khoảng thời gian giữa thời gian hiện tại và ngày cụ thể
+            $diffInSeconds =  $specificDate - $currentTime;
+            // Chuyển đổi thành số ngày, giờ, phút và giây
+            $diffInDays = floor($diffInSeconds / (60 * 60 * 24)); // Số ngày còn lại đến flash sale
+            $diffInHours = floor(($diffInSeconds % (60 * 60 * 24)) / (60 * 60)); // Số giờ còn lại
+            $diffInMinutes = floor((($diffInSeconds % (60 * 60 * 24)) % (60 * 60)) / 60); // Số phút còn lại
+            $diffInSeconds = $diffInSeconds % 60; // Số giây còn lại
+
+            $diffInDays = sprintf('%02d', $diffInDays);
+            $diffInHours = sprintf('%02d', $diffInHours);
+            $diffInMinutes = sprintf('%02d', $diffInMinutes);
+            $diffInSeconds = sprintf('%02d', $diffInSeconds);
+
             foreach ($flashsaleProductsOriginal as $item) {
                 $flashsaleProducts[$item->id] = $item;
             }
-
             $flashsaleProducts = array_values($flashsaleProducts);
-            
             foreach ($flashsaleProducts as $item) {
                 // print_r($flashsaleProducts);
                 if ($item->discount_price && $item->discount_price > 0) {
@@ -50,7 +68,6 @@ class HomeControllersHome extends FSControllers
         }
 
         $tmpl->assign('canonical', URL_ROOT);
-
         $userImage = 'images/user-icon.svg';
         $orderNew = 0;
         $orderShipping = 0;
@@ -67,13 +84,13 @@ class HomeControllersHome extends FSControllers
             foreach ($order as $item) {
                 switch ($item->status) {
                     case 0:
-                        $orderNew ++;
+                        $orderNew++;
                         break;
                     case 1:
-                        $orderShipping ++;
+                        $orderShipping++;
                         break;
                     case 2:
-                        $orderSuccess ++;
+                        $orderSuccess++;
                         break;
                 }
             }
@@ -96,7 +113,13 @@ class HomeControllersHome extends FSControllers
             echo $this->layoutProductItem($item);
         }
     }
+    public function function_FlashSale()
+    {
+        $model = $this->model;
 
+
+        echo "Còn lại $diffInDays ngày, $diffInHours giờ, $diffInMinutes phút và $diffInSeconds giây đến flash sale";
+    }
     function display404()
     {
         $url = URL_ROOT;

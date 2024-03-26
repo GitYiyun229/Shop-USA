@@ -4,6 +4,7 @@ class HomeModelsHome extends FSModels
 {
     public $tableProductCat;
     public $tableProduct;
+    public $tableFlashSale;
 
     function __construct()
     {
@@ -12,6 +13,7 @@ class HomeModelsHome extends FSModels
         $this->tableProductCat = 'fs_products_categories';
         $this->tableProduct = 'fs_products';
         $this->tableProductFlashSale = 'fs_flash_sale_detail';
+        $this->tableFlashSale = 'fs_promotion_discount';
         $this->limit = FSInput::get('limit', 24);
     }
 
@@ -28,7 +30,7 @@ class HomeModelsHome extends FSModels
 
         return $db->getObjectList($sql, USE_MEMCACHE);
     }
-    
+
     public function get_tiktok()
     {
         global $db;
@@ -61,8 +63,13 @@ class HomeModelsHome extends FSModels
                 FROM $this->tableProduct AS a INNER JOIN fs_promotion_discount_detail AS b ON a.id = b.product_id 
                 WHERE b.published = 1 AND a.published = 1 AND a.price > 0 AND DATE(b.date_end) >= DATE('$now') AND ((b.quantity > 0 AND b.sold < b.quantity) OR (b.quantity = 0))
                 ORDER BY a.ordering DESC, a.id DESC 
-               
         ";
         return $db->getObjectList($sql, USE_MEMCACHE);
+    }
+    public function  GetDateFlashSale()
+    {
+        global $db;
+        $sql = "SELECT * FROM $this->tableFlashSale WHERE published = 1   ORDER BY ordering ASC limit 1";
+        return $db->getObject($sql, USE_MEMCACHE);
     }
 }

@@ -92,53 +92,125 @@ function loadMoreContent(page, limit, load) {
   });
 }
 $(document).ready(function () {
-    $(".slider-flashsale").slick({
-      slidesToShow: 6,
-      rows: 2,
-      slidesToScroll: 6,
-      arrows: true,
-      infinite: true,
-      speed: 300,
-      prevArrow:
-        '<button class="slick-prev"><svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 21L1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>',
-      nextArrow:
-        '<button class="slick-next"><svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 21L11 11L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>',
-    });
-})
+  $(".slider-flashsale").slick({
+    slidesToShow: 6,
+    rows: 2,
+    slidesToScroll: 6,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    prevArrow:
+      '<button class="slick-prev"><svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 21L1 11L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>',
+    nextArrow:
+      '<button class="slick-next"><svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 21L11 11L1 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>',
+  });
+});
 
-const coutDown = (day, hour, minute, second) => {
-  setInterval(() => {
-    var d = new Date();
-    let hours = hour - 1 - d.getHours();
-    let min = minute - d.getMinutes();
-    if ((min + "").length == 1) {
-      min = "0" + min;
-    }
-    let sec = second - d.getSeconds();
-    if ((sec + "").length == 1) {
-      sec = "0" + sec;
-    }
-    $("#the-FlashSale-countdown #demo163").html(
+// const coutDown = (day, hour, minute, second) => {
+//   setInterval(() => {
+//     var d = new Date();
+//     let days = day ; // Số ngày còn lại
+//     let hours = hour - 1 - d.getHours(); // Số giờ còn lại
+//     let min = minute - d.getMinutes(); // Số phút còn lại
+//     if ((min + "").length == 1) {
+//       min = "0" + min;
+//     }
+//     let sec = second - d.getSeconds(); // Số giây còn lại
+//     if ((sec + "").length == 1) {
+//       sec = "0" + sec;
+//     }
+//     $("#the-FlashSale-countdown #demo163").html(
+//       "<span class='fw-bold number_'>" +
+//         days +
+//         "</span>" +
+//         "<span class='fw-bold number_'>" +
+//         hours +
+//         "</span>" +
+//         "<span class='fw-bold number_'>" +
+//         min +
+//         "</span>" +
+//         "<span class='fw-bold number_'>" +
+//         sec +
+//         "</span>"
+//     );
+//   }, 1000);
+// };
+
+// $(document).ready(function () {
+//   var countdownElement = $("#the-FlashSale-countdown");
+//   if (countdownElement.length) {
+//     var diffInDays = countdownElement.data("day");
+//     var diffInHours = countdownElement.data("hour");
+//     var diffInMinutes = countdownElement.data("minutes");
+//     var diffInSeconds = countdownElement.data("seconds");
+//     coutDown(diffInDays, diffInHours, diffInMinutes, diffInSeconds);
+//   }
+// });
+
+$(document).ready(function () {
+  var countdownElement = $("#the-FlashSale-countdown");
+
+  if (countdownElement.length) {
+    var diffInDays = parseInt(countdownElement.data("day"));
+    var diffInHours = parseInt(countdownElement.data("hour"));
+    var diffInMinutes = parseInt(countdownElement.data("minutes"));
+    var diffInSeconds = parseInt(countdownElement.data("seconds"));
+
+    countDown(diffInDays, diffInHours, diffInMinutes, diffInSeconds);
+  }
+});
+
+function countDown(days, hours, minutes, seconds) {
+  var targetDate = new Date();
+  targetDate.setDate(targetDate.getDate() + days);
+  targetDate.setHours(targetDate.getHours() + hours);
+  targetDate.setMinutes(targetDate.getMinutes() + minutes);
+  targetDate.setSeconds(targetDate.getSeconds() + seconds);
+
+  var countdownTimer = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = targetDate - now;
+
+    var daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hoursLeft = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    var minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+   if (daysLeft < 10) {
+     daysLeft = "0" + daysLeft;
+   }
+   if (hoursLeft < 10) {
+     hoursLeft = "0" + hoursLeft;
+   }
+   if (minutesLeft < 10) {
+     minutesLeft = "0" + minutesLeft;
+   }
+   if (secondsLeft < 10) {
+     secondsLeft = "0" + secondsLeft;
+   }
+    $("#demo163").html(
       "<span class='fw-bold number_'>" +
-        day +
-        "</span>:" +
+        daysLeft+
+        "</span>" +
+        " : " +
         "<span class='fw-bold number_'>" +
-        hours +
-        "</span>:" +
+        hoursLeft +
+        "</span>" +
+        " : " +
         "<span class='fw-bold number_'>" +
-        min +
-        "</span>:" +
+        minutesLeft +
+        "</span>" + " : " +
         "<span class='fw-bold number_'>" +
-        sec +
+        secondsLeft +
         "</span>"
     );
+
+    if (distance < 0) {
+      clearInterval(countdownTimer);
+      $("#the-FlashSale-countdown").html("EXPIRED");
+    }
   }, 1000);
-};
-
-var countdownElement = document.getElementById("the-FlashSale-countdown");
-
-if (countdownElement) {
-  var timeDayValue = countdownElement.getAttribute("data-day");
-  coutDown(timeDayValue, 24, 60, 60); // Sử dụng giờ mặc định là 24, bạn có thể cập nhật nếu cần thiết
 }
-

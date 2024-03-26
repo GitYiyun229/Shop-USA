@@ -1,7 +1,7 @@
 <?php
 $tmpl->addStylesheet('category', 'modules/products/assets/css');
 $tmpl->addScript('category', 'modules/products/assets/js');
-
+$tmpl->addStylesheet('default', 'blocks/product_categories/assets/css');
 ?>
 
 <div class="container">
@@ -9,12 +9,17 @@ $tmpl->addScript('category', 'modules/products/assets/js');
     <form action="<?php echo $canonical ?>" method="GET" class="page-products-category d-flex flex-wrap">
         <div class="section-main">
             <div class="section-item section-padding bg-white">
-                <h1 class="cat-h1"><?php echo $cat->name ?></h1>
                 <div class="section-banner">
                     <?php echo $tmpl->load_direct_blocks('banners', ['product_category_id' => $cat->id, 'style' => 'category']); ?>
                 </div>
             </div>
-            <div class="section-filter d-flex justify-content-end mb-4">
+            <div class="section-top mb-5 mt-3">
+                <?php echo $tmpl->load_direct_blocks('product_categories', ['style' => 'view_menu_categories_cat', 'category_id' => $cat->id]); ?>
+            </div>
+            <div class="section-filter d-flex flex-wrap align-items-center justify-content-between mb-4">
+                <div class="total_product">
+                    <p class="fw-bold fs-5"><?= $total . ' '?> <span class="fw-light"><?=  FSText::_('Sản phẩm')?></span></p>
+                </div>
                 <div class="select-menu ">
                     <?php ?>
                     <div class="select">

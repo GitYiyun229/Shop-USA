@@ -18,7 +18,13 @@ class Product_categoriesBControllersProduct_categories
 		$model = new Product_categoriesBModelsProduct_categories();
 		$style = $parameters->getParams('style') ?: 'default';
 
-		$list = $model->get_list();
+		if(!empty($category_id)){
+			$list = $model->get_list_cat($category_id);
+
+		}else{
+			$list = $model->get_list();
+
+		}
 		
 
 		// call views
