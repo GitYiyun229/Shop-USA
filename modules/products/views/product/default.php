@@ -84,30 +84,31 @@ $tmpl->addScript('product', 'modules/products/assets/js');
 
                 </div>
 
-                <?php if ($user->userID) { ?>
-                    <a href="" class="btn-submit add-like <?php echo $favorite ? 'added' : 'no-add' ?>">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.44 0.100006C12.63 0.100006 11.01 0.980006 10 2.33001C8.99 0.980006 7.37 0.100006 5.56 0.100006C2.49 0.100006 0 2.60001 0 5.69001C0 6.88001 0.19 7.98001 0.52 9.00001C2.1 14 6.97 16.99 9.38 17.81C9.72 17.93 10.28 17.93 10.62 17.81C13.03 16.99 17.9 14 19.48 9.00001C19.81 7.98001 20 6.88001 20 5.69001C20 2.60001 17.51 0.100006 14.44 0.100006Z" fill="#BFBFBF" />
-                        </svg>
-                    </a>
-                <?php } else { ?>
-                    <a href="javascript:void(0)" class="btn-submit add-like" data-bs-toggle="tooltip" data-bs-title="Vui lòng đăng nhập để sử dụng tính năng">
-                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.44 0.100006C12.63 0.100006 11.01 0.980006 10 2.33001C8.99 0.980006 7.37 0.100006 5.56 0.100006C2.49 0.100006 0 2.60001 0 5.69001C0 6.88001 0.19 7.98001 0.52 9.00001C2.1 14 6.97 16.99 9.38 17.81C9.72 17.93 10.28 17.93 10.62 17.81C13.03 16.99 17.9 14 19.48 9.00001C19.81 7.98001 20 6.88001 20 5.69001C20 2.60001 17.51 0.100006 14.44 0.100006Z" fill="#BFBFBF" />
-                        </svg>
-                    </a>
-                <?php } ?>
+
             </div>
 
             <div class="p-price-promotion">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="layout-public-price">
-                        <div class="price"><?php echo format_money($data->price_discount, '₫') ?></div>
+                <div class="d-flex align-items-center gap-3 justify-content-between">
+                    <div class="layout-public-price align-items-center gap-3">
+                        <div class="price fs-4"><?php echo format_money($data->price_discount, '₫') ?></div>
                         <div class="layout-origin-price"> <?php echo $data->price_old && $data->price_discount < $data->price_old ? format_money($data->price_old, '₫') : '' ?></div>
                         <div class="layout-info">
                             <div class="item-info item-percent">- <?php echo $data->percent ?>%</div>
                         </div>
                     </div>
+                    <?php if ($user->userID) { ?>
+                        <a href="" class="btn-submit add-like <?php echo $favorite ? 'added' : 'no-add' ?>">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.44 0.100006C12.63 0.100006 11.01 0.980006 10 2.33001C8.99 0.980006 7.37 0.100006 5.56 0.100006C2.49 0.100006 0 2.60001 0 5.69001C0 6.88001 0.19 7.98001 0.52 9.00001C2.1 14 6.97 16.99 9.38 17.81C9.72 17.93 10.28 17.93 10.62 17.81C13.03 16.99 17.9 14 19.48 9.00001C19.81 7.98001 20 6.88001 20 5.69001C20 2.60001 17.51 0.100006 14.44 0.100006Z" fill="#BFBFBF" />
+                            </svg>
+                        </a>
+                    <?php } else { ?>
+                        <a href="javascript:void(0)" class="btn-submit add-like" data-bs-toggle="tooltip" data-bs-title="Vui lòng đăng nhập để sử dụng tính năng">
+                            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.44 0.100006C12.63 0.100006 11.01 0.980006 10 2.33001C8.99 0.980006 7.37 0.100006 5.56 0.100006C2.49 0.100006 0 2.60001 0 5.69001C0 6.88001 0.19 7.98001 0.52 9.00001C2.1 14 6.97 16.99 9.38 17.81C9.72 17.93 10.28 17.93 10.62 17.81C13.03 16.99 17.9 14 19.48 9.00001C19.81 7.98001 20 6.88001 20 5.69001C20 2.60001 17.51 0.100006 14.44 0.100006Z" fill="#BFBFBF" />
+                            </svg>
+                        </a>
+                    <?php } ?>
                 </div>
                 <?php if ($data->have_flash) { ?>
                     <div class="p-promotion d-flex align-items-center justify-content-between ps-3 pe-3">
@@ -122,7 +123,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                     </div>
                 <?php } ?>
                 <div class="p-price">
-                    <div class="p-line align-items-end">
+                    <!-- <div class="p-line align-items-end">
                         <div class="p-line-title"><?php echo FSText::_('Giá') ?></div>
                         <div class="p-line-content">
                             <div class="p-price-public d-inline-block">
@@ -134,7 +135,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                                 </div>
                             <?php } ?>
                         </div>
-                    </div>
+                    </div> -->
                     <?php if ($promotionDiscount && $promotionDiscount->quantity_user) { ?>
                         <div class="p-note">
                             Giá chỉ còn <b class="p-price-discount"><?php echo format_money($data->price_discount) ?></b> cho <?php echo $promotionDiscount->quantity_user ?> sản phẩm mua lần đầu trong thời gian diễn ra chương trình
@@ -271,7 +272,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
 <div class="container">
     <?php if (!empty($dataRelated)) { ?>
         <div class="section-product-related bg-white mb-3">
-            <h2 class="text-center mb-4"><?php echo FSText::_('có thể bạn cũng thích') ?></h2>
+            <h2 class="text-center h2 mb-4"><?php echo FSText::_('có thể bạn cũng thích') ?></h2>
             <div class="<?php echo count($dataRelated) > 5 ? 'slider-related' : 'list-related d-flex' ?>">
                 <?php foreach ($dataRelated as $item) {
                     echo $this->layoutProductItem($item);
@@ -281,7 +282,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
     <?php } ?>
     <?php if (!empty($dataRelated)) { ?>
         <div class="section-product-related bg-white mb-4">
-            <h2 class="text-center mb-3"><?php echo FSText::_('Sản phẩm khuyến nghị') ?></h2>
+            <h2 class="text-center h2 mb-4"><?php echo FSText::_('Sản phẩm khuyến nghị') ?></h2>
             <div class="<?php echo count($dataRelated) > 5 ? 'slider-related' : 'list-related d-flex' ?>">
                 <?php foreach ($dataRelated as $item) {
                     echo $this->layoutProductItem($item);
@@ -291,7 +292,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
     <?php } ?>
     <?php if (empty($dataRelated)) { ?>
         <div class="section-product-related bg-white mb-4">
-            <h2 class="text-center mb-3"><?php echo FSText::_('Sản phẩm khuyến nghị') ?></h2>
+            <h2 class="text-center h2 mb-4"><?php echo FSText::_('Sản phẩm khuyến nghị') ?></h2>
             <div class="<?php echo count($dataSell) > 5 ? 'slider-related' : 'list-related d-flex' ?>">
                 <?php foreach ($dataSell as $item) {
                     echo $this->layoutProductItem($item);
@@ -304,7 +305,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
         <div class="section-grid-left">
             <?php if (!empty($dataExtend)) { ?>
                 <div class="section-item section-technical bg-white mb-3">
-                    <h2 class="section-title fw-bold position-relative"><?php echo FSText::_('Thông tin chi tiết') ?></h2>
+                    <h2 class="section-title text-center h2 fw-bold position-relative"><?php echo FSText::_('Thông tin chi tiết') ?></h2>
                     <?php foreach ($dataExtend as $item) { ?>
                         <div class="d-grid item-technical">
                             <div class="title-technical"><?php echo $item->field_name_display ?></div>
@@ -318,7 +319,7 @@ $tmpl->addScript('product', 'modules/products/assets/js');
 
             <?php if (!empty($dataRate)) { ?>
                 <div class="section-item section-rate-comment bg-white mb-3">
-                    <h2 class="section-title fw-bold position-relative"><?php echo FSText::_('Đánh giá của khách hàng') ?></h2>
+                    <h2 class="section-title text-center h2 mb-4 position-relative"><?php echo FSText::_('Đánh giá của khách hàng') ?></h2>
                     <div class="section-rate">
                         <div class="rate">
                             <p class="fw-medium mb-3 fs-6"><?php echo FSText::_('Tổng quan') ?></p>
@@ -364,12 +365,21 @@ $tmpl->addScript('product', 'modules/products/assets/js');
 
                     <div class="section-comment-filter d-flex align-items-center justify-content-between gap-2 flex-wrap">
                         <p class="fw-medium mb-0 fs-6"><?php echo FSText::_('Lọc theo') ?></p>
-                        <div class="d-flex align-items-center gap-2 flex-wrap">
-                            <?php foreach ($this->commentFilter as $i => $item) { ?>
-                                <a href="" class="comment-filter <?php echo $i == 0 ? 'active' : '' ?>" data-filter="<?php echo $i ?>">
-                                    <?php echo $item ?>
-                                </a>
-                            <?php } ?>
+                        <div class="select-menu ">
+                            <div class="select">
+                                <p> <?= FSText::_('Sắp xếp theo ') ?>
+                                </p>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="options-list">
+                                <div class="filter-div">
+                                    <?php foreach ($this->commentFilter as $i => $item) { ?>
+                                        <a href="" class="comment-filter fw-bold d-block w-100 mt-1  <?php echo $i == 0 ? 'active' : '' ?>" data-filter="<?php echo $i ?>">
+                                            <?php echo $item ?>
+                                        </a>
+                                    <?php } ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

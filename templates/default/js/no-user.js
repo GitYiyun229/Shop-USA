@@ -100,7 +100,6 @@ $('#btn-submit-register-telephone').click(function(e) {
         }
     });
 })
-
 $('#btn-submit-register-otp').click(function(e) {
     e.preventDefault();
     let otp = [];

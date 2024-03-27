@@ -17,7 +17,6 @@ class MembersControllersRegister extends FSControllers
             ]);
             exit();
         }
-
         global $user;
         if ($user->userID) {
             echo json_encode([

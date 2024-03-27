@@ -273,7 +273,7 @@ $cartList = $cart->calculateCartPrice();
                             <div class="layout-modal layout-register-telephone" style="display: none;">
                                 <div class="d-flex align-items-center justify-content-center mb-2">
                                     <h4 class="fs-4 m-0"><?php echo FSText::_('Đăng ký') ?></h4>
-                                    <!-- <a href="" class="fs-4 modal-member-tab opacity-50" data="login"><?php echo FSText::_('Đăng nhập') ?></a> -->
+                                     <a href="" class="fs-4 modal-member-tab opacity-50" data="login"><?php echo FSText::_('Đăng nhập') ?></a> 
                                 </div>
                                 <div class="mb-5 text-center"><?php echo FSText::_('Tạo tài khoản ShopUSA !') ?></div>
                                 <div class="form-register-container">
