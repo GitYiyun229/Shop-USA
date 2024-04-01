@@ -68,8 +68,10 @@ class FSModels
 		$sql = ' INSERT INTO  ' . $table_name;
 		$sql .= '(' . $str_fields . ") ";
 		$sql .= 'VALUES (' . $str_values . ") ";
+		// print_r($sql);
 		$db->query($sql);
 		$id = $db->insert();
+
 		return $id;
 	}
 

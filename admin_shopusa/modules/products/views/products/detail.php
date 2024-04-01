@@ -1,13 +1,13 @@
 <link type="text/css" rel="stylesheet" media="all" href="../libraries/jquery/jquery.ui/jquery-ui.css"/>
 <link type="text/css" rel="stylesheet" media="all" href="templates/default/css/products.css"/>
 <script type="text/javascript" src="../libraries/jquery/jquery.ui/jquery-ui.js"></script>
-<script type="importmap">
+<!-- <script type="importmap">
     {
         "imports": {
             "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
         }
     }
-</script>
+</script> -->
 <script>
     $(document).ready(function () {
         $("#tabs").tabs();
@@ -102,6 +102,7 @@ define('MIN_CONTENT',900);
     <div id="fragment-5">
         <?php include_once 'detail_images.php'; ?>
     </div>
+
 </div>
 
 <?php
@@ -151,7 +152,7 @@ $this->dt_form_end(@$data, 1, 0, 2, 'Cấu hình seo', '', 1);
         return str;
     }
 </script>
-
+<!-- 
 <script type="module">
     const regex = /(<([^>]+)>)/ig; // remove tag html
     const regex_space = /\S+/g; // remove backspace
@@ -363,7 +364,7 @@ $this->dt_form_end(@$data, 1, 0, 2, 'Cấu hình seo', '', 1);
     });
 
     app.mount('#app')
-</script>
+</script> -->
 
 <style>
     .mb-3 {

@@ -926,4 +926,14 @@ class ProductsControllersProducts extends Controllers
 
         setRedirect($link, $message, $type);
     }
+    function delete_other_image()
+    {
+ 
+        $record_id = FSInput::get('reocord_id');
+        // echo $record_id;
+       $delete = $this->model->delete_other_image();
+        // echo json_encode($record_id);
+        exit();
+    }
 }
+

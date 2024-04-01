@@ -8,6 +8,7 @@ $tmpl->addScript('slick.min', 'libraries/slick-js');
 $tmpl->addScript('product', 'modules/products/assets/js');
 
 // unset($_SESSION['cart'])
+
 ?>
 
 <input type="hidden" id="product" value="<?php echo $data->id ?>">
@@ -21,11 +22,11 @@ $tmpl->addScript('product', 'modules/products/assets/js');
             <div class="image mb-3">
                 <div class="slider-for">
                     <div>
-                        <img src="<?php echo image_replace_webp(URL_ROOT . $data->image, 'large') ?>" alt="<?php echo $data->name ?>" class="img-fluid">
+                        <img src="<?php echo image_replace_webp(URL_ROOT . $data->image, 'larges') ?>" onerror="this.src='/images/not_picture.png'" alt="<?php echo $data->name ?>" class="img-fluid">
                     </div>
                     <?php foreach ($dataImage as $item) { ?>
                         <div>
-                            <img src="<?php echo image_replace_webp(URL_ROOT . $item->image, 'large') ?>" alt="<?php echo $data->name ?>" class="img-fluid">
+                            <img src="<?php echo image_replace_webp(URL_ROOT . $item->image, 'larges') ?>" onerror="this.src='/images/not_picture.png'" alt="<?php echo $data->name ?>" class="img-fluid">
                         </div>
                     <?php } ?>
                 </div>
@@ -33,11 +34,11 @@ $tmpl->addScript('product', 'modules/products/assets/js');
             <div class="thumbnail">
                 <div class="slider-nav">
                     <div>
-                        <img src="<?php echo image_replace_webp(URL_ROOT . $data->image, 'large') ?>" alt="<?php echo $data->name ?>" class="img-fluid">
+                        <img src="<?php echo image_replace_webp(URL_ROOT . $data->image, 'larges') ?>" onerror="this.src='/images/not_picture.png'" alt="<?php echo $data->name ?>" class="img-fluid">
                     </div>
                     <?php foreach ($dataImage as $item) { ?>
                         <div>
-                            <img src="<?php echo image_replace_webp(URL_ROOT . $item->image, 'large') ?>" alt="<?php echo $data->name ?>" class="img-fluid">
+                            <img src="<?php echo image_replace_webp(URL_ROOT . $item->image, 'larges') ?>" onerror="this.src='/images/not_picture.png'" alt="<?php echo $data->name ?>" class="img-fluid">
                         </div>
                     <?php } ?>
                 </div>
@@ -81,20 +82,18 @@ $tmpl->addScript('product', 'modules/products/assets/js');
                         <b><?php echo $data->sold_out ?></b>
                         <span><?php echo FSText::_('Đã bán') ?></span>
                     </div>
-
                 </div>
-
-
             </div>
-
             <div class="p-price-promotion">
                 <div class="d-flex align-items-center gap-3 justify-content-between">
                     <div class="layout-public-price align-items-center gap-3">
                         <div class="price fs-4"><?php echo format_money($data->price_discount, '₫') ?></div>
                         <div class="layout-origin-price"> <?php echo $data->price_old && $data->price_discount < $data->price_old ? format_money($data->price_old, '₫') : '' ?></div>
-                        <div class="layout-info">
-                            <div class="item-info item-percent">- <?php echo $data->percent ?>%</div>
-                        </div>
+                        <?php if ($data->percent) { ?>
+                            <div class="layout-info">
+                                <div class="item-info item-percent">- <?php echo $data->percent ?>%</div>
+                            </div>
+                        <?php } ?>
                     </div>
                     <?php if ($user->userID) { ?>
                         <a href="" class="btn-submit add-like <?php echo $favorite ? 'added' : 'no-add' ?>">

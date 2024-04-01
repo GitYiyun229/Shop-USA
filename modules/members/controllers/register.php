@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class MembersControllersRegister extends FSControllers
 {
@@ -21,7 +21,7 @@ class MembersControllersRegister extends FSControllers
         if ($user->userID) {
             echo json_encode([
                 'error' => true,
-                'message' => "Vui lòng đăng xuất để sử dụng chức năng!", 
+                'message' => "Vui lòng đăng xuất để sử dụng chức năng!",
             ]);
             exit();
         }
@@ -76,7 +76,7 @@ class MembersControllersRegister extends FSControllers
         echo json_encode($response);
         exit;
     }
-    
+
     public function registerTelephone()
     {
         $telephone = FSInput::get('telregister');
@@ -90,7 +90,7 @@ class MembersControllersRegister extends FSControllers
         if ($exist) {
             echo json_encode([
                 'error' => true,
-                'message' => "Số điện thoại $telephone đã được đăng ký trước đó!", 
+                'message' => "Số điện thoại $telephone đã được đăng ký trước đó!",
             ]);
         } elseif ($this->sendOTP($telephone, $otp)) {
             echo json_encode([
@@ -102,7 +102,7 @@ class MembersControllersRegister extends FSControllers
         } else {
             echo json_encode([
                 'error' => true,
-                'message' => FSText::_('Không gửi được OTP. Vui lòng thử lại sau!'), 
+                'message' => FSText::_('Không gửi được OTP. Vui lòng thử lại sau!'),
             ]);
         }
 
@@ -111,6 +111,7 @@ class MembersControllersRegister extends FSControllers
 
     public function registerOTP()
     {
+
         $otp = FSInput::get('otp', [], 'array');
         $otp = implode('', $otp);
 
@@ -131,7 +132,7 @@ class MembersControllersRegister extends FSControllers
         }
 
         echo json_encode([
-            'error' => $error, 
+            'error' => $error,
             'message' => $message
         ]);
 
@@ -140,47 +141,64 @@ class MembersControllersRegister extends FSControllers
 
     public function register()
     {
-        $password = FSInput::get('password');
+        if (!csrf::authenticationToken()) {
+            echo json_encode([
+                'error' => true,
+                'message' => "Lỗi",
+            ]);
+            exit();
+        }
+
+        $DataName = FSInput::get('name');
+        $DataEmail = FSInput::get('email');
+        $DataPass = FSInput::get('password');
+        $DataConfirmPass = FSInput::get('repassword');
 
         $response = [
             'error' => false,
             'message' => FSText::_('Đăng ký thành công!'),
         ];
 
-        if (empty($_SESSION['register'])) {
+        if (!$DataPass) {
             $response = [
-                'error' => true,
-                'message' => FSText::_('Lỗi!'),
-            ];
-            goto exitFunc;
-        }
-
-        if (!$password) {
-            $response = [
+                'type' => 'pass',
                 'error' => true,
                 'message' => FSText::_('Mật khẩu không được để trống!'),
             ];
             goto exitFunc;
         }
 
-        $exist = $this->model->get_record("telephone = '" . $_SESSION['register']['telephone'] . "' ", 'fs_members', 'id');
+        if ($DataPass != $DataConfirmPass) {
+            $response = [
+                'type' => 'pass',
+                'error' => true,
+                'message' => FSText::_('Mật khẩu nhập lại không đúng !'),
+            ];
+            goto exitFunc;
+        }
+
+        $exist = $this->model->get_record("email = '" . $DataEmail . "' ", 'fs_members', 'id');
 
         if ($exist) {
             $response = [
+                'type' => 'email',
                 'error' => true,
-                'message' => FSText::_('Số điện thoại đã được đăng ký thành viên trước đó!'),
+                'message' => FSText::_('email đã được đăng ký thành viên trước đó!'),
             ];
             goto exitFunc;
         }
 
         $row = [
-            'telephone' => $_SESSION['register']['telephone'],
-            'password' => md5($password),
+            'full_name' => $DataName,
+            'email' => $DataEmail,
+            'password' => md5($DataPass),
             'created_time' => date('Y-m-d H:i:s'),
             'published' => 1,
         ];
 
         $id = $this->model->_add($row, 'fs_members');
+
+    
 
         if (!$id) {
             $response = [
@@ -188,10 +206,9 @@ class MembersControllersRegister extends FSControllers
                 'message' => FSText::_('Đăng ký không thành công. Vui lòng thử lại!'),
             ];
         } else {
-            $response['telephone'] = $_SESSION['register']['telephone'];
             unset($_SESSION['register']);
         }
-       
+
         exitFunc:
         echo json_encode($response);
         exit;

@@ -11,19 +11,7 @@ $task = FSInput::get('task');
     </div>
 </div>
 
-<div class="d-flex align-items-start justify-content-between mb-3 user-level-point-sidebar">
-    <div>
-        <div class="text-grey mb-1"><?php echo FSText::_('Hạng thành viên') ?></div>
-        <div class="user-level-sidebar level-<?php echo $user->userInfo->level ?> d-flex align-items-center text-uppercase fw-medium">
-            <img src="/images/user-level.svg" alt="level" class="img-fluid">
-            <?php echo $this->userLevel[$user->userInfo->level] ?>
-        </div>
-    </div>
-    <div class="text-end">
-        <div class="text-grey mb-1"><?php echo FSText::_('Điểm tích lũy') ?></div>
-        <b><?php echo number_format($user->userInfo->point, 0, "", ".") ?></b> <span class="text-grey">điểm</span>
-    </div>
-</div>
+
 
 <div class="user-menu-sidebar mb-3 pb-3">
     <a href="<?php echo FSRoute::_('index.php?module=members&view=members') ?>" class="<?php echo !$task  ? 'active' : '' ?>">
@@ -53,7 +41,7 @@ $task = FSInput::get('task');
 </div>
 
 <div>
-    <div class="text-grey fw-semibold">Bạn cần hỗ trợ?</div>
-    <div><span class="text-grey">Vui lòng gọi</span> <a href="tel:<?php echo $config['hotline'] ?>"><b><?php echo $config['hotline'] ?></b></a></div>
-    <div class="text-grey">(miễn phí cước gọi)</div>
+    <div class="text-grey fw-semibold"><?= FSText::_('Bạn cần hỗ trợ?')?></div>
+    <div><span class="text-grey"><?= FSText::_('Vui lòng gọi')?></span> <a href="tel:<?php echo $config['hotline'] ?>"><b><?php echo $config['hotline'] ?></b></a></div>
+    <div class="text-grey"><?= FSText::_('(miễn phí cước gọi)')?></div>
 </div>

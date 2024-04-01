@@ -1,8 +1,6 @@
 .select-menu {
   width: 300px;
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
+
 }
 
 .select {
@@ -28,6 +26,7 @@
 .options-list {
   position: absolute;
   width: 100%;
+      max-width: 300px;
   background-color: #f9f9f9;
   border-radius: 6px;
   //   margin-top: 14px;

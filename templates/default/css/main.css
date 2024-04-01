@@ -49,7 +49,7 @@ body a {
 }
 body a:hover {
   text-decoration: none;
-  color: #DD2033;
+  color: #dd2033;
 }
 body .fw-600 {
   font-weight: 600;
@@ -93,7 +93,7 @@ body .font-size-16 {
   line-height: normal;
 }
 .header-top .user-menu-header a:hover {
-  color: #DD2033;
+  color: #dd2033;
   background: #f4f4f4;
 }
 .header-top .user-btn img {
@@ -108,7 +108,7 @@ body .font-size-16 {
   display: block;
 }
 .header-top .user:hover .user-btn img {
-  border-color: #DD2033;
+  border-color: #dd2033;
 }
 
 header {
@@ -157,11 +157,11 @@ header .heder-center .form-control::placeholder {
   color: #757575;
 }
 header .heder-center .form-control:focus ~ svg path {
-  stroke: #DD2033;
+  stroke: #dd2033;
 }
 header .heder-center button,
 header .heder-center a {
-  background: linear-gradient(270deg, #DD2033 0%, #dd6333 100%);
+  background: linear-gradient(270deg, #dd2033 0%, #dd6333 100%);
   height: 40px;
   width: 100px;
   padding: 0;
@@ -316,11 +316,14 @@ footer .footer-bottom {
   width: calc((100% - 75px) / 6);
   box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0);
   z-index: 3;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
 }
 .layout-product-item .box-img {
   border-radius: 12px;
   max-width: 100%;
   overflow: hidden;
+  max-height: 200px;
 }
 .layout-product-item .box-img .layout-img {
   border-radius: 4px;
@@ -330,7 +333,7 @@ footer .footer-bottom {
   transition: 0.3s ease-in-out;
 }
 .layout-product-item .layout-content {
-  padding: 0.75rem 0px;
+  padding: 0.75rem 0.5rem;
   position: relative;
   z-index: 2;
   background: #fff;
@@ -367,7 +370,7 @@ footer .footer-bottom {
   line-height: normal;
 }
 .layout-product-item .layout-public-price .price {
-  color: #DD2033;
+  color: #dd2033;
   font-size: 14px;
   font-weight: 700;
 }
@@ -399,7 +402,7 @@ footer .footer-bottom {
 }
 .layout-product-item .layout-info .item-flash {
   color: #fff;
-  background: linear-gradient(277deg, #DD2033 0%, #dd6333 100%);
+  background: linear-gradient(277deg, #dd2033 0%, #dd6333 100%);
 }
 .layout-product-item .layout-info .item-gift {
   color: #fff;
@@ -435,7 +438,7 @@ footer .footer-bottom {
   color: #ffffff;
 }
 .layout-product-item:hover .layout-content .layout-name {
-  color: #DD2033;
+  color: #dd2033;
 }
 .layout-product-item:hover .layout-img {
   padding: 0;
@@ -478,7 +481,7 @@ footer .footer-bottom {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #DD2033;
+  background: #dd2033;
   animation: ldio 1s linear infinite;
 }
 .loadingio-spinner .ldio div:nth-child(1) > div {
@@ -583,7 +586,7 @@ footer .footer-bottom {
 }
 .flash-message-container .flash-message.error {
   background: #fbece6;
-  color: #DD2033;
+  color: #dd2033;
 }
 .flash-message-container .flash-message.error .svg-success {
   display: none;
@@ -615,7 +618,7 @@ footer .footer-bottom {
   transition: 0.15s ease-in-out;
 }
 #memberModal .btn-close:hover {
-  background-color: #DD2033;
+  background-color: #dd2033;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
 }
 #memberModal .grid-banner {
@@ -643,7 +646,7 @@ footer .footer-bottom {
   color: #a3a3a3;
 }
 #memberModal .form-control:focus {
-  border-color: #DD2033;
+  border-color: #dd2033;
   background: #fff;
   box-shadow: 0px 0px 6px 0px rgba(214, 61, 0, 0.6);
 }
@@ -661,7 +664,7 @@ footer .footer-bottom {
   -moz-appearance: textfield;
 }
 #memberModal .form-control.form-otp.active, #memberModal .form-control.form-otp:focus {
-  border-color: #DD2033;
+  border-color: #dd2033;
 }
 #memberModal .form-control.form-otp::-webkit-inner-spin-button, #memberModal .form-control.form-otp::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -706,7 +709,7 @@ footer .footer-bottom {
   border: 1px solid #c91d2e;
 }
 #memberModal .text-red {
-  color: #DD2033;
+  color: #dd2033;
 }
 #memberModal .text-blue {
   color: #2476ff;
@@ -720,11 +723,16 @@ footer .footer-bottom {
 .toggle-password {
   position: absolute;
   right: 1rem;
+  top: 0%;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .password-rule {
   color: #a3a3a3;
-  display: flex;
+  display: none;
   align-items: center;
   gap: 2px;
 }

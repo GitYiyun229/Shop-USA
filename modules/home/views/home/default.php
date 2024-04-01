@@ -3,12 +3,10 @@ $tmpl->addStylesheet('slick', 'libraries/slick-js');
 $tmpl->addStylesheet('slick.theme', 'libraries/slick-js');
 $tmpl->addStylesheet('owl.carousel.min', 'libraries/OwlCarousel2-2.3.4/dist/assets');
 $tmpl->addStylesheet('owl.theme.default.min', 'libraries/OwlCarousel2-2.3.4/dist/assets');
-
 $tmpl->addStylesheet('default', 'modules/home/assets/css');
 $tmpl->addScript('owl.carousel.min', 'libraries/OwlCarousel2-2.3.4/dist');
 $tmpl->addScript('default', 'modules/home/assets/js');
 $tmpl->addScript('slick.min', 'libraries/slick-js');
-
 ?>
 <div class="page-home">
     <div class="d-flex gap-3 section-top mb-3">
@@ -18,7 +16,7 @@ $tmpl->addScript('slick.min', 'libraries/slick-js');
     </div>
     <div class="container">
         <?php if (!empty($flashsaleProductsOriginal)) { ?>
-            <div class="section-flash-sale mb-5 mt-2">
+            <div class="section-flash-sale mb-3 mt-5">
                 <div class="title-flash-sale d-flex flex-wrap align-items-center">
                     <h3 class="title-categories mb-3 mt-3 fs-sale">
                         <p class="fst-italic"><?= FSText::_('Flash') ?><span class="pl-3"><?= FSText::_('Sale') ?></span> </p>
@@ -45,14 +43,13 @@ $tmpl->addScript('slick.min', 'libraries/slick-js');
                 </div>
             </div>
         <?php } ?>
-        <div class="section-top mb-5 mt-3">
+        <div class="section-top mb-5 mt-5">
             <h3 class="title-categories mb-3 mt-3"><?= FSText::_('Shop by categories') ?></h3>
             <?php echo $tmpl->load_direct_blocks('product_categories', ['style' => 'view_menu_categories_home']); ?>
         </div>
 
         <div class="section-product bg-white mb-3">
             <div class="mb-4 section-title fw-bold"><?php echo FSText::_('Gợi ý cho bạn') ?></div>
-
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="nav-0" role="tabpanel" aria-labelledby="nav-0-tab" tabindex="0">
                     <div class="products d-flex flex-wrap product-gap">

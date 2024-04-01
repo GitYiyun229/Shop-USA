@@ -25,14 +25,8 @@ $this->dt_form_begin(1, 2, FSText::_('Thông tin chung'), '', 1, 'col-md-8 fl-le
     TemplateHelper::dt_edit_text(FSText::_('Mã sản phẩm'), 'code', @$data->code, '', 255, 1, 0, '', '', 'col-md-3 left', 'col-md-9');
     TemplateHelper::dt_edit_text(FSText::_('Thương hiệu'), 'trademark', @$data->trademark, '', 255, 1, 0, '', '', 'col-md-3 left', 'col-md-9');
     TemplateHelper::dt_edit_selectbox(FSText::_('Danh mục'), 'category_id', $category_id, 0, $relate_categories, $field_value = 'id', $field_label = 'treename', $size = 1, 0, 0, '', '', '', 'col-md-3 left', 'col-md-9', '', '1', 'Danh mục chính của sản phẩm');
-    // TemplateHelper::dt_edit_selectbox(FSText::_('Danh mục phụ'), 'multi_categories', @$data->multi_categories, 0, $relate_categories, $field_value = 'id', $field_label = 'treename', $size = 1, 1, 0, '', '', '', 'col-md-3 left', 'col-md-9', '', 1, 'Danh mục phụ không có giá trị lọc nếu khác Bảng thuộc tính với Danh mục chính. Ví dụ điện thoại có thể có danh mục phụ là ');
     TemplateHelper::dt_edit_image(FSText::_('Ảnh đại diện'), 'image', URL_ROOT . @$data->image, '', '', '', 'col-md-3 left', 'col-md-9', 1);
-    // TemplateHelper::dt_edit_image(FSText::_('Ảnh share FB/Zalo'), 'image_og', @$data->image_og, '', 255, '', 'col-md-3 left', 'col-md-9');
-    // TemplateHelper::dt_edit_image(FSText::_('Ảnh Landing'), 'image_land', URL_ROOT . @$data->image_land, '', '', '', 'col-md-3 left', 'col-md-9', 1);
 
-    // TemplateHelper::dt_edit_image(FSText::_('Ảnh thông số kỹ thuật'), 'image_spec', URL_ROOT . @$data->image_spec, '', '', '', 'col-md-3 left', 'col-md-9', 1);
-    // TemplateHelper::dt_edit_image(FSText::_('Ảnh mở hộp'), 'image_unbox', URL_ROOT . @$data->image_unbox, '', '', '', 'col-md-3 left', 'col-md-9', 1);
-    
     TemplateHelper::dt_edit_selectbox(FSText::_('Sản phẩm cùng loại'), 'products_same', @$data->products_same, 0, $list_products, $field_value = 'id', $field_label = 'name', $size = 1, 1, 0, '', '', '', 'col-md-3 left', 'col-md-9', '', 1, '');
     // TemplateHelper::dt_edit_text(FSText::_('Quà tặng'), 'text_sale', @$data->text_sale, '', 15, 1, 0, 'Lưu ý giới hạn ký tự', '', 'col-md-3 left', 'col-md-9', '', '', '1', '');
     TemplateHelper::dt_edit_selectbox(FSText::_('Trạng thái'), 'status_prd', @$data->status_prd, 0, $arr_status, $field_value = 'id', $field_label = 'title', $size = 1, 0, 1, '', '', '', 'col-md-3 left', 'col-md-9');

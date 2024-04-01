@@ -828,17 +828,12 @@ class FSModels
 						$this->remove_old_image($id, $field_img);
 					}
 					//						$image = $this -> upload_image($field_img,'_'.time(),10000000);
-					$image = $this->upload_image(
-						$field_img,
-						'_' . time(),
-						2000000,
-						$this->arr_img_paths,
-						'',
-						$type_image,
-						$image
-					);
+					$image = $this->upload_image($field_img,'_' . time(),2000000,$this->arr_img_paths,'',$type_image,$image);
+
 					$row[$field_img] = 	$image;
-					//						var_dump($image);die;
+											// var_dump($image);
+											// var_dump($this->arr_img_paths);
+											// die;
 					//					if($field_width){
 					//							// tính chiều rộng để thêm vào admin
 					//							list($root_width,$root_height) = getimagesize(URL_ROOT.$image);
@@ -1633,6 +1628,7 @@ class FSModels
 
 	function upload_image($image_tag_name = 'image', $suffix = '', $max_size = 2000000, $arr_img_paths = array(), $img_folder = '', $type = '', $path_image = '')
 	{
+		// print_r($arr_img_paths );
 		if (!$img_folder) {
 			$img_folder = $this->img_folder;
 		}

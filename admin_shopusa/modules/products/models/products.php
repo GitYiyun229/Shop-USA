@@ -5,6 +5,7 @@ class ProductsModelsProducts extends FSModels
     var $limit;
     var $prefix;
     var $image_watermark;
+    var $table_image;
 
     function __construct()
     {
@@ -15,6 +16,7 @@ class ProductsModelsProducts extends FSModels
         $this->table_name = FSTable_ad::_('fs_products');
         $this->use_table_extend = 1;
         $this->table_category = FSTable_ad::_('fs_' . $this->type . '_categories');
+        $this->table_image = FSTable_ad::_('fs_' . $this->type . '_images');
         $this->table_types = FSTable_ad::_('fs_' . $this->type . '_types');
 
         //synchronize
@@ -40,85 +42,91 @@ class ProductsModelsProducts extends FSModels
             array('tiny', 120, 120, 'resize_image_fix_height_webp'),
             array('small', 112, 112, 'resize_image_fix_height_webp')
         );
-        
+
         // 192.200.240.112,616,120,88,231
 
         $this->arr_img_paths_other = array(
             array('larges', 616, 616, 'resize_image_fix_height_webp'),
             array('resized', 200, 200, 'resize_image_fix_height_webp'),
             array('large', 240, 240, 'resize_image_fix_height_webp'),
-            array('tiny',120, 120, 'resize_image_fix_height_webp'),
+            array('tiny', 120, 120, 'resize_image_fix_height_webp'),
             array('small', 112, 112, 'resize_image_fix_height_webp')
         );
-        $this->arr_img_paths_landing = array(
-            array('resize', 590, 330, 'resize_image_fix_height_webp'),
-            array('small', 60, 60, 'resize_image_fix_height_webp')
+        $this->arr_img_paths = array(
+            array('larges', 616, 616, 'resize_image_fix_height_webp'),
+            array('resized', 200, 200, 'resize_image_fix_height_webp'),
+            array('large', 240, 240, 'resize_image_fix_height_webp'),
+            array('tiny', 120, 120, 'resize_image_fix_height_webp'),
+            array('small', 112, 112, 'resize_image_fix_height_webp')
         );
+        // $this->arr_img_paths_landing = array(
+        //     array('resize', 590, 330, 'resize_image_fix_height_webp'),
+        //     array('small', 60, 60, 'resize_image_fix_height_webp')
+        // );
         parent::__construct();
-
-        $this->load_params();
+        // $this->load_params();
     }
 
-    function load_params()
-    {
-        $module_params = $this->get_params($this->module, 'product');
+    // function load_params()
+    // {
+    //     $module_params = $this->get_params($this->module, 'product');
 
-        if ($module_params) { // params from fs_config_modules
-            $this->module_params = $module_params;
-            $arr_img_paths = array();
-            //            $arr_img_paths_other = array();
+    //     if ($module_params) { // params from fs_config_modules
+    //         $this->module_params = $module_params;
+    //         $arr_img_paths = array();
+    //         //            $arr_img_paths_other = array();
 
-            FSFactory::include_class('parameters');
-            $current_parameters = new Parameters($module_params);
-            // large size
-            $image_large_size = $current_parameters->getParams('image_large_size');
-            $image_large_method = $current_parameters->getParams('image_large_method');
-            if (!$image_large_method)
-                $image_large_method = 'resize_image'; // giữ nguyên dạng ảnh, thêm khoảng trắng
-            $image_large_width = $this->get_dimension($image_large_size, 'width');
-            $image_large_height = $this->get_dimension($image_large_size, 'height');
-            if (!$image_large_width && !$image_large_height) {
-                $image_large_width = 374;
-                $image_large_height = 380;
-            }
-            $arr_img_paths[] = array('large', $image_large_width, $image_large_height, $image_large_method);
-            //            $arr_img_paths_other [] = array('large', $image_large_width, $image_large_height, $image_large_method);
+    //         FSFactory::include_class('parameters');
+    //         $current_parameters = new Parameters($module_params);
+    //         // large size
+    //         $image_large_size = $current_parameters->getParams('image_large_size');
+    //         $image_large_method = $current_parameters->getParams('image_large_method');
+    //         if (!$image_large_method)
+    //             $image_large_method = 'resize_image'; // giữ nguyên dạng ảnh, thêm khoảng trắng
+    //         $image_large_width = $this->get_dimension($image_large_size, 'width');
+    //         $image_large_height = $this->get_dimension($image_large_size, 'height');
+    //         if (!$image_large_width && !$image_large_height) {
+    //             $image_large_width = 374;
+    //             $image_large_height = 380;
+    //         }
+    //         $arr_img_paths[] = array('large', $image_large_width, $image_large_height, $image_large_method);
+    //         //            $arr_img_paths_other [] = array('large', $image_large_width, $image_large_height, $image_large_method);
 
-            // resized: ảnh đại diện trong trang danh sách
-            $image_resized_size = $current_parameters->getParams('image_resized_size');
-            $image_resized_method = $current_parameters->getParams('image_resized_method');
-            if (!$image_resized_method)
-                $image_resized_method = 'resize_image'; // giữ nguyên dạng ảnh, thêm khoảng trắng
+    //         // resized: ảnh đại diện trong trang danh sách
+    //         $image_resized_size = $current_parameters->getParams('image_resized_size');
+    //         $image_resized_method = $current_parameters->getParams('image_resized_method');
+    //         if (!$image_resized_method)
+    //             $image_resized_method = 'resize_image'; // giữ nguyên dạng ảnh, thêm khoảng trắng
 
 
-            $image_resized_width = $this->get_dimension($image_resized_size, 'width');
-            $image_resized_height = $this->get_dimension($image_resized_size, 'height');
-            if (!$image_resized_width && !$image_resized_height) {
-                $image_resized_width = 204;
-                $image_resized_height = 190;
-            }
-            $arr_img_paths[] = array('resized', $image_resized_width, $image_resized_height, $image_resized_method);
+    //         $image_resized_width = $this->get_dimension($image_resized_size, 'width');
+    //         $image_resized_height = $this->get_dimension($image_resized_size, 'height');
+    //         if (!$image_resized_width && !$image_resized_height) {
+    //             $image_resized_width = 204;
+    //             $image_resized_height = 190;
+    //         }
+    //         $arr_img_paths[] = array('resized', $image_resized_width, $image_resized_height, $image_resized_method);
 
-            // small: ảnh nhỏ làm slideshow
-            $image_small_size = $current_parameters->getParams('image_small_size');
-            $image_small_method = $current_parameters->getParams('image_small_method');
-            if (!$image_small_method)
-                $image_small_method = 'resize_image'; // giữ nguyên dạng ảnh, thêm khoảng trắng
-            $image_small_width = $this->get_dimension($image_small_size, 'width');
-            $image_small_height = $this->get_dimension($image_small_size, 'height');
-            if ($image_small_width || $image_small_height) {
-                $arr_img_paths[] = array('small', $image_small_width, $image_small_height, $image_small_method);
-                //                $arr_img_paths_other [] = array('small', $image_small_width, $image_small_height, $image_small_method);
-            }
-            $this->arr_img_paths = $arr_img_paths;
-            //            $this->arr_img_paths_other = $arr_img_paths_other;
+    //         // small: ảnh nhỏ làm slideshow
+    //         $image_small_size = $current_parameters->getParams('image_small_size');
+    //         $image_small_method = $current_parameters->getParams('image_small_method');
+    //         if (!$image_small_method)
+    //             $image_small_method = 'resize_image'; // giữ nguyên dạng ảnh, thêm khoảng trắng
+    //         $image_small_width = $this->get_dimension($image_small_size, 'width');
+    //         $image_small_height = $this->get_dimension($image_small_size, 'height');
+    //         if ($image_small_width || $image_small_height) {
+    //             $arr_img_paths[] = array('small', $image_small_width, $image_small_height, $image_small_method);
+    //             //                $arr_img_paths_other [] = array('small', $image_small_width, $image_small_height, $image_small_method);
+    //         }
+    //         $this->arr_img_paths = $arr_img_paths;
+    //         //            $this->arr_img_paths_other = $arr_img_paths_other;
 
-        } else {
-            // default
-            $this->arr_img_paths = array(array('large', 374, 380, 'resize_image'), array('resized', 204, 190, 'resize_image'), array('small', 47, 35, 'resize_image'));
-            //            $this->arr_img_paths_other = array(array('large', 374, 380, 'resize_image'), array('resized', 204, 190, 'resize_image'), array('small', 47, 35, 'resize_image'));
-        }
-    }
+    //     } else {
+    //         // default
+    //         $this->arr_img_paths = array(array('large', 374, 380, 'resize_image'), array('resized', 204, 190, 'resize_image'), array('small', 47, 35, 'resize_image'));
+    //         //            $this->arr_img_paths_other = array(array('large', 374, 380, 'resize_image'), array('resized', 204, 190, 'resize_image'), array('small', 47, 35, 'resize_image'));
+    //     }
+    // }
 
 
     /*
@@ -443,43 +451,42 @@ class ProductsModelsProducts extends FSModels
         //                $row['image_spec'] = $image;
         //            }
         //        }
-        $type_image = FSInput::get('type_image_spec', 0, 'int');
-        if ($type_image == 0) {
-            $image_spec = $_FILES["image_spec"]["name"];
-        } else {
-            $image_spec = FSInput::get('image_spec');
-        }
-        if ($image_spec) {
-            $image = $this->upload_image('image_spec', '_' . time(), 2000000, $this->arr_img_paths_spec, '', $type_image, $image_spec);
-            if ($image) {
-                $row['image_spec'] = $image;
-            }
-        }
-
-        $type_image_unbox = FSInput::get('type_image_unbox', 0, 'int');
-        if ($type_image_unbox == 0) {
-            $image_unbox = $_FILES["image_unbox"]["name"];
-        } else {
-            $image_unbox = FSInput::get('image_unbox');
-        }
-        if ($image_unbox) {
-            $image = $this->upload_image('image_unbox', '_' . time(), 2000000, $this->arr_img_paths_unbox, '', $type_image_unbox, $image_unbox);
-            if ($image) {
-                $row['image_unbox'] = $image;
-            }
-        }
-        $type_image_land = FSInput::get('type_image_land', 0, 'int');
-        if ($type_image_land == 0) {
-            $image_land = $_FILES["image_land"]["name"];
-        } else {
-            $image_land = FSInput::get('image_land');
-        }
-        if ($image_land) {
-            $image = $this->upload_image('image_land', '_' . time(), 2000000, $this->arr_img_paths_landing, '', $type_image_land, $image_land);
-            if ($image) {
-                $row['image_land'] = $image;
-            }
-        }
+        // $type_image = FSInput::get('type_image_spec', 0, 'int');
+        // if ($type_image == 0) {
+        //     $image_spec = $_FILES["image_spec"]["name"];
+        // } else {
+        //     $image_spec = FSInput::get('image_spec');
+        // }
+        // if ($image_spec) {
+        //     $image = $this->upload_image('image_spec', '_' . time(), 2000000, $this->arr_img_paths_spec, '', $type_image, $image_spec);
+        //     if ($image) {
+        //         $row['image_spec'] = $image;
+        //     }
+        // }
+        // $type_image_unbox = FSInput::get('type_image_unbox', 0, 'int');
+        // if ($type_image_unbox == 0) {
+        //     $image_unbox = $_FILES["image_unbox"]["name"];
+        // } else {
+        //     $image_unbox = FSInput::get('image_unbox');
+        // }
+        // if ($image_unbox) {
+        //     $image = $this->upload_image('image_unbox', '_' . time(), 2000000, $this->arr_img_paths_unbox, '', $type_image_unbox, $image_unbox);
+        //     if ($image) {
+        //         $row['image_unbox'] = $image;
+        //     }
+        // }
+        // $type_image_land = FSInput::get('type_image_land', 0, 'int');
+        // if ($type_image_land == 0) {
+        //     $image_land = $_FILES["image_land"]["name"];
+        // } else {
+        //     $image_land = FSInput::get('image_land');
+        // }
+        // if ($image_land) {
+        //     $image = $this->upload_image('image_land', '_' . time(), 2000000, $this->arr_img_paths_landing, '', $type_image_land, $image_land);
+        //     if ($image) {
+        //         $row['image_land'] = $image;
+        //     }
+        // }
 
 
         //        $image_og = $_FILES["image_og"]["name"];
@@ -879,8 +886,8 @@ class ProductsModelsProducts extends FSModels
             }
 
             if (($price_exist != $price_exist_begin) || ($price_h_exist != $price_h_exist_begin)
-                || ($published_exist != $published_exist_begin) || ($products_type_id_exist != $products_type_id_exist_begin) || $_FILES[$upload_area]["name"] 
-                || ($code_exist != $code_exist_begin) 
+                || ($published_exist != $published_exist_begin) || ($products_type_id_exist != $products_type_id_exist_begin) || $_FILES[$upload_area]["name"]
+                || ($code_exist != $code_exist_begin)
                 || ($nhanh_exist != $nhanh_exist_begin)
                 || ($quantity_exist != $quantity_exist_begin)
             ) {
@@ -2509,5 +2516,42 @@ class ProductsModelsProducts extends FSModels
         }
 
         return 0;
+    }
+    function delete_other_image($record_id = 0)
+    {
+        global $db;
+        $record_id = FSInput::get('reocord_id');
+        // print_r($record_id);die;
+        if ($record_id)
+            $where = 'record_id = \'' . $record_id . '\'';
+
+        $id = FSInput::get('id');
+        if (!empty($id)) {
+            $where .= ' AND id = \'' . $id . '\'';
+        }
+
+
+        $query = '  SELECT *
+                        FROM ' . $this->table_image . '
+                        WHERE ' . $where;
+
+        $db->query($query);
+
+        $listImages = $db->getObjectList();
+
+        if ($listImages) {
+
+            foreach ($listImages as $item) {
+                $querys = '  DELETE FROM  ' . $this->table_image . '
+                                WHERE id = \'' . $item->id . '\'';
+                $db->query($querys);
+                $rows = $db->affected_rows();
+                $path = PATH_BASE . $item->image;
+                @unlink($path);
+                foreach ($this->arr_img_paths_other as $image) {
+                    @unlink(str_replace('/original/', '/' . $image[0] . '/', $path));
+                }
+            }
+        }
     }
 }

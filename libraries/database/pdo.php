@@ -10,6 +10,7 @@ class FS_PDO extends PDO
     var $db;
     var $port;
     var $query_string = '';
+   
 
     function __construct()
     {
@@ -52,10 +53,12 @@ class FS_PDO extends PDO
 
     function query($query_string)
     {
+
         if (!$query_string)
             return;
         $this->query_string = $query_string;
         return $this;
+
     }
 
     function query_limit($query_string, $limit, $page = 0)

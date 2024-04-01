@@ -1405,20 +1405,18 @@ class TemplateHelper
             else
                 $uploadConfig = base64_encode('add|' . session_id());
             if ($list_other_images == '') {
-                $list_other_images = TemplateHelper::get_other_images($module, $uploadConfig, $type);
+                $list_other_images = TemplateHelper::get_other_images(
+                    $module,
+                    $uploadConfig,
+                    $type
+                );
             }
-            // print_r($uploadConfig);die;
-            // $colors = TemplateHelper::get_colors($id);
-            $subs = TemplateHelper::get_product_sub($id);
             $arr_sku_map = array();
             $i = 1;
             foreach ($list_other_images as $item) {
                 $arr_sku_map['Data'][$i]['AttachmentID'] = $item->id;
                 $arr_sku_map['Data'][$i]['FileName'] = $item->title;
                 $arr_sku_map['Data'][$i]['Path'] = URL_ROOT . str_replace('/original/', '/original/', $item->image);
-                // $arr_sku_map['Data'][$i]['ColorId'] = $item->color_id;
-                $arr_sku_map['Data'][$i]['SubId'] = $item->sub_id;
-                $arr_sku_map['Data'][$i]['FileType'] = $item->file_type;
                 $i++;
             }
             if (!count($arr_sku_map)) {
@@ -1426,11 +1424,116 @@ class TemplateHelper
                 $arr_sku_map['Data'][0]['FileName'] = '';
                 $arr_sku_map['Data'][0]['Path'] = '';
                 $arr_sku_map['Data'][0]['SubId'] = '';
-                $arr_sku_map['Data'][0]['FileType'] = '';
             }
             $skuConfig = json_encode($arr_sku_map);
-            $html = '';
+            $html = '
+		    <link type="text/css" rel="stylesheet" media="all" href="' . URL_ROOT . 'libraries/jquery/dropzone/dist/min/dropzone.min.css" />
+			<link type="text/css" rel="stylesheet" media="all" href="libraries/dropzone/dropzone.css" />
 
+			<script type="text/javascript" src="' . URL_ROOT . 'libraries/jquery/dropzone/dist/min/dropzone.min.js"></script>
+			<script type="text/javascript" src="libraries/uploadify/jquery.uploadify.js"></script>
+
+			 <script>
+              $(document).ready(function() {
+                let data =' . $skuConfig . ';
+				let previewNode = document.querySelector("#template");
+				let uploadConfig =  $("#uploadConfig").val();
+				previewNode.id = "";
+				let previewTemplate = previewNode.parentNode.innerHTML;
+				previewNode.parentNode.removeChild(previewNode);
+				let myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
+				  url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=upload_other_images&data="+uploadConfig+"&type_img=0",
+				  thumbnailWidth: 100,
+				  thumbnailHeight: 100,
+				  parallelUploads: 20,
+				  previewTemplate: previewTemplate,
+				  autoQueue: true, 
+				  previewsContainer: "#previews", 
+				  clickable: ".fileinput-button", 
+				  removedfile: function(file) {
+				  		console.log(file);
+					  	let reocord_id = $("#id_mage").val();
+					    $.ajax({
+					        type: "POST",
+					        url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=delete_other_image",
+					        data: { "name": file.name,"reocord_id":reocord_id,"id":file.size},
+                  
+					    });
+					let _ref;
+					return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;        
+				  },
+                  success: function(file, response){
+                    //alert(response);
+                    file.previewElement.id = "sort_"+response;
+                  },  
+				  init: function () {
+                    let thisDropzone = this;  
+                    if (data.Data != "") {
+                        $.each(data.Data, function (index, item) {
+                                var mockFile = {
+                                    name: item.FileName,
+                                    title: item.title,
+                                    size: item.AttachmentID
+                                };
+                                thisDropzone.emit("addedfile", mockFile);
+                                thisDropzone.emit("thumbnail", mockFile, item.Path);
+                                $(mockFile.previewElement).prop("id", "sort_"+item.AttachmentID);
+                                $(mockFile.previewTemplate).find(".title_dropzon").val(item.FileName);
+                                $(mockFile.previewTemplate).find(".dz-color").val(item.SubId);
+     							select_index = $("#sort_"+item.AttachmentID+" .dz-color option:selected").index();
+
+                        });
+                    }
+	           	 }
+				});
+
+				$(function() {
+					$("#previews").sortable({
+						update : function () {
+							serial = $("#previews").sortable("serialize");
+							$.ajax({
+								url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=sort_other_images",
+								type: "post",
+								data: serial,
+								error: function(){
+									alert("Lỗi load dữ liệu");
+								}
+							});
+
+						}
+					});
+					
+				});
+
+			  });
+				function change_color(element){
+					value = $(element).val();
+					console.log(value);
+					parent_id =  $(element).parent().attr("id");
+					id =  parent_id.replace("sort_", "");
+					let uploadConfig =  $("#uploadConfig").val();
+					 $.ajax({
+				        type: "GET",
+				       url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=change_attr_image",
+				        data: { "field": "sub","data":uploadConfig,"id":id,"value":value}
+				    });
+//					 element.style.backgroundColor=element.options[element.selectedIndex].style.backgroundColor;
+				}
+                
+                function change_tile(element){
+					value = $(element).val();
+					console.log(value);
+					parent_id =  $(element).parent().attr("id");
+                    id =  parent_id.replace("sort_", "");
+					let uploadConfig =  $("#uploadConfig").val();
+					 $.ajax({
+				        type: "POST",
+				        url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=change_title_attr_image",
+				        data: {"data":uploadConfig,"id":id,"value":value}
+				    });
+				}
+			  </script>
+			';
             $html .= '<div class="dropzone files" id="previews">';
             $html .= '<div  id="template" class="dz-preview dz-image-preview">';
             $html .= '<div class="dz-details">';
@@ -1440,146 +1543,15 @@ class TemplateHelper
             $html .= '<div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress=""></span></div>';
             $html .= '<a class="dz-remove"  data-dz-remove id="">Remove</a>';
             $html .= '<input type="text" onchange="javascript: change_tile(this);" class="form-control title_dropzon" placeholder="Title" style="width:100px;border-radius: 0px;margin-top: 2px;">';
-            $html .= '<select class="dz-color form-control" onchange="javascript: change_color(this);">';
-            $html .= '<option value="0">Phân loại</option>';
-            if (@$subs) {
-                foreach ($subs as $item) {
-                    $html .= '<option value="' . $item->id . '" >' . $item->name . '</option>';
-                }
-            }
             $html .= '</select>';
             $html .= '</div>';
-
             $html .= '</div>';
-            $html .= '<input type="hidden" value="' . $uploadConfig . '" id="uploadConfig" />';
+            $html .= '<input type="hidden" value="' . $uploadConfig
+                . '" id="uploadConfig" />';
             $html .= '<input type="hidden" value="' . $id . '" id="id_mage" />';
             $html .= '<span class="post_images fileinput-button">Thêm ảnh/video</span>';
-
-            $html .= '
-                <link type="text/css" rel="stylesheet" media="all" href="' . URL_ROOT . 'libraries/jquery/dropzone/dist/min/dropzone.min.css" />
-                <link type="text/css" rel="stylesheet" media="all" href="libraries/dropzone/dropzone.css" />
-
-                <script type="text/javascript" src="' . URL_ROOT . 'libraries/jquery/dropzone/dist/min/dropzone.min.js"></script>
-                <script type="text/javascript" src="libraries/uploadify/jquery.uploadify.js"></script>
-
-                <script>
-                    $(document).ready(function() {
-                        let data =' . $skuConfig . ';
-                        let previewNode = document.querySelector("#template");
-                        let uploadConfig =  $("#uploadConfig").val();
-                        previewNode.id = "";
-                        let previewTemplate = previewNode.parentNode.innerHTML;
-                        previewNode.parentNode.removeChild(previewNode);
-                        let myDropzone = new Dropzone(document.body, { // Make the whole body a dropzone
-                            url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=upload_other_images&data="+uploadConfig+"&type_img=0",
-                            thumbnailWidth: 100,
-                            thumbnailHeight: 100,
-                            parallelUploads: 20,
-                            previewTemplate: previewTemplate,
-                            autoQueue: true, 
-                            previewsContainer: "#previews", 
-                            clickable: ".fileinput-button", 
-                            removedfile: function(file) {
-                                    console.log(file);
-                                    let reocord_id = $("#id_mage").val();
-                                    $.ajax({
-                                        type: "POST",
-                                        url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=delete_other_image",
-                                        data: { "name": file.name,"reocord_id":reocord_id,"id":file.size}
-                                    });
-                                let _ref;
-                                return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;        
-                            },
-                            success: function(file, response){
-                                console.log(file)
-                                //alert(response);
-                                file.previewElement.id = "sort_"+response;
-                                if (file.type == "video/mp4") {
-                                    let html_video = `
-                                        <img class="icon" src="/images/play-icon.svg" alt="" style="width: 40px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);" />
-                                    `;
-                                    $("#sort_"+response+" .dz-details").addClass("dz-video").html(html_video);
-                                }
-                            },  
-                            init: function () {
-                                let thisDropzone = this;  
-                                if (data.Data != "") {
-                                    $.each(data.Data, function (index, item) {
-                                        var mockFile = {
-                                            type: item.FileType,
-                                            name: item.FileName,
-                                            title: item.title,
-                                            size: item.AttachmentID
-                                        };
-
-                                        thisDropzone.emit("addedfile", mockFile);
-                                        thisDropzone.emit("thumbnail", mockFile, item.Path);
-                                        $(mockFile.previewElement).prop("id", "sort_"+item.AttachmentID);
-                                        $(mockFile.previewTemplate).find(".title_dropzon").val(item.FileName);
-                                        $(mockFile.previewTemplate).find(".dz-color").val(item.SubId);
-                                        select_index = $("#sort_"+item.AttachmentID+" .dz-color option:selected").index();
-                                    
-                                        if (item.FileType == "video"){
-                                            let html_video = `
-                                                <video controls style="width:100%;height:100%;object-fit:cover;">
-                                                    <source src="${item.Path}" type="video/mp4">
-                                                </video>
-                                                <!-- <img class="icon" src="/images/play-icon.svg" alt="" style="width: 40px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);"/> -->
-                                            `;
-                                            
-                                            $(`#sort_${item.AttachmentID}`).find(".dz-details").addClass("dz-video").html(html_video);
-                                        }
-                                    });
-                                }
-                            }
-                        });
-
-                        $(function() {
-                            $("#previews").sortable({
-                                update : function () {
-                                    serial = $("#previews").sortable("serialize");
-                                    $.ajax({
-                                        url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=sort_other_images",
-                                        type: "post",
-                                        data: serial,
-                                        error: function(){
-                                            alert("Lỗi load dữ liệu");
-                                        }
-                                    });
-
-                                }
-                            });
-                            
-                        });
-                    });
-                    function change_color(element){
-                        value = $(element).val();
-                        console.log(value);
-                        parent_id =  $(element).parent().attr("id");
-                        id =  parent_id.replace("sort_", "");
-                        let uploadConfig =  $("#uploadConfig").val();
-                        $.ajax({
-                            type: "GET",
-                        url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=change_attr_image",
-                            data: { "field": "sub","data":uploadConfig,"id":id,"value":value}
-                        });
-                        // element.style.backgroundColor=element.options[element.selectedIndex].style.backgroundColor;
-                    }
-                    
-                    function change_tile(element){
-                        value = $(element).val();
-                        parent_id =  $(element).parent().attr("id");
-                        id =  parent_id.replace("sort_", "");
-                        let uploadConfig =  $("#uploadConfig").val();
-                        $.ajax({
-                            type: "POST",
-                            url: "index2.php?module=' . $module . '&view=' . $view . '&raw=1&task=change_title_attr_image",
-                            data: {"data":uploadConfig,"id":id,"value":value}
-                        });
-                    }
-                </script>
-            ';
         }
+
         echo $html;
     }
 

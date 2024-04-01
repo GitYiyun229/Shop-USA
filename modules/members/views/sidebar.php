@@ -11,19 +11,7 @@ $view = FSInput::get('view');
     </div>
 </div>
 
-<div class="d-flex align-items-start justify-content-between mb-3 user-level-point-sidebar">
-    <div>
-        <div class="text-grey mb-1"><?php echo FSText::_('Hạng thành viên') ?></div>
-        <div class="user-level-sidebar level-<?php echo $user->userInfo->level ?> d-flex align-items-center text-uppercase fw-medium">
-            <img src="/images/user-level.svg" alt="level" class="img-fluid">
-            <?php echo $this->userLevel[$user->userInfo->level] ?>
-        </div>
-    </div>
-    <div class="text-end">
-        <div class="text-grey mb-1"><?php echo FSText::_('Điểm tích lũy') ?></div>
-        <b><?php echo number_format($user->userInfo->point, 0, "", ".") ?></b> <span class="text-grey">điểm</span>
-    </div>
-</div>
+
 
 <div class="user-menu-sidebar mb-3 pb-3">
     <a href="<?php echo FSRoute::_('index.php?module=members&view=dashboard') ?>" class="<?php echo $view == 'dashboard'  ? 'active' : '' ?>">
@@ -34,10 +22,7 @@ $view = FSInput::get('view');
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.66667 10.1667H12.5M6.66667 13.5H10.3167M13.3333 3.34999C16.1083 3.49999 17.5 4.52499 17.5 8.33332V13.3333C17.5 16.6667 16.6667 18.3333 12.5 18.3333H7.5C3.33333 18.3333 2.5 16.6667 2.5 13.3333V8.33332C2.5 4.53332 3.89167 3.49999 6.66667 3.34999M8.33333 4.99999H11.6667C13.3333 4.99999 13.3333 4.16666 13.3333 3.33332C13.3333 1.66666 12.5 1.66666 11.6667 1.66666H8.33333C7.5 1.66666 6.66667 1.66666 6.66667 3.33332C6.66667 4.99999 7.5 4.99999 8.33333 4.99999Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Đơn hàng của tôi
     </a>
-    <!-- <a href="<?php //echo FSRoute::_('index.php?module=members&view=level') ?>" class="<?php //echo $view == 'level'  ? 'active' : '' ?>">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.4421 2.92501L12.9087 5.85835C13.1087 6.26668 13.6421 6.65835 14.0921 6.73335L16.7504 7.17501C18.4504 7.45835 18.8504 8.69168 17.6254 9.90835L15.5587 11.975C15.2087 12.325 15.0171 13 15.1254 13.4833L15.7171 16.0417C16.1837 18.0667 15.1087 18.85 13.3171 17.7917L10.8254 16.3167C10.3754 16.05 9.63375 16.05 9.17541 16.3167L6.68375 17.7917C4.90041 18.85 3.81708 18.0583 4.28375 16.0417L4.87541 13.4833C4.98375 13 4.79208 12.325 4.44208 11.975L2.37541 9.90835C1.15875 8.69168 1.55041 7.45835 3.25041 7.17501L5.90875 6.73335C6.35041 6.65835 6.88375 6.26668 7.08375 5.85835L8.55041 2.92501C9.35041 1.33335 10.6504 1.33335 11.4421 2.92501Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Hạng thành viên
-    </a> -->
+
     <a href="<?php echo FSRoute::_('index.php?module=members&view=address') ?>" class="<?php echo $view == 'address'  ? 'active' : '' ?>">
         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.0001 11.1917C11.436 11.1917 12.6001 10.0276 12.6001 8.59166C12.6001 7.15572 11.436 5.99166 10.0001 5.99166C8.56414 5.99166 7.40008 7.15572 7.40008 8.59166C7.40008 10.0276 8.56414 11.1917 10.0001 11.1917Z" stroke="currentColor" stroke-width="1.5"/><path d="M3.01675 7.07499C4.65842 -0.141675 15.3501 -0.133341 16.9834 7.08333C17.9417 11.3167 15.3084 14.9 13.0001 17.1167C11.3251 18.7333 8.67508 18.7333 6.99175 17.1167C4.69175 14.9 2.05842 11.3083 3.01675 7.07499Z" stroke="currentColor" stroke-width="1.5"/></svg>
         Sổ địa chỉ
@@ -53,7 +38,7 @@ $view = FSInput::get('view');
 </div>
 
 <div>
-    <div class="text-grey fw-semibold">Bạn cần hỗ trợ?</div>
-    <div><span class="text-grey">Vui lòng gọi</span> <a href="tel:<?php echo $config['hotline'] ?>"><b><?php echo $config['hotline'] ?></b></a></div>
-    <div class="text-grey">(miễn phí cước gọi)</div>
+    <div class="text-grey fw-semibold"><?= FSText::_('Bạn cần hỗ trợ?')?></div>
+    <div><span class="text-grey"><?= FSText::_('Vui lòng gọi')?></span> <a href="tel:<?php echo $config['hotline'] ?>"><b><?php echo $config['hotline'] ?></b></a></div>
+    <div class="text-grey"><?= FSText::_('(miễn phí cước gọi)')?></div>
 </div>

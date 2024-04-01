@@ -327,7 +327,7 @@ class FSControllers
 	public function layoutProductItem($item)
 	{
 		$url = FSRoute::_("index.php?module=products&view=product&code=$item->alias&id=$item->id");
-		$src = URL_ROOT . str_replace(['/original/', '.jpg', '.png'], ['/resized/', '.webp', '.webp'], $item->image);
+		$src = URL_ROOT . str_replace(['/original/', '.jpg', '.png'], ['/larges/', '.webp', '.webp'], $item->image);
 
 ?>
 		<div class="layout-product-item position-relative">
@@ -374,7 +374,7 @@ class FSControllers
 	public function layoutProductItemFlashSale($item)
 	{
 		$url = FSRoute::_("index.php?module=products&view=product&code=$item->alias&id=$item->id");
-		$src = URL_ROOT . str_replace(['/original/', '.jpg', '.png'], ['/resized/', '.webp', '.webp'], $item->image);
+		$src = URL_ROOT . str_replace(['/original/', '.jpg', '.png'], ['/larges/', '.webp', '.webp'], $item->image);
 
 	?>
 		<div class="layout-product-item position-relative">
